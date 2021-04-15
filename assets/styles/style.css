@@ -11,6 +11,7 @@
     align-content: center;
 }
 
+h3,
 h5 {
     font-family: 'Londrina Solid', cursive;
 }
@@ -121,8 +122,55 @@ nav ul li a:hover {
 
 /* ----------------------------------Songs Suggestion */
 
+.songSuggestionHeading {
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
 .songSuggestion iframe {
     margin: 0 5px 0 5px;
+}
+
+/* ----------------------------------Songs Suggestion Carousel (for medium and small screens)*/
+
+.arrowsControl {
+    background-color: rgba(22, 22, 22, 0.493);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#leftArrow {
+    top: 290px;
+}
+
+#rigthArrow {
+    top: 240px;
+    left: 720px;
+}
+
+.carouselWrap {
+    height: 300px;
+}
+
+.contentWrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    background-color: rgba(22, 22, 22, 0.116);
+}
+
+.contentWrap div {
+    display: none;
+}
+
+.contentWrap div.activeSlide {
+    display: inline-block;
 }
 
 /* ----------------------------------Footer */
@@ -151,6 +199,13 @@ footer i:hover {
 
 /* ----------------------------------Media queries*/
 
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    iframe {
+        width: 500px;
+        height: 380px;
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     .col-md-6 {
         flex: 0 0 90%;
@@ -168,6 +223,12 @@ footer i:hover {
     .placeInfo h6 {
         font-size: 2rem;
     }
+
+    iframe {
+        width: 670px;
+        height: 280px;
+        margin-left: 50px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -178,5 +239,61 @@ footer i:hover {
 
     .placeInfo h6 {
         font-size: 0.9rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    iframe {
+        width: 350px;
+        height: 280px;
+        margin-left: 40px;
+    }
+
+    .arrowsControl {
+        width: 30px;
+        height: 30px;
+    }
+
+    #rigthArrow {
+        top: 260px;
+        left: 395px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    iframe {
+        width: 315px;
+        height: 280px;
+        margin-left: 30px;
+    }
+
+    .arrowsControl {
+        width: 30px;
+        height: 30px;
+    }
+
+    #rigthArrow {
+        top: 260px;
+        left: 345px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    iframe {
+        width: 315px;
+        height: 280px;
+        margin-left: 5px;
+    }
+
+    .arrowsControl {
+        width: 30px;
+        height: 30px;
+    }
+
+    #rigthArrow {
+        top: 260px;
+        left: 290px;
     }
 }

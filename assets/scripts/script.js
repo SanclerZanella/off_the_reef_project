@@ -1,0 +1,62 @@
+
+// -----------------------------------------------------------------------------Carousel Script
+$(document).ready(function () {
+
+    // fetch all elements with slideContent class
+    let slideContent = $('.slideContent');
+
+    // Add functionality on click to the previous button
+    $('#leftArrow').click(function () {
+
+        // fetch the current element with activeSlide class, which is shown on screen while the others slide contents are hidden
+        let currentSlide = $('.activeSlide');
+
+        // fetch the previous element before the element with activeSlide class, 
+        //which is hidden on screen
+        let prevSlide = currentSlide.prev();
+
+        // if there is a sibling element before the current element with activeSlide class
+        if (prevSlide.length) {
+
+            // then will remove the activeSlide class of the current element, getting this element hidden on flow
+            currentSlide.removeClass('activeSlide');
+
+            // and will add activeSlide class to the previous sibling element, getting this element visible on flow
+            prevSlide.addClass('activeSlide');
+
+            // if there is not a sibling element before the current element with activeSlide class
+        } else if (!prevSlide.length) {
+
+            // then will remove the activeSlide class of the current element, getting this element hidden on flow
+            currentSlide.removeClass('activeSlide');
+
+            // and will add activeSlide class to the last sibling element, getting this element visible on flow
+            slideContent.last().addClass('activeSlide');
+        }
+    });
+
+    // Add functionality on click to the next arrow button
+
+    $('#rigthArrow').click(function () {
+        let currentSlide = $('.activeSlide');
+
+        // fetch the next element after the element with activeSlide class, 
+        //which is hidden on screen
+        let nextSlide = currentSlide.next();
+
+        if (nextSlide.length) {
+            currentSlide.removeClass('activeSlide');
+
+            // fetch the next element after the element with activeSlide class, 
+            //which is hidden on screen
+            nextSlide.addClass('activeSlide');
+
+        // if there is not a sibling element after the current element with activeSlide class
+        } else if (!nextSlide.length) {
+            currentSlide.removeClass('activeSlide');
+
+            // will add activeSlide class to the first sibling element, getting this element visible on flow
+            slideContent.first().addClass('activeSlide');
+        }
+    });
+})
