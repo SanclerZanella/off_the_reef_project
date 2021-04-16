@@ -11,7 +11,12 @@
     align-content: center;
 }
 
+.textCenter {
+    text-align: center;
+}
+
 h3,
+h4,
 h5 {
     font-family: 'Londrina Solid', cursive;
 }
@@ -162,7 +167,7 @@ nav ul li a:hover {
     overflow: hidden;
     position: relative;
     float: left;
-    background-color: rgba(22, 22, 22, 0.116);
+    background-color: rgba(12, 12, 12, 0.555);
 }
 
 .contentWrap div {

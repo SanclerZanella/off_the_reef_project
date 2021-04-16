@@ -60,3 +60,20 @@ $(document).ready(function () {
         }
     });
 })
+
+
+// -----------------------------------------------------------------------------Current Time Script
+
+function currentHour() {
+
+    //Fetch the current time
+    let currentTime = new Date();
+    
+    //Apply the current time to an element in the document
+    $('#currentTime').html(currentTime);
+
+    //Refresh the time each 1 second, set in milli seconds
+    setTimeout('currentHour()', 1000)
+}
+
+currentHour();
