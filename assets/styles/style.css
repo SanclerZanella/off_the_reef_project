@@ -81,6 +81,53 @@ nav ul li a:hover {
     border: 3px solid #fff;
 }
 
+/* ----------------------------------Local Report */
+
+#prev {
+    position: relative;
+    top: 170px;
+    right: 320px;
+}
+
+#next {
+    position: relative;
+    top: 170px;
+    left: 170px;
+}
+
+.sliderInner {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    /* background-color: rgba(12, 12, 12, 0.555); */
+}
+
+.sliderInner>div.col-12 {
+    display: none;
+}
+
+.sliderInner div.activeReportSlide {
+    display: inline-block;
+}
+
+.hourHeading {
+    border: 1px solid black;
+}
+
+.hourlyReport {
+    margin-left: 60px;
+}
+
+.hourlyReportWeather {
+    margin-left: 5px;
+}
+
+.hourReportsValues {
+    background-color: #ededed;
+}
+
 /* ----------------------------------Beach links */
 
 .infoCard {

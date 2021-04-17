@@ -64,7 +64,7 @@
                     <!-- Report heading | Place name -->
 
                     <div class="row no-gutters reportHeading">
-                        <div class="col">
+                        <div class="col-12">
                             <h3 class="textCenter" id="placeName">Copacabana - Rio de Janeiro</h3>
                         </div>
                     </div>
@@ -86,13 +86,13 @@
                                 <div class="col-12">
                                     <div class="row no-gutters">
                                         <div class="col-12">
-                                            <p>12</p>
+                                            <p>ICON</p>
                                         </div>
                                         <div class="col-12">
-                                            <p>12</p>
+                                            <p>MAIN</p>
                                         </div>
                                         <div class="col-12">
-                                            <p>12</p>
+                                            <p>DESCRIPTION</p>
                                         </div>
                                         <div class="col-12">
                                             <div class="row no-gutters">
@@ -115,7 +115,7 @@
 
                                 <!-- Current Local Weather Report -->
 
-                                <div class="col-12">
+                                <div class="col-12 currentReport">
                                     <h5>Current Weather <i class="fas fa-copyright"></i></h5>
                                 </div>
                                 <div class="col-12">
@@ -153,8 +153,1139 @@
                                     </div>
                                 </div>
 
+                                <!-- Hourly Local Weather Report -->
+
                                 <div class="col-12">
                                     <h5>Hourly Forecast <i class="fas fa-clock"></i></h5>
+                                </div>
+
+                                <div class="col-12 hourlyReport container">
+
+                                    <!-- ------------------------------------------------------------------------------------- -->
+
+                                    <img id="prev" class="arrowsControl"
+                                        src="assets/images/carousel_control/arrow_left.svg" alt="prev">
+
+                                    <div class="row no-gutters sliderInner">
+
+                                        <!-- First Hours Report -->
+
+                                        <div class="col-12 hourlyReportSlide activeReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Second Hours Report -->
+
+                                        <div class="col-12 hourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 2
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Third Hours Report -->
+
+                                        <div class="col-12 hourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 3
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Fourth Hours Report -->
+
+                                        <div class="col-12 hourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 4
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Fifth Hours Report -->
+
+                                        <div class="col-12 hourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 5
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Sixth Hours Report -->
+
+                                        <div class="col-12 hourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 6
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Seventh Hours Report -->
+
+                                        <div class="col-12 hourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 7
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Eighth Hours Report -->
+
+                                        <div class="col-12 hourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 8
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY ICON
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY MAIN
+                                                        </div>
+                                                        <div class="col-12">
+                                                            HOURLY DESCRIPTION
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-thermometer-three-quarters"></i>
+                                                                    Temp:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-temperature-low"></i> Feels Like:
+                                                                </h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-umbrella-beach"></i> UVI:</h7>
+                                                                <span>12</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-wind"></i> Wind Speed:</h7>
+                                                                <span>12</span><span> m/s</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7><i class="fas fa-location-arrow"></i> Wind
+                                                                    Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <img id="next" class="arrowsControl"
+                                        src="assets/images/carousel_control/arrow_right.svg" alt="next">
+                                    <!-- ------------------------------------------------------------------------------------- -->
+
                                 </div>
                             </div>
                         </div>

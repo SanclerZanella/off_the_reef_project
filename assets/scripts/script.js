@@ -1,3 +1,38 @@
+// -----------------------------------------------------------------------------Hourly report carousel Script
+$(document).ready(function () {
+    let slideContent = $('.hourlyReportSlide');
+
+    $('#prev').click(function () {
+        let currentSlide = $('.activeReportSlide');
+        let prevSlide = currentSlide.prev();
+
+        if (prevSlide.length) {
+            currentSlide.removeClass('activeReportSlide');
+            prevSlide.addClass('activeReportSlide');
+
+         } else if (!prevSlide.length) {
+             currentSlide.removeClass('activeReportSlide');
+             slideContent.last().addClass('activeReportSlide');
+         }
+    });
+
+    $('#next').click(function () {
+        let currentSlide = $('.activeReportSlide');
+
+        let nextSlide = currentSlide.next();
+
+        if (nextSlide.length) {
+            currentSlide.removeClass('activeReportSlide');
+
+            nextSlide.addClass('activeReportSlide');
+
+        } else if (!nextSlide.length) {
+             currentSlide.removeClass('activeReportSlide');
+             slideContent.first().addClass('activeReportSlide');
+         }
+    });
+});
+
 
 // -----------------------------------------------------------------------------Carousel Script
 $(document).ready(function () {
@@ -67,7 +102,7 @@ $(document).ready(function () {
 function currentHour() {
 
     //Fetch the current time
-    let currentTime = new Date();
+    let currentTime = new Date().toString().substr(0, 24);
     
     //Apply the current time to an element in the document
     $('#currentTime').html(currentTime);
