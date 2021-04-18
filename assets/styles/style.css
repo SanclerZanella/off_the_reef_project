@@ -83,19 +83,19 @@ nav ul li a:hover {
 
 /* ----------------------------------Local Report */
 
-#prev {
+#hourlyPrev {
     position: relative;
     top: 170px;
     right: 320px;
 }
 
-#next {
+#hourlyNext {
     position: relative;
     top: 170px;
     left: 170px;
 }
 
-.sliderInner {
+.hourlysliderInner {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -104,15 +104,18 @@ nav ul li a:hover {
     /* background-color: rgba(12, 12, 12, 0.555); */
 }
 
-.sliderInner>div.col-12 {
+.hourlysliderInner>div.col-12,
+.dailySliderInner>div.col-12 {
     display: none;
 }
 
-.sliderInner div.activeReportSlide {
+.hourlysliderInner div.activeHourlyReportSlide,
+.dailySliderInner div.activeDailyReportSlide {
     display: inline-block;
 }
 
-.hourHeading {
+.hourHeading,
+.dailyHeading {
     border: 1px solid black;
 }
 
@@ -120,12 +123,30 @@ nav ul li a:hover {
     margin-left: 60px;
 }
 
-.hourlyReportWeather {
+.dailyReport {
+    margin-left: 30px;
+}
+
+.hourlyReportWeather,
+.dailyReportWeather {
     margin-left: 5px;
 }
 
+.dailyReportsValues,
 .hourReportsValues {
     background-color: #ededed;
+}
+
+#dailyPrev {
+    position: relative;
+    top: 190px;
+    right: 310px;
+}
+
+#dailyNext {
+    position: relative;
+    bottom: 205px;
+    left: 220px;
 }
 
 /* ----------------------------------Beach links */
