@@ -58,6 +58,8 @@
         <!-- Selected beach status report:  | uses grid system from Bootstrap 4----------------------------------------------------->
 
         <section>
+
+            <!-- Google Map -->
             <div class="row no-gutters">
                 <div class="col-lg-6 col-md-12 col-12">
 
@@ -69,13 +71,14 @@
                         </div>
                     </div>
 
+                    <!-- Local Report---------------------------------------------------------------------------------------------->
                     <div class="row no-gutters reportStatus">
                         <div class="col">
+
+                            <!-- Local Weather Report------------------------------------------------------------------------------>
                             <div class="row no-gutters reportWeather textCenter">
                                 <div id="currentTime" class="col-12">
                                 </div>
-
-                                <!-- Local Weather Report--------------------------------------------------------------------------->
 
                                 <!-- Local weather heading -->
                                 <div class="col-12 ">
@@ -1876,6 +1879,1492 @@
 
                                 </div>
 
+                            </div>
+
+                            <!-- Local Surf Report--------------------------------------------------------------------------------->
+                            <div class="row no-gutters textCenter">
+
+                                <!-- Local surf heading -->
+                                <div class="col-12">
+                                    <h4>Surf Report <i class="fas fa-snowboarding"></i></h4>
+                                </div>
+
+                                <!-- Hourly Local Surf Report------------------------------------------------------------------->
+                                <div class="col-12 hourlyReport">
+                                    <img id="surfHourlyPrev" class="arrowsControl"
+                                        src="assets/images/carousel_control/arrow_left.svg" alt="prev">
+
+                                    <div class="row no-gutters hourlysliderInner">
+
+                                        <!-- First Hours Report -->
+
+                                        <div class="col-12 SurfHourlyReportSlide activeSurfHourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Second Hours Report -->
+
+                                        <div class="col-12 SurfHourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 2
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Third Hours Report -->
+
+                                        <div class="col-12 SurfHourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 3
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Fourth Hours Report -->
+
+                                        <div class="col-12 SurfHourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 4
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Fifth Hours Report -->
+
+                                        <div class="col-12 SurfHourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 5
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Sixth Hours Report -->
+
+                                        <div class="col-12 SurfHourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 6
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Seventh Hours Report -->
+
+                                        <div class="col-12 SurfHourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 7
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Eighth Hours Report -->
+
+                                        <div class="col-12 SurfHourlyReportSlide">
+                                            <div class="row no-gutters">
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME 8
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-3 hourlyReportWeather">
+                                                    <div class="row no-gutters">
+                                                        <div class="col-12 hourHeading">
+                                                            TIME
+                                                        </div>
+                                                        <div class="col-12 hourReportsValues">
+                                                            <div class="col-12">
+                                                                <h7>
+                                                                    Swell Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Swell Period:</h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Water Temperature:</h7>
+                                                                <span>12</span><span> °c</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Direction:
+                                                                </h7>
+                                                                <span>12</span><span>°</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Height:
+                                                                </h7>
+                                                                <span>12</span><span> m</span>
+                                                            </div>
+                                                            <div class="col-12">
+                                                                <h7>Wind Wave Period:
+                                                                </h7>
+                                                                <span>12</span><span> sec</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <img id="surfHourlyNext" class="arrowsControl"
+                                        src="assets/images/carousel_control/arrow_right.svg" alt="next">
+                                </div>
                             </div>
                         </div>
                     </div>

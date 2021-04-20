@@ -101,7 +101,6 @@ nav ul li a:hover {
     overflow: hidden;
     position: relative;
     float: left;
-    /* background-color: rgba(12, 12, 12, 0.555); */
 }
 
 .hourlysliderInner>div.col-12,
@@ -110,7 +109,8 @@ nav ul li a:hover {
 }
 
 .hourlysliderInner div.activeHourlyReportSlide,
-.dailySliderInner div.activeDailyReportSlide {
+.dailySliderInner div.activeDailyReportSlide,
+.hourlysliderInner div.activeSurfHourlyReportSlide {
     display: inline-block;
 }
 
@@ -147,6 +147,18 @@ nav ul li a:hover {
     position: relative;
     bottom: 205px;
     left: 220px;
+}
+
+#surfHourlyPrev {
+    position: relative;
+    top: 300px;
+    right: 290px;
+}
+
+#surfHourlyNext {
+    position: relative;
+    top: 300px;
+    left: 150px;
 }
 
 /* ----------------------------------Beach links */
