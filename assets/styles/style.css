@@ -15,6 +15,7 @@
     text-align: center;
 }
 
+h2,
 h3,
 h4,
 h5 {
@@ -23,6 +24,33 @@ h5 {
 
 h6 {
     font-family: 'Open Sans', sans-serif;
+}
+
+.bigHr {
+    width: 25%;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #569532;
+}
+
+.fineHr {
+    width: 50%;
+}
+
+/* ----------------------------------Carousel control */
+
+.arrowsControl {
+    background-color: rgba(22, 22, 22, 0.493);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.arrowsControl:hover {
+    background-color: rgba(0, 0, 0, 0.671);
 }
 
 /* ----------------------------------Navbar */
@@ -49,10 +77,15 @@ header nav img:hover {
     filter: drop-shadow(3px 6px 9px #636161);
 }
 
-nav ul li a {
+nav ul li .nav-link {
     font-size: 1.5rem;
     letter-spacing: 1px;
     font-family: 'Londrina Solid', cursive;
+}
+
+nav ul li .nav-link:hover {
+    color: #000;
+    font-weight: bold;
 }
 
 .navbar-light .navbar-nav .nav-link,
@@ -60,11 +93,6 @@ nav ul li a {
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
     color: #fff;
-}
-
-nav ul li a:hover {
-    color: #000;
-    font-weight: bold;
 }
 
 .active {
@@ -83,24 +111,66 @@ nav ul li a:hover {
 
 /* ----------------------------------Local Report */
 
+.generalReportHeadings {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.reportData {
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.reportBackground {
+    background-color: #ededed;
+    margin-left: 4%;
+    border-radius: 5%;
+}
+
+.reportBackground:hover {
+    top: -5px;
+    filter: drop-shadow(-3px 6px 9px #636161);
+}
+
+.localReport,
+.currentReport,
+.hourlyReport {
+    margin-bottom: 15px;
+}
+
+.reportDescription {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+#currentTime {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.reportHeading {
+    margin-top: 20px;
+}
+
 #hourlyPrev {
     position: relative;
-    top: 170px;
-    right: 320px;
+    top: 100px;
+    right: 500px;
 }
 
 #hourlyNext {
     position: relative;
-    top: 170px;
-    left: 170px;
+    top: 100px;
+    left: 495px;
 }
 
 .hourlysliderInner {
     width: 100%;
     height: auto;
     overflow: hidden;
-    position: relative;
-    float: left;
+    position: absolute;
+    bottom: 45px;
 }
 
 .hourlysliderInner>div.col-12,
@@ -114,17 +184,32 @@ nav ul li a:hover {
     display: inline-block;
 }
 
+.hourlyReportSlide {
+    margin-left: 80px;
+}
+
 .hourHeading,
 .dailyHeading {
-    border: 1px solid black;
+    border-bottom: 1px solid rgba(66, 66, 66, 0.514);
+    font-weight: 700;
+}
+
+.hourlyDescription {
+    font-weight: 600;
 }
 
 .hourlyReport {
-    margin-left: 60px;
+    height: 50vh;
 }
 
-.dailyReport {
-    margin-left: 30px;
+.hourlyReport h4 {
+    margin-left: 80px;
+}
+
+.dailySliderInner {
+    margin-left: 200px;
+    position: relative;
+    bottom: 45px;
 }
 
 .hourlyReportWeather,
@@ -134,19 +219,23 @@ nav ul li a:hover {
 
 .dailyReportsValues,
 .hourReportsValues {
-    background-color: #ededed;
+    background-color: #bebebe;
+}
+
+.dailyReportSlide {
+    height: 40vh;
 }
 
 #dailyPrev {
     position: relative;
-    top: 190px;
-    right: 310px;
+    top: 150px;
+    right: 410px;
 }
 
 #dailyNext {
     position: relative;
-    bottom: 205px;
-    left: 220px;
+    bottom: 165px;
+    left: 390px;
 }
 
 #surfHourlyPrev {
@@ -203,59 +292,6 @@ nav ul li a:hover {
 .placeInfo p {
     font-size: 1.5rem;
     font-family: 'Open Sans', sans-serif;
-}
-
-/* ----------------------------------Songs Suggestion */
-
-.songSuggestionHeading {
-    margin-left: 30px;
-    margin-bottom: 50px;
-}
-
-.songSuggestion iframe {
-    margin: 0 5px 0 5px;
-}
-
-/* ----------------------------------Songs Suggestion Carousel (for medium and small screens)*/
-
-.arrowsControl {
-    background-color: rgba(22, 22, 22, 0.493);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-}
-
-#leftArrow {
-    top: 290px;
-}
-
-#rigthArrow {
-    top: 240px;
-    left: 720px;
-}
-
-.carouselWrap {
-    height: 300px;
-}
-
-.contentWrap {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    position: relative;
-    float: left;
-    background-color: rgba(12, 12, 12, 0.555);
-}
-
-.contentWrap div {
-    display: none;
-}
-
-.contentWrap div.activeSlide {
-    display: inline-block;
 }
 
 /* ----------------------------------Footer */
