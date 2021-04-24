@@ -15,7 +15,7 @@ $(document).ready(function () {
 
                 // Hourly weather forecast Slide script
                 case "hourlyPrev":
-                    let currentHourlyPrevSlide = $('.activeHourlyReportSlide').attr('class', 'col-12 hourlyReportSlide activeHourlyReportSlide');
+                    let currentHourlyPrevSlide = $('.activeHourlyReportSlide').attr('class', 'col-12 col-md-10 hourlyReportSlide activeHourlyReportSlide');
                     let prevSlide = currentHourlyPrevSlide.prev();
 
                     if (prevSlide.length) {
@@ -30,7 +30,7 @@ $(document).ready(function () {
                     break;
 
                 case "hourlyNext":
-                    let currentHourlyNextSlide = $('.activeHourlyReportSlide').attr('class', 'col-12 hourlyReportSlide activeHourlyReportSlide');
+                    let currentHourlyNextSlide = $('.activeHourlyReportSlide').attr('class', 'col-12 col-md-10 hourlyReportSlide activeHourlyReportSlide');
                     let nextSlide = currentHourlyNextSlide.next();
 
                     if (nextSlide.length) {

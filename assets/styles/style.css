@@ -45,7 +45,7 @@ h6 {
     height: 50px;
     border-radius: 50%;
     position: relative;
-    z-index: 1;
+    z-index: 999;
     cursor: pointer;
 }
 
@@ -143,6 +143,10 @@ nav ul li .nav-link:hover {
     font-weight: 500;
 }
 
+.tableColorMark {
+    background-color: #ededed;
+}
+
 #currentTime {
     font-size: 1.2rem;
     font-weight: 500;
@@ -173,6 +177,7 @@ nav ul li .nav-link:hover {
     bottom: 45px;
 }
 
+.surfHourlysliderInner>div.col-12,
 .hourlysliderInner>div.col-12,
 .dailySliderInner>div.col-12 {
     display: none;
@@ -180,7 +185,7 @@ nav ul li .nav-link:hover {
 
 .hourlysliderInner div.activeHourlyReportSlide,
 .dailySliderInner div.activeDailyReportSlide,
-.hourlysliderInner div.activeSurfHourlyReportSlide {
+.surfHourlysliderInner div.activeSurfHourlyReportSlide {
     display: inline-block;
 }
 
@@ -199,7 +204,8 @@ nav ul li .nav-link:hover {
 }
 
 .hourlyReport {
-    height: 50vh;
+    min-height: 50vh;
+    overflow: hidden;
 }
 
 .hourlyReport h4 {
@@ -223,31 +229,57 @@ nav ul li .nav-link:hover {
 }
 
 .dailyReportSlide {
-    height: 40vh;
+    min-height: 40vh;
+    overflow: hidden;
 }
 
 #dailyPrev {
-    position: relative;
+    position: absolute;
     top: 150px;
     right: 410px;
 }
 
 #dailyNext {
-    position: relative;
+    position: absolute;
     bottom: 165px;
     left: 390px;
 }
 
+.surfReport {
+    margin-top: 15px;
+}
+
+.surfHourlyReport h4 {
+    margin-left: 40px;
+}
+
+.surfHourlysliderInner {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    bottom: 65px;
+}
+
+.SurfHourlyReportSlide {
+    margin-left: 140px;
+}
+
+.hourReportsValues .col-12,
+.dailyReportsValues .col-12 {
+    border-bottom: 1px solid #fff;
+}
+
 #surfHourlyPrev {
     position: relative;
-    top: 300px;
-    right: 290px;
+    top: 100px;
+    right: 470px;
 }
 
 #surfHourlyNext {
     position: relative;
-    top: 300px;
-    left: 150px;
+    bottom: 215px;
+    left: 483px;
 }
 
 /* ----------------------------------Beach links */
@@ -320,10 +352,110 @@ footer i:hover {
 
 /* ----------------------------------Media queries*/
 
+@media screen and (min-width: 1440px) and (max-width: 2559px) {
+    .hourlyReport {
+        min-height: 27vh;
+        overflow: hidden;
+    }
+
+    .hourlyReportSlide {
+        margin-left: 90px;
+    }
+
+    #hourlyPrev {
+        top: 100px;
+        right: 570px;
+    }
+
+    #hourlyNext {
+        top: 100px;
+        left: 560px;
+    }
+
+    .dailyReportSlide {
+        min-height: 100%;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+
+    #dailyPrev {
+        top: 250px;
+        right: 1130px;
+    }
+
+    #dailyNext {
+        top: 250px;
+        left: 1070px;
+    }
+
+    #surfHourlyPrev {
+        top: 100px;
+        right: 550px;
+    }
+
+    #surfHourlyNext {
+        bottom: 225px;
+        left: 520px;
+    }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
-    iframe {
-        width: 500px;
-        height: 380px;
+    .hourlyReport {
+        min-height: 37vh;
+        overflow: hidden;
+    }
+
+    .hourlyReportSlide {
+        margin-left: 65px;
+    }
+
+    #hourlyPrev {
+        top: 100px;
+        right: 405px;
+    }
+
+    #hourlyNext {
+        top: 100px;
+        left: 410px;
+    }
+
+    .dailyReportSlide {
+        min-height: 100%;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+
+    #dailyPrev {
+        top: 250px;
+        right: 750px;
+    }
+
+    #dailyNext {
+        top: 250px;
+        left: 780px;
+    }
+
+    .surfHourlyReport {
+        min-height: 30vh;
+        overflow: hidden;
+    }
+
+    .surfHourlyReport h4 {
+        margin-left: 30px;
+    }
+
+    .SurfHourlyReportSlide {
+        margin-left: 110px;
+    }
+
+    #surfHourlyPrev {
+        top: 100px;
+        right: 385px;
+    }
+
+    #surfHourlyNext {
+        bottom: 225px;
+        left: 390px;
     }
 }
 
@@ -345,10 +477,82 @@ footer i:hover {
         font-size: 2rem;
     }
 
-    iframe {
-        width: 670px;
-        height: 280px;
+    .mdAdjust {
         margin-left: 50px;
+    }
+
+    .hourlyReport {
+        min-height: 100vh;
+        overflow: hidden;
+    }
+
+    .hourlyReportSlide {
+        margin-left: 105px;
+    }
+
+    .mdHourCenter {
+        margin-left: 95px;
+    }
+
+    #hourlyPrev {
+        top: 300px;
+        right: 255px;
+    }
+
+    #hourlyNext {
+        top: 300px;
+        left: 220px;
+    }
+
+    .dailyReportSlide {
+        min-height: 100%;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+
+    .dailySliderInner {
+        right: 50px;
+    }
+
+    .mdDailyCenter {
+        margin-left: 100px;
+    }
+
+    #dailyPrev {
+        top: 290px;
+        right: 580px;
+    }
+
+    #dailyNext {
+        top: 290px;
+        left: 600px;
+    }
+
+    .surfHourlyReport {
+        min-height: 100%;
+        overflow: hidden;
+    }
+
+    .surfHourlyReport h4 {
+        margin-left: 30px;
+    }
+
+    .SurfHourlyReportSlide {
+        margin-left: 90px;
+    }
+
+    .mdSurfCenter {
+        margin-left: 120px;
+    }
+
+    #surfHourlyPrev {
+        top: 260px;
+        right: 290px;
+    }
+
+    #surfHourlyNext {
+        bottom: 335px;
+        left: 250px;
     }
 }
 
