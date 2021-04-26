@@ -46,9 +46,9 @@ $(document).ready(function () {
                     };
                     break;
 
-                    // Hourly weather forecast Slide script for small screens
+                    // Hourly weather forecast Slide script for medium and small screens
                 case "smHourlyPrev":
-                    let smHourlyPrevSlide = $('.activeSmHourlyReportSlide').attr('class', 'col-lg-12 col-md-10 smHourlyReportSlide activeSmHourlyReportSlide');
+                    let smHourlyPrevSlide = $('.activeSmHourlyReportSlide').attr('class', 'col-lg-12 col-md-12 smHourlyReportSlide activeSmHourlyReportSlide');
                     let smPrevSlide = smHourlyPrevSlide.prev();
 
                     if (smPrevSlide.length) {
@@ -63,7 +63,7 @@ $(document).ready(function () {
                     break;
 
                 case "smHourlyNext":
-                    let smHourlyNextSlide = $('.activeSmHourlyReportSlide').attr('class', 'col-lg-12 col-md-10 smHourlyReportSlide activeSmHourlyReportSlide');
+                    let smHourlyNextSlide = $('.activeSmHourlyReportSlide').attr('class', 'col-lg-12 col-md-12 smHourlyReportSlide activeSmHourlyReportSlide');
                     let smNextSlide = smHourlyNextSlide.next();
 
                     if (smNextSlide.length) {
@@ -108,7 +108,7 @@ $(document).ready(function () {
                     };
                     break;
 
-                    // Daily weather forecast Slide script for small screens
+                    // Daily weather forecast Slide script for medium and small screens
                 case "smDailyPrev":
                     let currentSmDailyPrevSlide = $('.activeSmDailyReportSlide').attr('class', 'col-lg-12 dailySmReportSlide activeSmDailyReportSlide');
                     let smDailyPrevSlide = currentSmDailyPrevSlide.prev();
@@ -167,7 +167,7 @@ $(document).ready(function () {
                     };
                     break;
 
-                    // Hourly surf forecast Slide script for small screens
+                    // Hourly surf forecast Slide script for medium and small screens
                 case "smSurfHourlyPrev":
                     let currentSmSurfPrevSlide = $('.activeSmSurfHourlyReportSlide').attr('class', 'col-lg-12 smSurfHourlyReportSlide activeSmSurfHourlyReportSlide');
                     let smSurfPrevSlide = currentSmSurfPrevSlide.prev();

@@ -415,18 +415,13 @@ footer i:hover {
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
-
-    /* .col-lg-2 {
-        flex: 0 0 16%;
-        max-width: 16%;
-    } */
     .hourlyReport {
         min-height: 37vh;
         overflow: hidden;
     }
 
     .hourlyReportSlide {
-        margin-left: 75px;
+        margin-left: 65px;
     }
 
     #hourlyPrev {
@@ -442,7 +437,7 @@ footer i:hover {
     .dailyReportSlide {
         min-height: 100%;
         overflow: hidden;
-        margin-top: 50px;
+        margin-top: 10px;
     }
 
     #dailyPrev {
@@ -497,82 +492,126 @@ footer i:hover {
         font-size: 2rem;
     }
 
+    .generalReportAdjust {
+        margin-left: 70px;
+    }
+
     .mdAdjust {
-        margin-left: 50px;
+        margin-left: 60px;
+    }
+
+    .smHourlyReportSlide h7 {
+        font-weight: bold;
+    }
+
+    .hourlyReportWeather,
+    .dailyReportWeather {
+        margin-left: 0;
     }
 
     .hourlyReport {
-        min-height: 100vh;
+        min-height: 33vh;
         overflow: hidden;
     }
 
-    .hourlyReportSlide {
-        margin-left: 105px;
+    .hourlyReport h4 {
+        margin-left: 50px;
     }
 
-    .mdHourCenter {
-        margin-left: 95px;
+    .hourlyReport .fineHr {
+        margin-left: 170px;
     }
 
-    #hourlyPrev {
-        top: 300px;
-        right: 255px;
+    .hourlysliderInner .col-lg-12 {
+        display: none;
     }
 
-    #hourlyNext {
-        top: 300px;
-        left: 220px;
+    .hourlysliderInner div.activeSmHourlyReportSlide {
+        display: inline-block;
     }
 
-    .dailyReportSlide {
+    #smHourlyPrev {
+        top: 80px;
+        right: 230px;
+    }
+
+    #smHourlyNext {
+        top: 80px;
+        left: 230px;
+    }
+
+    .dailyAdjust {
+        margin-left: 41px;
+    }
+
+    .valuesAdjust {
+        margin-left: 50px;
+    }
+
+    .dailySmReportSlide {
         min-height: 100%;
         overflow: hidden;
-        margin-top: 50px;
     }
 
-    .dailySliderInner {
-        right: 50px;
+    .smDailySliderInner {
+        position: relative;
+        bottom: 60px;
     }
 
-    .mdDailyCenter {
-        margin-left: 100px;
+    .smDailySliderInner .col-lg-12 {
+        display: none;
     }
 
-    #dailyPrev {
-        top: 310px;
-        right: 580px;
+    .smDailySliderInner div.activeSmDailyReportSlide {
+        display: inline-block;
     }
 
-    #dailyNext {
-        top: 310px;
-        left: 600px;
+    .dailySmReportSlide :is(h6, h7, .col-6) {
+        font-weight: bold;
     }
 
-    .surfHourlyReport {
-        min-height: 100%;
-        overflow: hidden;
+    #smDailyPrev {
+        top: 150px;
+        right: 280px;
+    }
+
+    #smDailyNext {
+        top: 150px;
+        left: 280px;
     }
 
     .surfHourlyReport h4 {
-        margin-left: 30px;
+        margin-left: 10px;
+    }
+
+    .smSurfHourlyReportSlide h7 {
+        font-weight: bold;
     }
 
     .SurfHourlyReportSlide {
-        margin-left: 190px;
+        margin-left: 0;
     }
 
-    .mdSurfCenter {
-        margin-left: 100px;
+    .smSurfHourlysliderInner .col-lg-12 {
+        display: none;
     }
 
-    #surfHourlyPrev {
-        top: 350px;
-        right: 240px;
+    .smSurfHourlysliderInner div.activeSmSurfHourlyReportSlide {
+        display: inline-block;
     }
 
-    #surfHourlyNext {
-        bottom: 440px;
-        left: 250px;
+    .smSurfHourlyReportSlide {
+        bottom: 45px;
+    }
+
+    #smSurfHourlyPrev {
+        top: 100px;
+        right: 160px;
+    }
+
+    #smSurfHourlyNext {
+        bottom: 225px;
+        left: 160px;
     }
 }
 
@@ -590,13 +629,29 @@ footer i:hover {
         font-size: 1.5rem;
     }
 
+    .mdAdjust {
+        margin-left: 20px;
+    }
+
+    .dailyAdjust {
+        margin-left: 25px;
+    }
+
+    .valuesAdjust {
+        margin-left: 35px;
+    }
+
+    .smHourlyReportSlide h7 {
+        font-weight: bold;
+    }
+
     .hourlyReportWeather,
     .dailyReportWeather {
         margin-left: 0;
     }
 
     .hourlyReport {
-        min-height: 55vh;
+        min-height: 50vh;
         overflow: hidden;
     }
 
@@ -617,13 +672,13 @@ footer i:hover {
     }
 
     #smHourlyPrev {
-        top: 100px;
-        right: 120px;
+        top: 70px;
+        right: 140px;
     }
 
     #smHourlyNext {
-        top: 100px;
-        left: 120px;
+        top: 70px;
+        left: 140px;
     }
 
     .dailySmReportSlide {
@@ -642,6 +697,14 @@ footer i:hover {
 
     .smDailySliderInner div.activeSmDailyReportSlide {
         display: inline-block;
+    }
+
+    .smSurfHourlyReportSlide h7 {
+        font-weight: bold;
+    }
+
+    .dailySmReportSlide :is(h6, h7, .sunReport) {
+        font-weight: bold;
     }
 
     #smDailyPrev {
@@ -685,6 +748,366 @@ footer i:hover {
     }
 }
 
-@media screen and (min-width: 375px) and (max-width: 424px) {}
+@media screen and (min-width: 414px) and (max-width: 424px) {
+    .mdAdjust {
+        margin-left: 20px;
+    }
 
-@media screen and (min-width: 320px) and (max-width: 374px) {}
+    .dailyAdjust {
+        margin-left: 25px;
+    }
+
+    .valuesAdjust {
+        margin-left: 35px;
+    }
+
+    .smHourlyReportSlide h7 {
+        font-weight: bold;
+    }
+
+    .hourlyReportWeather,
+    .dailyReportWeather {
+        margin-left: 0;
+    }
+
+    .hourlyReport {
+        min-height: 40vh;
+        overflow: hidden;
+    }
+
+    .hourlyReport h4 {
+        margin-left: 50px;
+    }
+
+    .hourlyReport .fineHr {
+        margin-left: 110px;
+    }
+
+    .hourlysliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .hourlysliderInner div.activeSmHourlyReportSlide {
+        display: inline-block;
+    }
+
+    #smHourlyPrev {
+        top: 35px;
+        right: 115px;
+    }
+
+    #smHourlyNext {
+        top: 35px;
+        left: 115px;
+    }
+
+    .dailySmReportSlide {
+        min-height: 100%;
+        overflow: hidden;
+    }
+
+    .smDailySliderInner {
+        position: relative;
+        bottom: 60px;
+    }
+
+    .smDailySliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .smDailySliderInner div.activeSmDailyReportSlide {
+        display: inline-block;
+    }
+
+    .smSurfHourlyReportSlide h7 {
+        font-weight: bold;
+    }
+
+    .dailySmReportSlide :is(h6, h7, .sunReport) {
+        font-weight: bold;
+    }
+
+    #smDailyPrev {
+        top: 150px;
+        right: 125px;
+    }
+
+    #smDailyNext {
+        top: 150px;
+        left: 125px;
+    }
+
+    .surfHourlyReport h4 {
+        margin-left: 10px;
+    }
+
+    .SurfHourlyReportSlide {
+        margin-left: 0;
+    }
+
+    .smSurfHourlysliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .smSurfHourlysliderInner div.activeSmSurfHourlyReportSlide {
+        display: inline-block;
+    }
+
+    .smSurfHourlyReportSlide {
+        bottom: 45px;
+    }
+
+    #smSurfHourlyPrev {
+        top: 100px;
+        right: 130px;
+    }
+
+    #smSurfHourlyNext {
+        bottom: 225px;
+        left: 130px;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 413px) {
+    .mdAdjust {
+        margin-left: 20px;
+    }
+
+    .dailyAdjust {
+        margin-left: 25px;
+    }
+
+    .valuesAdjust {
+        margin-left: 35px;
+    }
+
+    .smHourlyReportSlide h7 {
+        font-weight: bold;
+    }
+
+    .hourlyReportWeather,
+    .dailyReportWeather {
+        margin-left: 0;
+    }
+
+    .hourlyReport {
+        min-height: 49vh;
+        overflow: hidden;
+    }
+
+    .hourlyReport h4 {
+        margin-left: 50px;
+    }
+
+    .hourlyReport .fineHr {
+        margin-left: 110px;
+    }
+
+    .hourlysliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .hourlysliderInner div.activeSmHourlyReportSlide {
+        display: inline-block;
+    }
+
+    #smHourlyPrev {
+        top: 35px;
+        right: 115px;
+    }
+
+    #smHourlyNext {
+        top: 35px;
+        left: 115px;
+    }
+
+    .dailySmReportSlide {
+        min-height: 100%;
+        overflow: hidden;
+    }
+
+    .smDailySliderInner {
+        position: relative;
+        bottom: 60px;
+    }
+
+    .smDailySliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .smDailySliderInner div.activeSmDailyReportSlide {
+        display: inline-block;
+    }
+
+    .smSurfHourlyReportSlide h7 {
+        font-weight: bold;
+    }
+
+    .dailySmReportSlide :is(h6, h7, .sunReport) {
+        font-weight: bold;
+    }
+
+    #smDailyPrev {
+        top: 150px;
+        right: 125px;
+    }
+
+    #smDailyNext {
+        top: 150px;
+        left: 125px;
+    }
+
+    .surfHourlyReport h4 {
+        margin-left: 10px;
+    }
+
+    .SurfHourlyReportSlide {
+        margin-left: 0;
+    }
+
+    .smSurfHourlysliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .smSurfHourlysliderInner div.activeSmSurfHourlyReportSlide {
+        display: inline-block;
+    }
+
+    .smSurfHourlyReportSlide {
+        bottom: 45px;
+    }
+
+    #smSurfHourlyPrev {
+        top: 100px;
+        right: 130px;
+    }
+
+    #smSurfHourlyNext {
+        bottom: 225px;
+        left: 130px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+    .mdAdjust {
+        margin-left: 20px;
+    }
+
+    .dailyAdjust {
+        margin-left: 15px;
+    }
+
+    .valuesAdjust {
+        margin-left: 0;
+    }
+
+    .smHourlyReportSlide h7 {
+        font-weight: bold;
+    }
+
+    .hourlyReportWeather,
+    .dailyReportWeather {
+        margin-left: 0;
+    }
+
+    .hourlyReport {
+        min-height: 55vh;
+        overflow: hidden;
+    }
+
+    .hourlyReport h4 {
+        margin-left: 50px;
+    }
+
+    .hourlyReport .fineHr {
+        margin-left: 90px;
+    }
+
+    .hourlysliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .hourlysliderInner div.activeSmHourlyReportSlide {
+        display: inline-block;
+    }
+
+    #smHourlyPrev {
+        top: 35px;
+        right: 90px;
+    }
+
+    #smHourlyNext {
+        top: 35px;
+        left: 90px;
+    }
+
+    .maxMinValue {
+        margin-left: 10px;
+    }
+
+    .dailySmReportSlide {
+        min-height: 100%;
+        overflow: hidden;
+    }
+
+    .smDailySliderInner {
+        position: relative;
+        bottom: 60px;
+    }
+
+    .smDailySliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .smDailySliderInner div.activeSmDailyReportSlide {
+        display: inline-block;
+    }
+
+    .smSurfHourlyReportSlide h7 {
+        font-weight: bold;
+    }
+
+    .dailySmReportSlide :is(h6, h7, .sunReport) {
+        font-weight: bold;
+    }
+
+    #smDailyPrev {
+        top: 210px;
+        right: 105px;
+    }
+
+    #smDailyNext {
+        top: 210px;
+        left: 105px;
+    }
+
+    .surfHourlyReport h4 {
+        margin-left: 10px;
+    }
+
+    .SurfHourlyReportSlide {
+        margin-left: 0;
+    }
+
+    .smSurfHourlysliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .smSurfHourlysliderInner div.activeSmSurfHourlyReportSlide {
+        display: inline-block;
+    }
+
+    .smSurfHourlyReportSlide {
+        bottom: 45px;
+    }
+
+    #smSurfHourlyPrev {
+        top: 100px;
+        right: 125px;
+    }
+
+    #smSurfHourlyNext {
+        bottom: 225px;
+        left: 125px;
+    }
+}
