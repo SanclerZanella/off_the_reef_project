@@ -177,13 +177,14 @@ nav ul li .nav-link:hover {
     bottom: 45px;
 }
 
-.surfHourlysliderInner>div.col-12,
-.hourlysliderInner>div.col-12,
-.dailySliderInner>div.col-12 {
+.surfHourlysliderInner>div.col-lg-12,
+.hourlysliderInner>div.col-lg-12,
+.dailySliderInner>div.col-lg-12 {
     display: none;
 }
 
 .hourlysliderInner div.activeHourlyReportSlide,
+.hourlysliderInner div.activeSmHourlyReportSlide,
 .dailySliderInner div.activeDailyReportSlide,
 .surfHourlysliderInner div.activeSurfHourlyReportSlide {
     display: inline-block;
@@ -212,15 +213,15 @@ nav ul li .nav-link:hover {
     margin-left: 80px;
 }
 
-.dailySliderInner {
-    margin-left: 200px;
-    position: relative;
-    bottom: 45px;
-}
-
 .hourlyReportWeather,
 .dailyReportWeather {
     margin-left: 5px;
+}
+
+.dailySliderInner {
+    margin-left: 200px;
+    position: relative;
+    bottom: 5px;
 }
 
 .dailyReportsValues,
@@ -235,14 +236,14 @@ nav ul li .nav-link:hover {
 
 #dailyPrev {
     position: absolute;
-    top: 150px;
-    right: 410px;
+    top: 200px;
+    right: 960px;
 }
 
 #dailyNext {
     position: absolute;
-    bottom: 165px;
-    left: 390px;
+    bottom: 160px;
+    left: 940px;
 }
 
 .surfReport {
@@ -399,14 +400,33 @@ footer i:hover {
     }
 }
 
+@media screen and (min-width: 1200px) and (max-width: 2558px) {
+    .col-md-10 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .dailySliderInner .col-md-10 {
+        -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
+
+    /* .col-lg-2 {
+        flex: 0 0 16%;
+        max-width: 16%;
+    } */
     .hourlyReport {
         min-height: 37vh;
         overflow: hidden;
     }
 
     .hourlyReportSlide {
-        margin-left: 65px;
+        margin-left: 75px;
     }
 
     #hourlyPrev {
@@ -519,12 +539,12 @@ footer i:hover {
     }
 
     #dailyPrev {
-        top: 290px;
+        top: 310px;
         right: 580px;
     }
 
     #dailyNext {
-        top: 290px;
+        top: 310px;
         left: 600px;
     }
 
@@ -538,25 +558,25 @@ footer i:hover {
     }
 
     .SurfHourlyReportSlide {
-        margin-left: 90px;
+        margin-left: 190px;
     }
 
     .mdSurfCenter {
-        margin-left: 120px;
+        margin-left: 100px;
     }
 
     #surfHourlyPrev {
-        top: 260px;
-        right: 290px;
+        top: 350px;
+        right: 240px;
     }
 
     #surfHourlyNext {
-        bottom: 335px;
+        bottom: 440px;
         left: 250px;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 425px) and (max-width: 767px) {
     .col-md-6 {
         flex: 0 0 95%;
         max-width: 95%;
@@ -570,55 +590,101 @@ footer i:hover {
         font-size: 1.5rem;
     }
 
-    iframe {
-        width: 350px;
-        height: 280px;
-        margin-left: 40px;
+    .hourlyReportWeather,
+    .dailyReportWeather {
+        margin-left: 0;
     }
 
-    .arrowsControl {
-        width: 30px;
-        height: 30px;
+    .hourlyReport {
+        min-height: 55vh;
+        overflow: hidden;
     }
 
-    #rigthArrow {
-        top: 260px;
-        left: 395px;
+    .hourlyReport h4 {
+        margin-left: 50px;
+    }
+
+    .hourlyReport .fineHr {
+        margin-left: 110px;
+    }
+
+    .hourlysliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .hourlysliderInner div.activeSmHourlyReportSlide {
+        display: inline-block;
+    }
+
+    #smHourlyPrev {
+        top: 100px;
+        right: 120px;
+    }
+
+    #smHourlyNext {
+        top: 100px;
+        left: 120px;
+    }
+
+    .dailySmReportSlide {
+        min-height: 100%;
+        overflow: hidden;
+    }
+
+    .smDailySliderInner {
+        position: relative;
+        bottom: 60px;
+    }
+
+    .smDailySliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .smDailySliderInner div.activeSmDailyReportSlide {
+        display: inline-block;
+    }
+
+    #smDailyPrev {
+        top: 150px;
+        right: 130px;
+    }
+
+    #smDailyNext {
+        top: 150px;
+        left: 135px;
+    }
+
+    .surfHourlyReport h4 {
+        margin-left: 10px;
+    }
+
+    .SurfHourlyReportSlide {
+        margin-left: 0;
+    }
+
+    .smSurfHourlysliderInner .col-lg-12 {
+        display: none;
+    }
+
+    .smSurfHourlysliderInner div.activeSmSurfHourlyReportSlide {
+        display: inline-block;
+    }
+
+    .smSurfHourlyReportSlide {
+        bottom: 45px;
+    }
+
+    #smSurfHourlyPrev {
+        top: 100px;
+        right: 160px;
+    }
+
+    #smSurfHourlyNext {
+        bottom: 225px;
+        left: 160px;
     }
 }
 
-@media screen and (max-width: 375px) {
-    iframe {
-        width: 315px;
-        height: 280px;
-        margin-left: 30px;
-    }
+@media screen and (min-width: 375px) and (max-width: 424px) {}
 
-    .arrowsControl {
-        width: 30px;
-        height: 30px;
-    }
-
-    #rigthArrow {
-        top: 260px;
-        left: 345px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    iframe {
-        width: 315px;
-        height: 280px;
-        margin-left: 5px;
-    }
-
-    .arrowsControl {
-        width: 30px;
-        height: 30px;
-    }
-
-    #rigthArrow {
-        top: 260px;
-        left: 290px;
-    }
-}
+@media screen and (min-width: 320px) and (max-width: 374px) {}
