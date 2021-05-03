@@ -1,3 +1,4 @@
+
 // -----------------------------------------------------------------------------Carousel Script
 $(document).ready(function () {
 
@@ -46,7 +47,7 @@ $(document).ready(function () {
                     };
                     break;
 
-                    // Hourly weather forecast Slide script for medium and small screens
+                // Hourly weather forecast Slide script for medium and small screens
                 case "smHourlyPrev":
                     let smHourlyPrevSlide = $('.activeSmHourlyReportSlide').attr('class', 'col-lg-12 col-md-12 smHourlyReportSlide activeSmHourlyReportSlide');
                     let smPrevSlide = smHourlyPrevSlide.prev();
@@ -78,7 +79,7 @@ $(document).ready(function () {
                     };
                     break;
 
-                    // Daily weather forecast Slide script
+                // Daily weather forecast Slide script
                 case "dailyPrev":
                     let currentDailyPrevSlide = $('.activeDailyReportSlide').attr('class', 'col-lg-12 dailyReportSlide activeDailyReportSlide');
                     let dailyPrevSlide = currentDailyPrevSlide.prev();
@@ -108,7 +109,7 @@ $(document).ready(function () {
                     };
                     break;
 
-                    // Daily weather forecast Slide script for medium and small screens
+                // Daily weather forecast Slide script for medium and small screens
                 case "smDailyPrev":
                     let currentSmDailyPrevSlide = $('.activeSmDailyReportSlide').attr('class', 'col-lg-12 dailySmReportSlide activeSmDailyReportSlide');
                     let smDailyPrevSlide = currentSmDailyPrevSlide.prev();
@@ -138,7 +139,7 @@ $(document).ready(function () {
                     };
                     break;
 
-                    // Hourly surf forecast Slide script
+                // Hourly surf forecast Slide script
                 case "surfHourlyPrev":
                     let currentSurfPrevSlide = $('.activeSurfHourlyReportSlide').attr('class', 'col-lg-12 SurfHourlyReportSlide activeSurfHourlyReportSlide');
                     let surfPrevSlide = currentSurfPrevSlide.prev();
@@ -167,7 +168,7 @@ $(document).ready(function () {
                     };
                     break;
 
-                    // Hourly surf forecast Slide script for medium and small screens
+                // Hourly surf forecast Slide script for medium and small screens
                 case "smSurfHourlyPrev":
                     let currentSmSurfPrevSlide = $('.activeSmSurfHourlyReportSlide').attr('class', 'col-lg-12 smSurfHourlyReportSlide activeSmSurfHourlyReportSlide');
                     let smSurfPrevSlide = currentSmSurfPrevSlide.prev();
@@ -218,3 +219,10 @@ function currentHour() {
 }
 
 currentHour();
+
+// -----------------------------------------------------------------------------Report Section Script
+
+// Show report section
+function showReport() {
+    $('#beachReport').show();
+};

@@ -43,10 +43,7 @@
                         <a class="nav-link" href="#">Surfboards</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="#">Feedback</a>
                     </li>
                 </ul>
             </div>
@@ -55,10 +52,28 @@
 
     <main>
 
+        <!-- Iteractive map that shows the surf spots and links to the report:  | uses grid system from Bootstrap 4 and google maps API ----------------------------------------------------->
+        <section>
+
+            <!-- Home Page main heading -->
+            <div class="row no-gutters">
+                <div class="col-12 text-center mainHeading">
+                    <h1>Irish Surf Forecast Map</h1>
+                </div>
+                <hr class="fineHr">
+            </div>
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <div id="map"></div>
+                </div>
+            </div>
+            <hr class="fineHr">
+        </section>
+
         <!-- Selected beach status report:  | uses grid system from Bootstrap 4----------------------------------------------------->
 
         <section>
-            <div class="row no-gutters">
+            <div id="beachReport" class="row no-gutters">
                 <div class="col-lg-12 col-md-12 col-12">
 
                     <!-- Report heading | Place name -->
@@ -117,57 +132,6 @@
                                                         <p>12</p>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Current Local Weather Report------------------------------------------------------------------->
-
-                                <!-- Current reports -->
-                                <div class="col-11 currentReport reportBackground">
-                                    <div class="row no-gutters">
-
-                                        <!-- Current heading -->
-                                        <div class="col-12">
-                                            <h4>Current Weather <i class="fas fa-copyright"></i></h4>
-                                            <hr class="fineHr">
-                                        </div>
-                                    </div>
-                                    <div class="row no-gutters">
-                                        <div class="col-4 col-lg-4 col-md-4">
-                                            <h6 class="generalReportHeadings"><i
-                                                    class="fas fa-thermometer-three-quarters"></i> Temp(°c)</h6>
-                                            <div class="reportData">
-                                                <p>12</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 col-lg-4 col-md-4">
-                                            <h6 class="generalReportHeadings"><i class="fas fa-temperature-low"></i>
-                                                Feels Like(°c)</h6>
-                                            <div class="reportData">
-                                                <p>12</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 col-lg-4 col-md-4">
-                                            <h6 class="generalReportHeadings"><i class="fas fa-umbrella-beach"></i> UVI
-                                            </h6>
-                                            <div class="reportData">
-                                                <p>12</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-5 col-lg-6 col-md-5 mdAdjust">
-                                            <h6 class="generalReportHeadings"><i class="fas fa-wind"></i> Wind
-                                                Speed(m/s)</h6>
-                                            <div class="reportData">
-                                                <p>12</p>
-                                            </div>
-                                        </div>
-                                        <div class="col-5 col-lg-6 col-md-5">
-                                            <h6 class="generalReportHeadings"><i class="fas fa-location-arrow"></i> Wind
-                                                Direction(deg)</h6>
-                                            <div class="reportData">
-                                                <p>12</p>
                                             </div>
                                         </div>
                                     </div>
@@ -2913,7 +2877,7 @@
                             <div class="row no-gutters textCenter surfReport">
 
                                 <!-- Hourly Local Surf Report -->
-                                <div class="col-11 surfHourlyReport hourlyReport reportBackground d-none d-lg-block">
+                                <div class="col-11 surfHourlyReport reportBackground d-none d-lg-block">
 
                                     <!-- Local surf heading -->
                                     <div class="row no-gutters">
@@ -4407,7 +4371,7 @@
                                 </div>
 
                                 <!-- Hourly Local Surf Report for medium and small screens -->
-                                <div class="col-11 surfHourlyReport hourlyReport reportBackground d-lg-none">
+                                <div class="col-11 surfHourlyReport reportBackground d-lg-none">
 
                                     <!-- Local surf heading -->
                                     <div class="row no-gutters">
@@ -4629,245 +4593,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Google Map -->
-                <div class="col-lg-12 col-md-12 col-12" style="background-color: blue; width: 100px; height: 100px;">
-                </div>
-            </div>
-        </section>
-
-        <!-- Links to beaches status: Includes Image and some status of each beach | uses grid system from Bootstrap 4-->
-
-        <section>
-            <hr class="bigHr">
-            <div class="row no-gutters">
-                <div class="col">
-                    <div class="row no-gutters content-alignment">
-
-                        <div id="copacabana" class="col-lg-3 col-md-6 col-sm-12 infoCard">
-                            <div class="row no-gutters">
-                                <div class="col-12 coverLink">
-                                    <img class="image-responsive"
-                                        src="assets/images/index/rio-de-janeiro-beach-brazil-copacabana-landscape-rio-mar-tourism-mountain.jpg"
-                                        alt="Rio de Janeiro Landscape">
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeName">
-                                <div class="col">
-                                    <h5><i class="fas fa-map-marker-alt"></i> Copacabana - Rio de Janeiro</h5>
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeInfo">
-                                <div class="col">
-                                    <h6><i class="fas fa-water"></i> Tide (m)</h6>
-                                    <div class="col">
-                                        <p class="tide">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-wind"></i> Wind(mph)</h6>
-                                    <div class="col">
-                                        <p class="wind">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-thermometer-three-quarters"></i> Temp (°c)</h6>
-                                    <div class="col">
-                                        <p class="temp">12</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="copacabana" class="col-lg-3 col-md-6 col-sm-12 infoCard">
-                            <div class="row no-gutters">
-                                <div class="col-12 coverLink">
-                                    <img class="image-responsive"
-                                        src="assets/images/index/rio-de-janeiro-beach-brazil-copacabana-landscape-rio-mar-tourism-mountain.jpg"
-                                        alt="Rio de Janeiro Landscape">
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeName">
-                                <div class="col">
-                                    <h5><i class="fas fa-map-marker-alt"></i> Copacabana - Rio de Janeiro</h5>
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeInfo">
-                                <div class="col">
-                                    <h6><i class="fas fa-water"></i> Tide (m)</h6>
-                                    <div class="col">
-                                        <p class="tide">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-wind"></i> Wind(mph)</h6>
-                                    <div class="col">
-                                        <p class="wind">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-thermometer-three-quarters"></i> Temp (°c)</h6>
-                                    <div class="col">
-                                        <p class="temp">12</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="copacabana" class="col-lg-3 col-md-6 col-sm-12 infoCard">
-                            <div class="row no-gutters">
-                                <div class="col-12 coverLink">
-                                    <img class="image-responsive"
-                                        src="assets/images/index/rio-de-janeiro-beach-brazil-copacabana-landscape-rio-mar-tourism-mountain.jpg"
-                                        alt="Rio de Janeiro Landscape">
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeName">
-                                <div class="col">
-                                    <h5><i class="fas fa-map-marker-alt"></i> Copacabana - Rio de Janeiro</h5>
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeInfo">
-                                <div class="col">
-                                    <h6><i class="fas fa-water"></i> Tide (m)</h6>
-                                    <div class="col">
-                                        <p class="tide">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-wind"></i> Wind(mph)</h6>
-                                    <div class="col">
-                                        <p class="wind">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-thermometer-three-quarters"></i> Temp (°c)</h6>
-                                    <div class="col">
-                                        <p class="temp">12</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="copacabana" class="col-lg-3 col-md-6 col-sm-12 infoCard">
-                            <div class="row no-gutters">
-                                <div class="col-12 coverLink">
-                                    <img class="image-responsive"
-                                        src="assets/images/index/rio-de-janeiro-beach-brazil-copacabana-landscape-rio-mar-tourism-mountain.jpg"
-                                        alt="Rio de Janeiro Landscape">
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeName">
-                                <div class="col">
-                                    <h5><i class="fas fa-map-marker-alt"></i> Copacabana - Rio de Janeiro</h5>
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeInfo">
-                                <div class="col">
-                                    <h6><i class="fas fa-water"></i> Tide (m)</h6>
-                                    <div class="col">
-                                        <p class="tide">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-wind"></i> Wind(mph)</h6>
-                                    <div class="col">
-                                        <p class="wind">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-thermometer-three-quarters"></i> Temp (°c)</h6>
-                                    <div class="col">
-                                        <p class="temp">12</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="copacabana" class="col-lg-3 col-md-6 col-sm-12 infoCard">
-                            <div class="row no-gutters">
-                                <div class="col-12 coverLink">
-                                    <img class="image-responsive"
-                                        src="assets/images/index/rio-de-janeiro-beach-brazil-copacabana-landscape-rio-mar-tourism-mountain.jpg"
-                                        alt="Rio de Janeiro Landscape">
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeName">
-                                <div class="col">
-                                    <h5><i class="fas fa-map-marker-alt"></i> Copacabana - Rio de Janeiro</h5>
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeInfo">
-                                <div class="col">
-                                    <h6><i class="fas fa-water"></i> Tide (m)</h6>
-                                    <div class="col">
-                                        <p class="tide">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-wind"></i> Wind(mph)</h6>
-                                    <div class="col">
-                                        <p class="wind">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-thermometer-three-quarters"></i> Temp (°c)</h6>
-                                    <div class="col">
-                                        <p class="temp">12</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="copacabana" class="col-lg-3 col-md-6 col-sm-12 infoCard">
-                            <div class="row no-gutters">
-                                <div class="col-12 coverLink">
-                                    <img class="image-responsive"
-                                        src="assets/images/index/rio-de-janeiro-beach-brazil-copacabana-landscape-rio-mar-tourism-mountain.jpg"
-                                        alt="Rio de Janeiro Landscape">
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeName">
-                                <div class="col">
-                                    <h5><i class="fas fa-map-marker-alt"></i> Copacabana - Rio de Janeiro</h5>
-                                </div>
-                            </div>
-                            <div class="row no-gutters placeInfo">
-                                <div class="col">
-                                    <h6><i class="fas fa-water"></i> Tide (m)</h6>
-                                    <div class="col">
-                                        <p class="tide">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-wind"></i> Wind(mph)</h6>
-                                    <div class="col">
-                                        <p class="wind">12</p>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <h6><i class="fas fa-thermometer-three-quarters"></i> Temp (°c)</h6>
-                                    <div class="col">
-                                        <p class="temp">12</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
             </div>
         </section>
     </main>
@@ -4890,7 +4615,10 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script id="mapCall" async></script>
     <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/maps.js"></script>
+    <script src="assets/scripts/config.js"></script>
 </body>
 
 </html>
