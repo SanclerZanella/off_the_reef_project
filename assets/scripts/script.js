@@ -220,9 +220,27 @@ function currentHour() {
 
 currentHour();
 
-// -----------------------------------------------------------------------------Report Section Script
-
 // Show report section
 function showReport() {
     $('#beachReport').show();
+
+    let spotName = $('.reportCard').find('h4').text();
+    $('#placeName').text(spotName);
+
 };
+
+// Show and hide scroll top button
+let scrollButton = $('#myBtn');
+$(window).scroll(() => {
+    if ($(window).scrollTop() > 350) {
+        scrollButton.css('display', 'block');
+      } else {
+        scrollButton.css('display', 'none');
+      }
+});
+
+// Scroll up to the map from the report section and hide the report when click the scroll top button
+scrollButton.click(() => {
+    $(window).scrollTop(200);
+    $('#beachReport').hide();
+});

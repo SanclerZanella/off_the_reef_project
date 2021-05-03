@@ -13,9 +13,16 @@ let surfSpots = [
 ];
 
 function initMap() {
+    let mapZoom;
+    if($(window).width() <= 425) {
+        mapZoom =  6;
+    } else {
+        mapZoom = 7;
+    };
+
     const map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat:  53.46322656497797, lng: -8.02571174923902 },
-        zoom: 7,
+        center: { lat: 53.46322656497797, lng: -8.02571174923902 },
+        zoom: mapZoom,
     });
     
     // Create an info window to share between markers.
@@ -24,7 +31,7 @@ function initMap() {
     surfSpots.forEach(([position, title], i) => {
 
         let preReportCard = `<div class="row no-gutters text-center reportCard">
-                                <div class="col-12">
+                                <div class="col-12 d-none d-md-block">
                                     <img id="localCoverImg" src="assets/images/index/map/${title.replace(/\s+/g, '')}.jpg" alt="">
                                 </div>
                                 <div class="col-12">
