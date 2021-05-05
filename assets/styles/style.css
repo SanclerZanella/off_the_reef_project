@@ -148,6 +148,21 @@ div#map {
     color: #5eff00;
 }
 
+@keyframes nodeInserted {
+    from {
+        opacity: 0.99;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.reportCard>.reportLink {
+    animation-duration: 0.001s;
+    animation-name: nodeInserted;
+}
+
 /* ----------------------------------Local Report */
 
 #beachReport {
@@ -391,6 +406,110 @@ div#map {
 .placeInfo p {
     font-size: 1.5rem;
     font-family: 'Open Sans', sans-serif;
+}
+
+/* --------------------------------------------------- SURFBOARDS PAGE -----------------------------------------------------------*/
+
+.boardsCover {
+    position: relative;
+}
+
+.creditLink small {
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.creditLink a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+
+.coverText {
+    color: #000;
+    text-align: center;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.coverText h1 {
+    font-size: 20vh;
+}
+
+.boardsCover img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    object-position: center;
+    filter: opacity(0.5);
+}
+
+.boardTextContent {
+    overflow: hidden;
+    height: auto;
+}
+
+.boardTextContent p {
+    width: 70%;
+}
+
+.toggleText {
+    display: none;
+}
+
+.authorCredit {
+    margin-top: 5px;
+    margin-left: 170px;
+}
+
+.showHideText {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #569532;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.showHideText p {
+    margin-top: 10px;
+}
+
+.arrowUp {
+    background-color: transparent;
+    color: transparent;
+    font-weight: 900;
+    position: relative;
+    top: 10px;
+    border-radius: 0;
+    width: 50px;
+    height: 50px;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #5baf2a;
+}
+
+.arrowDown {
+    background-color: transparent;
+    color: transparent;
+    font-weight: 900;
+    position: relative;
+    top: 10px;
+    border-radius: 0;
+    width: 50px;
+    height: 50px;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 30px solid #5baf2a;
+}
+
+.boardCalculator {
+    margin-top: 20px;
 }
 
 /* ----------------------------------Footer */

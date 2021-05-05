@@ -202,8 +202,7 @@ $(document).ready(function () {
 });
 
 
-// -----------------------------------------------------------------------------Current Time Script
-
+//Current Time Script
 function currentHour() {
 
     //Fetch the current time
@@ -217,26 +216,24 @@ function currentHour() {
     //Refresh the time each 1 second, set in milli seconds
     setTimeout('currentHour()', 1000)
 }
-
 currentHour();
 
 // Show report section
-function showReport() {
+$(document).on('click', '.reportLink', () => {
     $('#beachReport').show();
 
     let spotName = $('.reportCard').find('h4').text();
     $('#placeName').text(spotName);
-
-};
+});
 
 // Show and hide scroll top button
 let scrollButton = $('#myBtn');
 $(window).scroll(() => {
     if ($(window).scrollTop() > 350) {
         scrollButton.css('display', 'block');
-      } else {
+    } else {
         scrollButton.css('display', 'none');
-      }
+    }
 });
 
 // Scroll up to the map from the report section and hide the report when click the scroll top button
@@ -244,3 +241,54 @@ scrollButton.click(() => {
     $(window).scrollTop(200);
     $('#beachReport').hide();
 });
+
+// -----------------------------------------------------------------------------Surfboard page Script
+
+// Show/Hide text button
+let buttonText = $('.showHideText');
+
+$('.showHideText').click(() => {
+
+    if ($('.showHideText p').text() === "Hide") {
+        $('.toggleText').toggle('slow');
+        $('.showHideText').html('<p class="text-center">Read</p>');
+
+        readTextIn(buttonText);
+    } else {
+        $('.toggleText').toggle('slow');
+        $('.toggleText').css('display', 'flex');
+        $('.showHideText').html('<p class="text-center">Hide</p>');
+
+        readTextIn(buttonText);
+    }
+});
+
+function readTextIn(buttonText) {
+    if(buttonText.text() === "Hide") {
+        buttonText.mouseover(() => {
+            buttonText.addClass('arrowUp');
+            buttonText.removeClass('arrowDown');
+        }).mouseleave(() => {
+            buttonText.removeClass('arrowUp');
+        });
+    } else {
+        buttonText.mouseover(() => {
+            buttonText.addClass('arrowDown');
+            buttonText.removeClass('arrowUp');
+        }).mouseleave(() => {
+            buttonText.removeClass('arrowDown');
+        });
+    }
+};
+readTextIn(buttonText);
+
+
+
+
+
+
+
+
+
+
+

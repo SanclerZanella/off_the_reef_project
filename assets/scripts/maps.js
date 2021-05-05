@@ -61,7 +61,7 @@ function initMap() {
                             </div>
                             <div class="row no-gutters text-center">
                                 <div class="col">
-                                    <a id=${title.replace(/\s+/g, '')} class="reportLink" href="index.html#beachReport" onclick="showReport()">Click here to open full report</a>
+                                    <a id=${title.replace(/\s+/g, '')} class="reportLink" href="index.html#beachReport">Click here to open full report</a>
                                 </div>
                             </div>`;
 
