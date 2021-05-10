@@ -1,5 +1,5 @@
 
-// -----------------------------------------------------------------------------Carousel Script
+// -------------------------------------------------------Home Page (Report Script)----------------------------------------------- //
 $(document).ready(function () {
 
     // -----------------------------------------------------------------------------Hourly and daily report slide Script
@@ -10,6 +10,7 @@ $(document).ready(function () {
     let surfSlideContent = $('.SurfHourlyReportSlide');
     let surfSmScreen = $('.smSurfHourlyReportSlide');
 
+    // Report Carousel Control
     $('.arrowsControl').each(function () {
         $(this).click(function () {
             let arrowSide = $(this).attr('id');
@@ -242,7 +243,7 @@ scrollButton.click(() => {
     $('#beachReport').hide();
 });
 
-// -----------------------------------------------------------------------------Surfboard page Script
+// -------------------------------------------------------Surfboard page Script-------------------------------------------------- //
 
 // Show/Hide text button
 let buttonText = $('.showHideText');
@@ -263,8 +264,9 @@ $('.showHideText').click(() => {
     }
 });
 
+// Add arrowUp and arrowDown Class on mouse over and change the text inside the button
 function readTextIn(buttonText) {
-    if(buttonText.text() === "Hide") {
+    if (buttonText.text() === "Hide") {
         buttonText.mouseover(() => {
             buttonText.addClass('arrowUp');
             buttonText.removeClass('arrowDown');
@@ -281,6 +283,77 @@ function readTextIn(buttonText) {
     }
 };
 readTextIn(buttonText);
+
+// Surfboard Calculator Script
+$('#btnCalculator').click(() => {
+    let weightAbility = weightAbilityRel();
+    let age = ageFactorCalc();
+    let fitness = fitnessFactorCalc();
+    let sizes = boardSizesCalc();
+    let type = $('#styleInput option:selected').text().substr(0, 10);
+
+    var boardVolume = volumeCalc(weightAbility.weiAbFactor, age.ageFactor, fitness.fitnessFactor);
+
+    boardCalcValidation(sizes, boardVolume, type);
+
+    $('#btnCalculator').addClass('btnCalculatorOnClick');
+    setTimeout(() => {
+        $('#btnCalculator').removeClass('btnCalculatorOnClick');
+    }, 500);
+});
+
+// Reset the form without refresh the page
+$('#btnReset').click(() => {
+    let selectEl = $('.custom-select');
+
+    selectEl.each((key, value) => {
+        if ($(value).val() === null) {
+            $(value).removeClass('warningBorders');
+            $(value).next().css('display', 'none');
+        } else if ($(value).val() !== null) {
+            $(value).val('Choose one option');
+            $('#boardSizes').removeClass('boardSizesDisplay');
+            $('#boardSizes').addClass('boardSizesDisplayHide');
+        };
+    });
+});
+
+//Calculates the board volume
+function volumeCalc(volume, ageFactor, fitnessFactor) {
+    return parseFloat((volume * ageFactor * fitnessFactor).toFixed(2));
+};
+
+//Prints the answer (board sizes, volume and board type) on output element underneath the clear form button
+function printedAnswer(boardLength, boardWidth, boardThickness, boardVolume, boardType) {
+    $('#boardType').text(boardType);
+    $('#boardLength').text(boardLength);
+    $('#boardWidth').text(boardWidth);
+    $('#boardThickness').text(boardThickness);
+    $('#boardVolume').text(`${boardVolume} Ltrs`);
+};
+
+// validates the form checking then executes the print function on screen if each input is filled properly
+function boardCalcValidation(sizes, boardVolume, type) {
+    let selectEl = $('.custom-select');
+   
+    selectEl.each((key, value) => {
+        if ($(value).val() === null) {
+            $(value).addClass('warningBorders');
+            $(value).next().css('display', 'inline-block');
+            $('#boardSizes').removeClass('boardSizesDisplay');
+            $('#boardSizes').addClass('boardSizesDisplayHide');
+        } else if ($('#weightInput').val() === null || $('#ageInput').val() === null || $('#abilityInput').val() === null || $('#fitnessInput').val() === null || $('#styleInput').val() === null) {
+            $('#boardSizes').removeClass('boardSizesDisplay');
+            $('#boardSizes').addClass('boardSizesDisplayHide');
+        } else if ($(value).val() !== null) {
+            $(value).removeClass('warningBorders');
+            $(value).next().css('display', 'none');
+            $('#boardSizes').removeClass('boardSizesDisplayHide');
+            $('#boardSizes').addClass('boardSizesDisplay');
+            printedAnswer(sizes.boardLength, sizes.boardWidth, sizes.boardThickness, boardVolume, type);
+        }
+    });
+};
 
 
 

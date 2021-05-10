@@ -148,21 +148,6 @@ div#map {
     color: #5eff00;
 }
 
-@keyframes nodeInserted {
-    from {
-        opacity: 0.99;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-.reportCard>.reportLink {
-    animation-duration: 0.001s;
-    animation-name: nodeInserted;
-}
-
 /* ----------------------------------Local Report */
 
 #beachReport {
@@ -510,6 +495,59 @@ div#map {
 
 .boardCalculator {
     margin-top: 20px;
+}
+
+.boardCalculator h3 {
+    margin-bottom: 30px;
+}
+
+#btnCalculator {
+    border: 1px solid #569532;
+    color: #569532;
+}
+
+#btnCalculator:hover {
+    background-color: #569532;
+    color: #fff;
+}
+
+.btnCalculatorOnClick {
+    height: 10vh;
+    background-color: #569532;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+#btnReset {
+    color: #555;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+
+#btnReset:hover {
+    color: #000;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.boardSizesDisplay {
+    display: inline-block;
+}
+
+.boardSizesDisplayHide {
+    display: none;
+}
+
+/* ----------------------------------Validation of Calculator Form */
+.warningMsg {
+    display: none;
+    color: red;
+}
+
+.warningBorders {
+    border: 1px solid red;
 }
 
 /* ----------------------------------Footer */

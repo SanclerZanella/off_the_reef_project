@@ -52,11 +52,15 @@
 
     <main>
         <div class="row no-gutters boardPageContent">
+
+            <!-- Page cover image and title -->
             <div class="col-12 boardsCover creditLink">
-                <img src="assets/images/index/surfboards.jpg" alt="Surfboards page cover image">
+                <img src="assets/images/surfboards_page/surfboards.jpg" alt="Surfboards page cover image">
                 <div class="coverText">
                     <h1>Choosing The Right Surfboard</h1>
                 </div>
+
+                <!-- image credit -->
                 <small>Image Credit: <a href="https://www.pexels.com/pt-br/@chelsey-horne-225035" target="_blank"
                         aria-label="Go to image credit website">
                         Chelsey Horne</a></small>
@@ -65,11 +69,16 @@
             <div class="col-12">
                 <div class="row no-gutters">
                     <div class="col-12">
+
+                        <!-- Surfboard Calculator brief | grid system from bootstrap -->
                         <div class="row no-gutters boardTextContent">
+
+                            <!-- Brief title -->
                             <div class="col-12">
                                 <h3 class="text-center">About the Surfboard Calculator</h3>
                             </div>
 
+                            <!-- Brief text -->
                             <div class="col-12 text-left content-alignment">
                                 <p>Choosing the right surfboard is one of the most, if not the most important purchasing
                                     decision you’ll
@@ -90,7 +99,7 @@
                                     believe it or not, your fitness level. <br><br></p>
                             </div>
 
-
+                            <!-- Brief text hidden -->
                             <div class="col-12 text-left toggleText content-alignment">
 
                                 <p>It all comes into play when buying a board, not to mention paraphernalia like
@@ -172,6 +181,7 @@
                                 </p>
                             </div>
                         </div>
+                        <!-- Text credit -->
                         <div class="col-12 creditLink authorCredit">
                             <small>Author Credit: <a href="https://www.surfnation.com.au/" target="_blank"
                                     aria-label="Go to author credit website">
@@ -179,18 +189,182 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Expand and hide text button -->
                 <div class="col-12 content-alignment">
                     <div class="showHideText">
                         <p class="text-center">Read</p>
                     </div>
                 </div>
             </div>
+
+            <!-- Surfboard calculator form | uses form and grid system from bootstrap-->
         </div>
         <div class="col-12">
             <div class="row no-gutters boardCalculator">
                 <hr class="fineHr">
+
+                <!-- Surfboard calculator title -->
                 <div class="col-12 text-center">
                     <h3>Surfboard Calculator</h3>
+                </div>
+            </div>
+            <div class="row no-gutters">
+                <div class="col-12">
+                    <form method="get" autocomplete="on">
+                        <fieldset>
+                            <div class="form-row no-gutters content-alignment">
+
+                                <!-- Weight input -->
+                                <div class="form-group col-4">
+                                    <label for="weightInput">Weight(Kg)</label><br>
+                                    <select id="weightInput" class="custom-select" name="weightInput" required>
+                                        <option selected disabled hidden>Choose one option</option>
+                                        <option value="w35_39_under">35 - 39 or Under</option>
+                                        <option value="w40_44">40 - 44</option>
+                                        <option value="w45_49">45 - 49</option>
+                                        <option value="w50_54">50 - 54</option>
+                                        <option value="w55_59">55 - 59</option>
+                                        <option value="w60_64">60 - 64</option>
+                                        <option value="w65_69">65 - 69</option>
+                                        <option value="w70_74">70 - 74</option>
+                                        <option value="w75_79">75 - 79</option>
+                                        <option value="w80_84">80 - 84</option>
+                                        <option value="w85_89">85 - 89</option>
+                                        <option value="w90_94">90 - 94</option>
+                                        <option value="w95_99">95 - 99</option>
+                                        <option value="w100_104">100 - 104</option>
+                                        <option value="w105_109">105 - 109</option>
+                                        <option value="w110_more">110 or more</option>
+                                    </select>
+
+                                    <!-- Validation warning message -->
+                                    <small class="warningMsg"><i class="fas fa-exclamation-circle"></i> Please select
+                                        your weight, it's essential to obtain the result</small>
+                                </div>
+
+                                <!-- Age input -->
+                                <div class="form-group col-4">
+                                    <label for="ageInput">How old are you?</label><br>
+                                    <select id="ageInput" class="custom-select" name="ageInput" required>
+                                        <option selected disabled hidden>Choose one option</option>
+                                        <option value="a0_To_30">0 - 30</option>
+                                        <option value="a31_To_50">31 - 50</option>
+                                        <option value="a51_To_60">51 - 60</option>
+                                        <option value="a60_more">60 or more</option>
+                                    </select>
+
+                                    <!-- Validation warning message -->
+                                    <small class="warningMsg"><i class="fas fa-exclamation-circle"></i> Please select
+                                        your age, it's essential to obtain the result</small>
+                                </div>
+
+                                <!-- Ability input -->
+                                <div class="form-group col-4">
+                                    <label for="abilityInput">What's your surf ability level?</label><br>
+                                    <select id="abilityInput" class="custom-select" name="abilityLevel" required>
+                                        <option selected disabled hidden>Choose one option</option>
+                                        <option value="advancedPlus">Advanced+</option>
+                                        <option value="advanced">Advanced</option>
+                                        <option value="inter_adv">Intermediate / Advanced</option>
+                                        <option value="intermediate">Intermediate</option>
+                                        <option value="beginner">Beginner</option>
+                                    </select>
+
+                                    <!-- Validation warning message -->
+                                    <small class="warningMsg"><i class="fas fa-exclamation-circle"></i> Please select
+                                        your ability level, it's essential to obtain the result</small>
+                                </div>
+
+                                <!-- Fitness condition input -->
+                                <div class="form-group col-4">
+                                    <label for="fitnessInput">What's your Fitness Condition?</label><br>
+                                    <select id="fitnessInput" class="custom-select" name="fitnessLevel" required>
+                                        <option selected disabled hidden>Choose one option</option>
+                                        <option value="excellent">Excellent</option>
+                                        <option value="good">Good</option>
+                                        <option value="average">Average</option>
+                                        <option value="poor">Poor</option>
+                                    </select>
+
+                                    <!-- Validation warning message -->
+                                    <small class="warningMsg"><i class="fas fa-exclamation-circle"></i> Please select
+                                        your Fitness Condition, it's essential to obtain the result</small>
+                                </div>
+
+                                <!-- Surfboard type input -->
+                                <div class="form-group col-4">
+                                    <label for="styleInput">What's your prefered surfboard style?</label><br>
+                                    <select id="styleInput" class="custom-select" name="fitnessLevel" required>
+                                        <option selected disabled hidden>Choose one option</option>
+                                        <option value="shortboardSize">Shortboard Size</option>
+                                        <option value="funboardSize">Funboard Size</option>
+                                        <option value="longboardSize">Longboard Size</option>
+                                    </select>
+
+                                    <!-- Validation warning message -->
+                                    <small class="warningMsg"><i class="fas fa-exclamation-circle"></i> Please select
+                                        your surfboard style, it's essential to obtain the result</small>
+                                </div>
+                            </div>
+
+                            <div class="form-row no-gutters">
+
+                                <!-- Calculate button -->
+                                <div class="form-group col-12 content-alignment">
+                                    <button type="button" id="btnCalculator" class="btn btn-lg">Calculate</button>
+                                </div>
+
+                                <!-- Clear form button -->
+                                <div class="form-group col-12 content-alignment">
+                                    <button type="button" id="btnReset">Clear form</button>
+                                </div>
+                                <hr class="fineHr">
+                            </div>
+
+                            <div class="form-row no-gutters">
+                                <div class="form-group col-12 content-alignment">
+
+                                    <!-- Output calculator values (answer) | uses table and grid system from bootstrap-->
+                                    <output name="boardSizes" id="boardSizes" class="boardSizesDisplayHide"
+                                        for="weightInput ageInput abilityInput fitnessInput">
+                                        <div class="row no-gutters">
+                                            <div class="col-12">
+
+                                                <!-- Answer title -->
+                                                <h5 class="text-center">Surfboard Sizes</h5>
+                                                <h6 class="text-center" id="boardType"></h6>
+                                                <table class="table table-borderless text-center">
+
+                                                    <!-- Sizes titles -->
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">Length</th>
+                                                            <th scope="col">width</th>
+                                                            <th scope="col">Thickness</th>
+                                                            <th scope="col">Volume</th>
+                                                        </tr>
+                                                    </thead>
+
+                                                    <!-- Sizes values -->
+                                                    <tbody>
+                                                        <tr>
+                                                            <td id="boardLength"></td>
+                                                            <td id="boardWidth"></td>
+                                                            <td id="boardThickness"></td>
+                                                            <td id="boardVolume"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </output>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -198,6 +372,7 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div id="socialMedia">
             <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
@@ -207,6 +382,7 @@
         <p>© 2021 - Off The Reef</p>
     </footer>
 
+    <!-- External resource -->
     <script src="https://kit.fontawesome.com/169bbd8201.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -218,6 +394,7 @@
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/config.js"></script>
+    <script src="assets/scripts/dataTables.js"></script>
 </body>
 
 </html>
