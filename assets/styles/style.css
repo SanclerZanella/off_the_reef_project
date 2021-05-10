@@ -441,6 +441,19 @@ div#map {
     width: 70%;
 }
 
+.guideSubTitle {
+    color: #569532;
+}
+
+.guideListDesc ul {
+    list-style: none;
+    margin-left: 150px;
+}
+
+.guideListDesc p {
+    width: 80%;
+}
+
 .toggleText {
     display: none;
 }
