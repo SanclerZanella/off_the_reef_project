@@ -421,7 +421,7 @@ div#map {
 }
 
 .coverText h1 {
-    font-size: 20vh;
+    font-size: 9rem;
 }
 
 .boardsCover img {
@@ -647,6 +647,14 @@ footer i:hover {
         bottom: 225px;
         left: 520px;
     }
+
+    .coverText h1 {
+        font-size: 18rem;
+    }
+
+    .guideListDesc ul {
+        margin-left: 180px;
+    }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1439px) {
@@ -733,6 +741,19 @@ footer i:hover {
     #surfHourlyNext {
         bottom: 225px;
         left: 390px;
+    }
+
+    .coverText h1 {
+        font-size: 16rem;
+    }
+
+    .guideListDesc ul {
+        margin-left: 115px;
+    }
+
+    .authorCredit {
+        margin-top: 5px;
+        margin-left: 130px;
     }
 }
 
@@ -888,6 +909,23 @@ footer i:hover {
         bottom: 225px;
         left: 160px;
     }
+
+    .coverText h1 {
+        font-size: 11rem;
+    }
+
+    .guideListDesc ul {
+        margin-left: 75px;
+    }
+
+    .authorCredit {
+        margin-top: 5px;
+        margin-left: 100px;
+    }
+
+    #calculatorForm label {
+        font-size: 0.90rem;
+    }
 }
 
 @media screen and (min-width: 425px) and (max-width: 767px) {
@@ -1034,6 +1072,30 @@ footer i:hover {
         bottom: 225px;
         left: 160px;
     }
+
+    .coverText h1 {
+        font-size: 6.7rem;
+    }
+
+    .guideListDesc ul {
+        margin-left: 25px;
+    }
+
+    .authorCredit {
+        margin-top: 0;
+        margin-bottom: 15px;
+        margin-left: 35px;
+        font-size: 0.88rem;
+    }
+
+    #calculatorForm label {
+        font-size: 0.8rem;
+    }
+
+    #calculatorForm small {
+        font-size: 0.6rem;
+        font-weight: 700;
+    }
 }
 
 @media screen and (min-width: 414px) and (max-width: 424px) {
@@ -1166,6 +1228,30 @@ footer i:hover {
     #smSurfHourlyNext {
         bottom: 225px;
         left: 130px;
+    }
+
+    .coverText h1 {
+        font-size: 6.7rem;
+    }
+
+    .guideListDesc ul {
+        margin-left: 25px;
+    }
+
+    .authorCredit {
+        margin-top: 0;
+        margin-bottom: 15px;
+        margin-left: 35px;
+        font-size: 0.88rem;
+    }
+
+    #calculatorForm label {
+        font-size: 0.8rem;
+    }
+
+    #calculatorForm small {
+        font-size: 0.6rem;
+        font-weight: 700;
     }
 }
 
@@ -1305,6 +1391,38 @@ footer i:hover {
         bottom: 225px;
         left: 130px;
     }
+
+    .coverText h1 {
+        font-size: 6rem;
+    }
+
+    .boardTextContent p {
+        width: 90%;
+    }
+
+    .guideListDesc ul {
+        margin-left: 0;
+    }
+
+    .authorCredit {
+        margin-top: 0;
+        margin-bottom: 15px;
+        margin-left: 0;
+        font-size: 0.75rem;
+    }
+
+    #calculatorForm label {
+        font-size: 0.75rem;
+    }
+
+    #calculatorForm small {
+        font-size: 0.6rem;
+        font-weight: 700;
+    }
+
+    output td {
+        font-size: 0.9rem;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 374px) {
@@ -1441,5 +1559,41 @@ footer i:hover {
     #smSurfHourlyNext {
         bottom: 225px;
         left: 125px;
+    }
+
+    .coverText h1 {
+        font-size: 14vh;
+    }
+
+    .boardTextContent p {
+        width: 90%;
+    }
+
+    .guideListDesc ul {
+        margin-left: 0;
+    }
+
+    .authorCredit {
+        margin-top: 0;
+        margin-bottom: 15px;
+        margin-left: 0;
+        font-size: 0.75rem;
+    }
+
+    #calculatorForm label {
+        font-size: 0.75rem;
+    }
+
+    #calculatorForm small {
+        font-size: 0.6rem;
+        font-weight: 700;
+    }
+
+    output tr {
+        font-size: 0.8rem;
+    }
+
+    output td {
+        font-size: 0.8rem;
     }
 }
