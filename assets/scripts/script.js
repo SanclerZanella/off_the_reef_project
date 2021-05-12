@@ -362,16 +362,16 @@ let closeButton = $('.close').first();
 
 $(document).ready(() => {
     feedbackButton.click(() => {
-        modal.addClass('visible');
+        modal.show(500);
     });
 
     closeButton.click(() => {
-        modal.removeClass('visible');
+        modal.hide(500);
     });
 
     $(document).click((event) => {
         if (!$(event.target).closest('#feedbackButton,.modal-content').length) {
-            $("body").find(modal).removeClass('visible');
+            modal.hide(500);
         };
     });
 });
