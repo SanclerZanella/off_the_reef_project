@@ -554,6 +554,7 @@ div#map {
 }
 
 /* ----------------------------------Validation of Calculator Form */
+
 .warningMsg {
     display: none;
     color: red;
@@ -563,12 +564,155 @@ div#map {
     border: 1px solid red;
 }
 
+/* --------------------------------------------------- FEEDBACK PAGE -----------------------------------------------------------*/
+
+.backgroundContainer {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.feedBackGround {
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* filter: opacity(0.9); */
+}
+
+.buttonContainer {
+    color: #fff;
+    text-align: center;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(66, 66, 66, 0.514);
+    border-radius: 5%;
+    padding: 30px;
+}
+
+.buttonContainer h1 {
+    margin-bottom: 50px;
+}
+
+.buttonContainer button {
+    border: 1px solid #fff;
+    outline: none;
+    color: #fff;
+    font-weight: 700;
+    background-color: #569532;
+}
+
+.buttonContainer button:hover {
+    color: #569532;
+    background-color: #fff;
+    border: 3px solid #569532;
+}
+
+.feedbackCredit {
+    position: absolute;
+    top: 96%;
+    left: 0.1%;
+}
+
+.feedbackCredit small {
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.feedbackCredit a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.visible {
+    display: block;
+}
+
+.modal-content {
+    background-color: #ededed;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.modal-content span {
+    width: 1%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.feedbackTitle h3 {
+    margin-bottom: 25px;
+}
+
+.feedbackForm {
+    text-align: left;
+}
+
+.feedbackForm label {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.feedbackForm textarea {
+    resize: none;
+}
+
+.feedbackWarning {
+    display: none;
+    color: red;
+}
+
+.feedbackButton {
+    margin-top: 10px;
+    color: #fff;
+    font-weight: 700;
+    background-color: #569532;
+    border: 1px solid #fff;
+    outline: none;
+}
+
+.feedbackButton:hover {
+    background-color: #fff;
+    color: #569532;
+    border: 3px solid #569532;
+}
+
 /* ----------------------------------Footer */
 
 footer {
     text-align: center;
     background: #569532;
-    opacity: 0.8;
 }
 
 footer i {

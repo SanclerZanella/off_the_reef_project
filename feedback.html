@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Surfboard Calculator | Off The Reef</title>
+
+    <link rel="icon" href="assets/images/wave1.png" type="image/icon_type">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body>
+
+    <!-- Header section: Includes the Navbar with logo within. Navbar template from Bootstrap 4------------------------------------->
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light no-gutters">
+
+            <!-- Logo -->
+
+            <a id="navLogo" class="navbar-brand" href="index.html">
+                <img src="assets/images/index/off_the_reef_nav_logo.png" alt="off the reef logo">
+            </a>
+
+            <!-- Toggle Button -->
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsiveNavbar"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="responsiveNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="surfboards.html">Surfboards</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Feedback <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="row no-gutters">
+                <div class="col-12 backgroundContainer">
+                    <img class="feedBackGround img-centered" src="assets/images/feedback/feedbackBackground.jpg"
+                        alt="Background image">
+                    <div class="buttonContainer">
+                        <h1>We Welcome your Feedback</h1>
+                        <button id="feedbackButton" class="feedbackButton btn-lg">Let's Talk</button>
+                    </div>
+                    <div class="feedbackCredit">
+                        <small>Image Credit: <a href="https://www.pexels.com/pt-br/@pixabay" target="_blank"
+                                aria-label="Go to image credit website">
+                                Pixabay</a></small>
+                    </div>
+                    <div id="feedbackModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="row no-gutters text-center">
+                                <div class="col-12 feedbackTitle">
+                                    <h3>We need your feedback</h3>
+                                    <hr>
+                                </div>
+                                <div class="col-12">
+                                    <form method="GET" class="feedbackForm">
+                                        <div class="form-group form-row no-gutters">
+
+                                            <div class="col-6">
+                                                <label for="feedbackName">Your Name:</label>
+                                                <input type="text" id="feedbackName" name="feedbackName"
+                                                    class="form-control" aria-describedby="User's name" required>
+                                                <small class="feedbackWarning"><i class="fas fa-exclamation-circle"></i>
+                                                    Please inform your Name.</small>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <label for="feedbackEmail">Your Email:</label>
+                                                <input type="email" id="feedbackEmail" name="feedbackEmail"
+                                                    class="form-control" aria-describedby="User's email" required>
+                                                <small class="feedbackWarning"><i class="fas fa-exclamation-circle"></i>
+                                                    Please inform your Name.</small>
+                                                <small><i class="fas fa-exclamation-circle"></i> We'll never share your
+                                                    email with anyone else.</small>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <hr class="fineHr">
+                                                <label for="feedbackText">Your Feedback:</label>
+                                                <textarea id="feedbackText" name="feedbackText" class="form-control"
+                                                    aria-describedby="User's feedback" cols="60" rows="10"
+                                                    required></textarea>
+                                                <small class="feedbackWarning"><i class="fas fa-exclamation-circle"></i>
+                                                    Your feedback is important.</small>
+                                            </div>
+                                            <div class="col-12 content-alignment">
+                                                <button type="submit" class="btn-lg feedbackButton">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div id="socialMedia">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.spotify.com" target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
+        <p>© 2021 - Off The Reef</p>
+    </footer>
+
+    <!-- External resource -->
+    <script src="https://kit.fontawesome.com/169bbd8201.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="assets/scripts/script.js"></script>
+    <script src="assets/scripts/config.js"></script>
+    <script src="assets/scripts/dataTables.js"></script>
+</body>
+
+</html>
