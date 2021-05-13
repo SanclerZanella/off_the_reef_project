@@ -356,6 +356,7 @@ function boardCalcValidation(sizes, boardVolume, type) {
 
 // -------------------------------------------------------Feedback page Script----------------------------------------------------- //
 
+// Show the feedback form in a modal popup and close the modal when click on close button or any place outside the modal
 let modal = $('#feedbackModal');
 let feedbackButton = $('#feedbackButton');
 let closeButton = $('.close').first();
@@ -374,4 +375,38 @@ $(document).ready(() => {
             modal.hide(500);
         };
     });
+});
+
+// Validation for feedback form
+function validForm(contactForm) {
+
+    let userName = $(contactForm).find('#feedbackName');
+    let userEmail = $(contactForm).find('#feedbackEmail');
+    let userMessage = $(contactForm).find('#feedbackText');
+    let formInput = $('.feedBackInput');
+
+    formInput.each((key, value) => {
+        if ($(value).val() === "") {
+            $(value).addClass('inputWarning');
+            $(value).next().css('display', 'block');
+
+        } else if (userName.val() === "" || userEmail.val() === "" || userMessage.val() === "") {
+            //test
+        } else if ($(value).val() !== "") {
+            $(value).removeClass('inputWarning');
+            $(value).next().css('display', 'none');
+
+            sendMail(contactForm);
+
+            return false;
+        };
+    });
+
+    return false;
+};
+
+// Reset the feedback form
+$('#feedbackReset').click(() => {
+    $('.feedBackInput').removeClass('inputWarning');
+    $('.feedBackInput').next().css('display', 'none');
 });
