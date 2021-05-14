@@ -115,6 +115,8 @@ nav ul li .nav-link:hover {
     border: 3px solid #fff;
 }
 
+/* ---------------------------------------------------------- HOME PAGE --------------------------------------------------------- */
+
 /* ----------------------------------Interactive Map */
 
 .mainHeading {
@@ -150,9 +152,9 @@ div#map {
 
 /* ----------------------------------Local Report */
 
-#beachReport {
+/* #beachReport {
     display: none;
-}
+} */
 
 .generalReportHeadings {
     font-size: 1.2rem;
@@ -166,8 +168,6 @@ div#map {
 
 .reportBackground {
     background-color: #ededed;
-    margin-left: 4%;
-    border-radius: 5%;
 }
 
 .reportBackground:hover {
@@ -186,10 +186,6 @@ div#map {
     font-weight: 500;
 }
 
-.tableColorMark {
-    background-color: #ededed;
-}
-
 #currentTime {
     font-size: 1.2rem;
     font-weight: 500;
@@ -198,132 +194,6 @@ div#map {
 
 .reportHeading {
     margin-top: 20px;
-}
-
-#hourlyPrev {
-    position: relative;
-    top: 100px;
-    right: 500px;
-}
-
-#hourlyNext {
-    position: relative;
-    top: 100px;
-    left: 495px;
-}
-
-.hourlysliderInner {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    position: absolute;
-    bottom: 45px;
-}
-
-.surfHourlysliderInner>div.col-lg-12,
-.hourlysliderInner>div.col-lg-12,
-.dailySliderInner>div.col-lg-12 {
-    display: none;
-}
-
-.hourlysliderInner div.activeHourlyReportSlide,
-.hourlysliderInner div.activeSmHourlyReportSlide,
-.dailySliderInner div.activeDailyReportSlide,
-.surfHourlysliderInner div.activeSurfHourlyReportSlide {
-    display: inline-block;
-}
-
-.hourlyReportSlide {
-    margin-left: 80px;
-}
-
-.hourHeading,
-.dailyHeading {
-    border-bottom: 1px solid rgba(66, 66, 66, 0.514);
-    font-weight: 700;
-}
-
-.hourlyDescription {
-    font-weight: 600;
-}
-
-.hourlyReport {
-    min-height: 50vh;
-    overflow: hidden;
-}
-
-.hourlyReport h4 {
-    margin-left: 80px;
-}
-
-.hourlyReportWeather,
-.dailyReportWeather {
-    margin-left: 5px;
-}
-
-.dailySliderInner {
-    margin-left: 200px;
-    position: relative;
-    bottom: 5px;
-}
-
-.dailyReportsValues,
-.hourReportsValues {
-    background-color: #bebebe;
-}
-
-.dailyReportSlide {
-    min-height: 40vh;
-    overflow: hidden;
-}
-
-#dailyPrev {
-    position: absolute;
-    top: 200px;
-    right: 960px;
-}
-
-#dailyNext {
-    position: absolute;
-    bottom: 160px;
-    left: 940px;
-}
-
-.surfReport {
-    margin-top: 15px;
-}
-
-.surfHourlyReport h4 {
-    margin-left: 40px;
-}
-
-.surfHourlysliderInner {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    position: relative;
-    bottom: 65px;
-}
-
-.SurfHourlyReportSlide {
-    margin-left: 140px;
-}
-
-.hourReportsValues .col-12,
-.dailyReportsValues .col-12 {
-    border-bottom: 1px solid #fff;
-}
-
-#surfHourlyPrev {
-    position: relative;
-    top: 100px;
-    right: 470px;
-}
-
-#surfHourlyNext {
-    position: relative;
-    bottom: 215px;
-    left: 483px;
 }
 
 #myBtn {
@@ -349,48 +219,83 @@ div#map {
     border: 1px solid #569532;
 }
 
-/* ----------------------------------Beach links */
-
-.infoCard {
-    margin: 20px 30px 20px 30px;
-    width: 600px;
-    height: auto;
-    background-color: #ededed;
+.forecastNav {
+    list-style: none;
+    border-bottom: 1px solid rgb(151, 151, 151);
 }
 
-.infoCard:hover {
-    filter: drop-shadow(-3px 6px 9px #636161);
-    top: -10px;
-    cursor: pointer
+.forecastNav li {
+    color: rgb(71, 71, 71);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0 80px 0 80px;
+    display: inline;
+    cursor: pointer;
 }
 
-.coverLink img {
-    width: 100%;
-    height: 60%;
-    object-fit: cover;
-    object-position: center;
+.forecastNav li:hover {
+    color: #000;
+    font-weight: 700;
+    border-bottom: 2px solid #000;
 }
 
-.coverLink {
-    height: 60%;
-    margin: 0 0 10px 0;
-    padding: 0;
-    overflow: hidden;
+.forecastActive {
+    color: #000 !important;
+    font-weight: 700 !important;
+    border-bottom: 2px solid #000 !important;
 }
 
-.placeName {
-    text-align: center;
+.currentWeather {
+    margin: 10px 0 20px 0;
 }
 
-.placeInfo {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
+.nowIconDesc {
+    margin-top: 75px;
 }
 
-.placeInfo p {
-    font-size: 1.5rem;
-    font-family: 'Open Sans', sans-serif;
+#nowDesc {
+    font-weight: 600;
+}
+
+#nowTemp {
+    margin-top: 45px;
+}
+
+#tempValNow {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.gradeSi::after {
+    content: "°";
+}
+
+#nowTemp .tempUnit {
+    font-weight: 600;
+}
+
+.forecastTable {
+    margin-top: 15px;
+    border-left: 1px solid rgb(151, 151, 151);
+    margin-bottom: 10px;
+}
+
+.forecastTableSm {
+    margin-top: 15px 0 10px 0;
+}
+
+span.tableTitle {
+    font-weight: 700;
+    margin: 0 0 20px 5px;
+}
+
+.tableVal {
+    margin-left: 50px;
+}
+
+.tableVal,
+.tableUnit {
+    font-weight: 500;
 }
 
 /* --------------------------------------------------- SURFBOARDS PAGE -----------------------------------------------------------*/
@@ -709,11 +614,15 @@ div#map {
 
 #feedbackReset {
     outline: none;
+    background: none;
+    border: none;
+    color: #555;
 }
 
 #feedbackReset:hover {
     text-decoration: underline;
     font-weight: 700;
+    color: #000;
 }
 
 /* ----------------------------------Footer */
@@ -935,131 +844,8 @@ footer i:hover {
         font-size: 2rem;
     }
 
-    .generalReportAdjust {
-        margin-left: 70px;
-    }
-
-    .mdAdjust {
-        margin-left: 60px;
-    }
-
-    .smHourlyReportSlide h7 {
-        font-weight: bold;
-    }
-
-    .hourlyReportWeather,
-    .dailyReportWeather {
-        margin-left: 0;
-    }
-
-    .hourlyReport {
-        min-height: 33vh;
-        overflow: hidden;
-    }
-
-    .hourlyReport h4 {
-        margin-left: 50px;
-    }
-
-    .hourlyReport .fineHr {
-        margin-left: 170px;
-    }
-
-    .hourlysliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .hourlysliderInner div.activeSmHourlyReportSlide {
-        display: inline-block;
-    }
-
-    #smHourlyPrev {
-        top: 80px;
-        right: 230px;
-    }
-
-    #smHourlyNext {
-        top: 80px;
-        left: 230px;
-    }
-
-    .dailyAdjust {
-        margin-left: 41px;
-    }
-
-    .valuesAdjust {
-        margin-left: 50px;
-    }
-
-    .dailySmReportSlide {
-        min-height: 100%;
-        overflow: hidden;
-    }
-
-    .smDailySliderInner {
-        position: relative;
-        bottom: 60px;
-    }
-
-    .smDailySliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .smDailySliderInner div.activeSmDailyReportSlide {
-        display: inline-block;
-    }
-
-    .dailySmReportSlide :is(h6, h7, .col-6) {
-        font-weight: bold;
-    }
-
-    #smDailyPrev {
-        top: 150px;
-        right: 280px;
-    }
-
-    #smDailyNext {
-        top: 150px;
-        left: 280px;
-    }
-
-    .surfHourlyReport {
-        max-height: 50vh;
-        overflow: hidden;
-    }
-
-    .surfHourlyReport h4 {
-        margin-left: 10px;
-    }
-
-    .smSurfHourlyReportSlide h7 {
-        font-weight: bold;
-    }
-
-    .SurfHourlyReportSlide {
-        margin-left: 0;
-    }
-
-    .smSurfHourlysliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .smSurfHourlysliderInner div.activeSmSurfHourlyReportSlide {
-        display: inline-block;
-    }
-
-    .smSurfHourlyReportSlide {
-        bottom: 45px;
-    }
-
-    #smSurfHourlyPrev {
-        top: 100px;
-        right: 160px;
-    }
-
-    #smSurfHourlyNext {
-        bottom: 225px;
-        left: 160px;
+    .forecastNav li {
+        margin: 0 50px 0 50px;
     }
 
     .coverText h1 {
@@ -1095,140 +881,31 @@ footer i:hover {
         height: 20vh;
     }
 
-    .col-md-6 {
-        flex: 0 0 95%;
-        max-width: 95%;
+    .forecastNav li {
+        font-size: 1.1rem;
+        margin: 0 23px 0 10px;
     }
 
-    .placeInfo h6 {
-        font-size: 0.9rem;
+    .nowIconDesc {
+        margin-top: 45px;
     }
 
-    h3 {
-        font-size: 1.5rem;
+    #nowTemp {
+        margin-top: 5px;
     }
 
-    .mdAdjust {
-        margin-left: 20px;
+    div.forecastTableSm {
+        margin-top: 15px 0 10px 0;
     }
 
-    .dailyAdjust {
-        margin-left: 25px;
+    span.tableTitle {
+        font-size: 1.1rem;
+        margin: 0 0 20px 0;
     }
 
-    .valuesAdjust {
+    .tableVal {
+        font-size: 1.1rem;
         margin-left: 35px;
-    }
-
-    .smHourlyReportSlide h7 {
-        font-weight: bold;
-    }
-
-    .hourlyReportWeather,
-    .dailyReportWeather {
-        margin-left: 0;
-    }
-
-    .hourlyReport {
-        min-height: 50vh;
-        overflow: hidden;
-    }
-
-    .hourlyReport h4 {
-        margin-left: 50px;
-    }
-
-    .hourlyReport .fineHr {
-        margin-left: 110px;
-    }
-
-    .hourlysliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .hourlysliderInner div.activeSmHourlyReportSlide {
-        display: inline-block;
-    }
-
-    #smHourlyPrev {
-        top: 70px;
-        right: 140px;
-    }
-
-    #smHourlyNext {
-        top: 70px;
-        left: 140px;
-    }
-
-    .dailySmReportSlide {
-        min-height: 100%;
-        overflow: hidden;
-    }
-
-    .smDailySliderInner {
-        position: relative;
-        bottom: 60px;
-    }
-
-    .smDailySliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .smDailySliderInner div.activeSmDailyReportSlide {
-        display: inline-block;
-    }
-
-    .smSurfHourlyReportSlide h7 {
-        font-weight: bold;
-    }
-
-    .dailySmReportSlide :is(h6, h7, .sunReport) {
-        font-weight: bold;
-    }
-
-    #smDailyPrev {
-        top: 150px;
-        right: 130px;
-    }
-
-    #smDailyNext {
-        top: 150px;
-        left: 135px;
-    }
-
-    .surfHourlyReport {
-        max-height: 65vh;
-        overflow: hidden;
-    }
-
-    .surfHourlyReport h4 {
-        margin-left: 10px;
-    }
-
-    .SurfHourlyReportSlide {
-        margin-left: 0;
-    }
-
-    .smSurfHourlysliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .smSurfHourlysliderInner div.activeSmSurfHourlyReportSlide {
-        display: inline-block;
-    }
-
-    .smSurfHourlyReportSlide {
-        bottom: 45px;
-    }
-
-    #smSurfHourlyPrev {
-        top: 100px;
-        right: 160px;
-    }
-
-    #smSurfHourlyNext {
-        bottom: 225px;
-        left: 160px;
     }
 
     .coverText h1 {
@@ -1277,127 +954,31 @@ footer i:hover {
         height: 20vh;
     }
 
-    .mdAdjust {
-        margin-left: 20px;
+    .forecastNav li {
+        font-size: 1.1rem;
+        margin: 0 20px 0 10px;
     }
 
-    .dailyAdjust {
-        margin-left: 25px;
+    .nowIconDesc {
+        margin-top: 45px;
     }
 
-    .valuesAdjust {
+    #nowTemp {
+        margin-top: 5px;
+    }
+
+    div.forecastTableSm {
+        margin-top: 15px 0 10px 0;
+    }
+
+    span.tableTitle {
+        font-size: 1.1rem;
+        margin: 0 0 20px 0;
+    }
+
+    .tableVal {
+        font-size: 1.1rem;
         margin-left: 35px;
-    }
-
-    .smHourlyReportSlide h7 {
-        font-weight: bold;
-    }
-
-    .hourlyReportWeather,
-    .dailyReportWeather {
-        margin-left: 0;
-    }
-
-    .hourlyReport {
-        min-height: 40vh;
-        overflow: hidden;
-    }
-
-    .hourlyReport h4 {
-        margin-left: 50px;
-    }
-
-    .hourlyReport .fineHr {
-        margin-left: 110px;
-    }
-
-    .hourlysliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .hourlysliderInner div.activeSmHourlyReportSlide {
-        display: inline-block;
-    }
-
-    #smHourlyPrev {
-        top: 35px;
-        right: 115px;
-    }
-
-    #smHourlyNext {
-        top: 35px;
-        left: 115px;
-    }
-
-    .dailySmReportSlide {
-        min-height: 100%;
-        overflow: hidden;
-    }
-
-    .smDailySliderInner {
-        position: relative;
-        bottom: 60px;
-    }
-
-    .smDailySliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .smDailySliderInner div.activeSmDailyReportSlide {
-        display: inline-block;
-    }
-
-    .smSurfHourlyReportSlide h7 {
-        font-weight: bold;
-    }
-
-    .dailySmReportSlide :is(h6, h7, .sunReport) {
-        font-weight: bold;
-    }
-
-    #smDailyPrev {
-        top: 150px;
-        right: 125px;
-    }
-
-    #smDailyNext {
-        top: 150px;
-        left: 125px;
-    }
-
-    .surfHourlyReport {
-        max-height: 50vh;
-        overflow: hidden;
-    }
-
-    .surfHourlyReport h4 {
-        margin-left: 10px;
-    }
-
-    .SurfHourlyReportSlide {
-        margin-left: 0;
-    }
-
-    .smSurfHourlysliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .smSurfHourlysliderInner div.activeSmSurfHourlyReportSlide {
-        display: inline-block;
-    }
-
-    .smSurfHourlyReportSlide {
-        bottom: 45px;
-    }
-
-    #smSurfHourlyPrev {
-        top: 100px;
-        right: 130px;
-    }
-
-    #smSurfHourlyNext {
-        bottom: 225px;
-        left: 130px;
     }
 
     .coverText h1 {
@@ -1446,132 +1027,27 @@ footer i:hover {
         height: 20vh;
     }
 
-    .mdAdjust {
-        margin-left: 20px;
+    .forecastNav li {
+        font-size: 1.1rem;
+        margin: 0 16px 0 4px;
     }
 
-    .dailyAdjust {
-        margin-left: 25px;
+    .nowIconDesc {
+        margin-top: 35px;
     }
 
-    .valuesAdjust {
+    #nowTemp {
+        margin-top: 5px;
+    }
+
+    span.tableTitle {
+        font-size: 1rem;
+        margin: 0 0 20px 0;
+    }
+
+    .tableVal {
+        font-size: 1rem;
         margin-left: 35px;
-    }
-
-    .smHourlyReportSlide h7 {
-        font-weight: bold;
-    }
-
-    .hourlyReportWeather,
-    .dailyReportWeather {
-        margin-left: 0;
-    }
-
-    .hourlyReport {
-        min-height: 49vh;
-        overflow: hidden;
-    }
-
-    .hourlyReport h4 {
-        margin-left: 50px;
-    }
-
-    .hourlyReport .fineHr {
-        margin-left: 110px;
-    }
-
-    .hourlysliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .hourlysliderInner div.activeSmHourlyReportSlide {
-        display: inline-block;
-    }
-
-    #smHourlyPrev {
-        top: 35px;
-        right: 115px;
-    }
-
-    #smHourlyNext {
-        top: 35px;
-        left: 115px;
-    }
-
-    .dailySmReportSlide {
-        min-height: 100%;
-        overflow: hidden;
-    }
-
-    .smDailySliderInner {
-        position: relative;
-        bottom: 60px;
-    }
-
-    .smDailySliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .smDailySliderInner div.activeSmDailyReportSlide {
-        display: inline-block;
-    }
-
-    .surfHourlyReport {
-        max-height: 65vh;
-        overflow: hidden;
-    }
-
-    .smSurfHourlyReportSlide h7 {
-        font-weight: bold;
-    }
-
-    .dailySmReportSlide :is(h6, h7, .sunReport) {
-        font-weight: bold;
-    }
-
-    #smDailyPrev {
-        top: 150px;
-        right: 125px;
-    }
-
-    #smDailyNext {
-        top: 150px;
-        left: 125px;
-    }
-
-    .surfHourlyReport {
-        max-height: 65vh;
-        overflow: hidden;
-    }
-
-    .surfHourlyReport h4 {
-        margin-left: 10px;
-    }
-
-    .SurfHourlyReportSlide {
-        margin-left: 0;
-    }
-
-    .smSurfHourlysliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .smSurfHourlysliderInner div.activeSmSurfHourlyReportSlide {
-        display: inline-block;
-    }
-
-    .smSurfHourlyReportSlide {
-        bottom: 45px;
-    }
-
-    #smSurfHourlyPrev {
-        top: 100px;
-        right: 130px;
-    }
-
-    #smSurfHourlyNext {
-        bottom: 225px;
-        left: 130px;
     }
 
     .coverText h1 {
@@ -1633,131 +1109,35 @@ footer i:hover {
         height: 20vh;
     }
 
-    .mdAdjust {
-        margin-left: 20px;
+    .forecastNav li {
+        font-size: 1rem;
+        margin: 0 8px 0 0;
     }
 
-    .dailyAdjust {
-        margin-left: 15px;
+    .nowIconDesc {
+        margin-top: 25px;
     }
 
-    .valuesAdjust {
-        margin-left: 0;
+    #nowDesc {
+        font-size: 0.9rem;
     }
 
-    .smHourlyReportSlide h7 {
-        font-weight: bold;
+    #nowTemp {
+        margin-top: 5px;
     }
 
-    .hourlyReportWeather,
-    .dailyReportWeather {
-        margin-left: 0;
+    span.tableTitle {
+        font-size: 0.9rem;
+        margin: 0 0 20px 0;
     }
 
-    .hourlyReport {
-        min-height: 55vh;
-        overflow: hidden;
+    .tableVal {
+        font-size: 1rem;
+        margin-left: 35px;
     }
 
-    .hourlyReport h4 {
-        margin-left: 50px;
-    }
-
-    .hourlyReport .fineHr {
-        margin-left: 90px;
-    }
-
-    .hourlysliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .hourlysliderInner div.activeSmHourlyReportSlide {
-        display: inline-block;
-    }
-
-    #smHourlyPrev {
-        top: 35px;
-        right: 90px;
-    }
-
-    #smHourlyNext {
-        top: 35px;
-        left: 90px;
-    }
-
-    .maxMinValue {
-        margin-left: 10px;
-    }
-
-    .dailySmReportSlide {
-        min-height: 100%;
-        overflow: hidden;
-    }
-
-    .smDailySliderInner {
-        position: relative;
-        bottom: 60px;
-    }
-
-    .smDailySliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .smDailySliderInner div.activeSmDailyReportSlide {
-        display: inline-block;
-    }
-
-    .smSurfHourlyReportSlide h7 {
-        font-weight: bold;
-    }
-
-    .dailySmReportSlide :is(h6, h7, .sunReport) {
-        font-weight: bold;
-    }
-
-    #smDailyPrev {
-        top: 210px;
-        right: 105px;
-    }
-
-    #smDailyNext {
-        top: 210px;
-        left: 105px;
-    }
-
-    .surfHourlyReport {
-        max-height: 65vh;
-        overflow: hidden;
-    }
-
-    .surfHourlyReport h4 {
-        margin-left: 10px;
-    }
-
-    .SurfHourlyReportSlide {
-        margin-left: 0;
-    }
-
-    .smSurfHourlysliderInner .col-lg-12 {
-        display: none;
-    }
-
-    .smSurfHourlysliderInner div.activeSmSurfHourlyReportSlide {
-        display: inline-block;
-    }
-
-    .smSurfHourlyReportSlide {
-        bottom: 45px;
-    }
-
-    #smSurfHourlyPrev {
-        top: 100px;
-        right: 125px;
-    }
-
-    #smSurfHourlyNext {
-        bottom: 225px;
-        left: 125px;
+    .tableUnit {
+        font-size: 0.8rem;
     }
 
     .coverText h1 {
