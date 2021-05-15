@@ -43,22 +43,6 @@ h6 {
     width: 50%;
 }
 
-/* ----------------------------------Carousel control */
-
-.arrowsControl {
-    background-color: rgba(22, 22, 22, 0.493);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: relative;
-    z-index: 999;
-    cursor: pointer;
-}
-
-.arrowsControl:hover {
-    background-color: rgba(0, 0, 0, 0.671);
-}
-
 /* ----------------------------------Navbar */
 
 nav {
@@ -219,6 +203,36 @@ div#map {
     border: 1px solid #569532;
 }
 
+/* ----------------------------------------------Forecast report */
+.gradeSi::after {
+    content: "°";
+}
+
+.forecastTable {
+    margin-top: 15px;
+    border-left: 1px solid rgb(151, 151, 151);
+    margin-bottom: 10px;
+}
+
+.forecastTableSm {
+    margin-top: 15px 0 10px 0;
+}
+
+span.tableTitle {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.tableVal {
+    margin-left: 50px;
+}
+
+.tableVal,
+.tableUnit {
+    font-weight: 500;
+}
+
+/* --------------------------------------------------Forecast navbar */
 .forecastNav {
     list-style: none;
     border-bottom: 1px solid rgb(151, 151, 151);
@@ -245,15 +259,22 @@ div#map {
     border-bottom: 2px solid #000 !important;
 }
 
+/* ------------------------------------------- Current Report (now) */
 .currentWeather {
     margin: 10px 0 20px 0;
 }
 
+.currentData {
+    border-bottom: 1px solid #000;
+    margin-bottom: 0.3em;
+}
+
 .nowIconDesc {
-    margin-top: 75px;
+    margin-top: 105px;
 }
 
 #nowDesc {
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
@@ -262,40 +283,87 @@ div#map {
 }
 
 #tempValNow {
-    font-size: 3rem;
+    font-size: 7rem;
     font-weight: 600;
-}
-
-.gradeSi::after {
-    content: "°";
 }
 
 #nowTemp .tempUnit {
+    font-size: 2rem;
     font-weight: 600;
 }
 
-.forecastTable {
-    margin-top: 15px;
-    border-left: 1px solid rgb(151, 151, 151);
+/* ------------------------------------------- Hourly Report */
+
+.hourlyWeather {
+    cursor: pointer;
     margin-bottom: 10px;
 }
 
-.forecastTableSm {
-    margin-top: 15px 0 10px 0;
+
+.hourlyDate {
+    margin: 1.5em 0 0 1em;
 }
 
-span.tableTitle {
+.hourlyDate span {
     font-weight: 700;
-    margin: 0 0 20px 5px;
 }
 
-.tableVal {
-    margin-left: 50px;
+.hourlyDate p {
+    color: rgb(70, 70, 70);
 }
 
-.tableVal,
-.tableUnit {
-    font-weight: 500;
+.hourIcon {
+    margin-top: 2em;
+}
+
+.hourDesc {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1.2em 1em 0 0;
+}
+
+.tempValHour {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+.hourTemp .tempUnit {
+    font-weight: 700;
+}
+
+.hourFeLike {
+    margin: 2.5em 0 0 1.5em;
+    font-weight: 600;
+}
+
+.hourCloud {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1.8em;
+}
+
+.arrowReport {
+    color: #569532;
+    font-size: 3rem;
+}
+
+#arrowDownHour {
+    margin: 0.3em 0.3em 0 0;
+}
+
+.hourValues {
+    border-bottom: 1px solid #000;
+    margin: 0 0 1em 1em;
+    overflow: hidden;
+}
+
+.hourTitle {
+    font-weight: 700;
+}
+
+.hourVal,
+.hourUnit {
+    font-weight: 600;
 }
 
 /* --------------------------------------------------- SURFBOARDS PAGE -----------------------------------------------------------*/
@@ -746,62 +814,8 @@ footer i:hover {
         height: 20vh;
     }
 
-    .hourlyReport {
-        min-height: 37vh;
-        overflow: hidden;
-    }
-
-    .hourlyReportSlide {
-        margin-left: 65px;
-    }
-
-    #hourlyPrev {
-        top: 100px;
-        right: 405px;
-    }
-
-    #hourlyNext {
-        top: 100px;
-        left: 410px;
-    }
-
-    .dailyReportSlide {
-        min-height: 100%;
-        overflow: hidden;
-        margin-top: 10px;
-    }
-
-    #dailyPrev {
-        top: 250px;
-        right: 750px;
-    }
-
-    #dailyNext {
-        top: 250px;
-        left: 780px;
-    }
-
-    .surfHourlyReport {
-        max-height: 30vh;
-        overflow: hidden;
-    }
-
-    .surfHourlyReport h4 {
-        margin-left: 30px;
-    }
-
-    .SurfHourlyReportSlide {
-        margin-left: 110px;
-    }
-
-    #surfHourlyPrev {
-        top: 100px;
-        right: 385px;
-    }
-
-    #surfHourlyNext {
-        bottom: 225px;
-        left: 390px;
+    .hourDesc {
+        margin: 1.2em 1.5em 0 0;
     }
 
     .coverText h1 {
@@ -848,6 +862,30 @@ footer i:hover {
         margin: 0 50px 0 50px;
     }
 
+    .hourTitle {
+        font-size: 0.88rem;
+    }
+
+    .hourDesc {
+        margin: 1.2em 2em 0 0;
+    }
+
+    .hourTemp {
+        margin-top: 1em;
+    }
+
+    .tempValHour {
+        font-size: 3rem;
+    }
+
+    .hourFeLike {
+        margin: 2em 0 0 1.5em;
+    }
+
+    .hourCloud {
+        margin-top: 1.5em;
+    }
+
     .coverText h1 {
         font-size: 11rem;
     }
@@ -892,6 +930,14 @@ footer i:hover {
 
     #nowTemp {
         margin-top: 5px;
+    }
+
+    #nowDesc {
+        font-size: 1rem;
+    }
+
+    #tempValNow {
+        font-size: 6rem;
     }
 
     div.forecastTableSm {
@@ -961,6 +1007,14 @@ footer i:hover {
 
     .nowIconDesc {
         margin-top: 45px;
+    }
+
+    #nowDesc {
+        font-size: 1rem;
+    }
+
+    #tempValNow {
+        font-size: 6rem;
     }
 
     #nowTemp {
@@ -1033,7 +1087,15 @@ footer i:hover {
     }
 
     .nowIconDesc {
-        margin-top: 35px;
+        margin-top: 55px;
+    }
+
+    #nowDesc {
+        font-size: 1rem;
+    }
+
+    #tempValNow {
+        font-size: 6rem;
     }
 
     #nowTemp {
@@ -1120,6 +1182,14 @@ footer i:hover {
 
     #nowDesc {
         font-size: 0.9rem;
+    }
+
+    #nowDesc {
+        font-size: 0.9rem;
+    }
+
+    #tempValNow {
+        font-size: 4rem;
     }
 
     #nowTemp {
