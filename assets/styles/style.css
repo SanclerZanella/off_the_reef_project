@@ -204,6 +204,7 @@ div#map {
 }
 
 /* ----------------------------------------------Forecast report */
+
 .gradeSi::after {
     content: "°";
 }
@@ -233,6 +234,7 @@ span.tableTitle {
 }
 
 /* --------------------------------------------------Forecast navbar */
+
 .forecastNav {
     list-style: none;
     border-bottom: 1px solid rgb(151, 151, 151);
@@ -260,6 +262,7 @@ span.tableTitle {
 }
 
 /* ------------------------------------------- Current Report (now) */
+
 .currentWeather {
     margin: 10px 0 20px 0;
 }
@@ -298,7 +301,6 @@ span.tableTitle {
     cursor: pointer;
     margin-bottom: 10px;
 }
-
 
 .hourlyDate {
     margin: 1.5em 0 0 1em;
@@ -954,6 +956,24 @@ footer i:hover {
         margin-left: 35px;
     }
 
+    #arrowDownHour i {
+        margin: 0 4em 0 0;
+    }
+
+    .hourTitle {
+        font-size: 1rem;
+    }
+
+    .hourDesc {
+        font-size: 0.99rem;
+        margin-top: 1.5em;
+    }
+
+    .tempValHour {
+        font-size: 4rem;
+        margin-left: 1em;
+    }
+
     .coverText h1 {
         font-size: 6.7rem;
     }
@@ -1035,6 +1055,24 @@ footer i:hover {
         margin-left: 35px;
     }
 
+    #arrowDownHour i {
+        margin: 0 4em 0 0;
+    }
+
+    .hourTitle {
+        font-size: 1rem;
+    }
+
+    .hourDesc {
+        font-size: 0.99rem;
+        margin-top: 1.5em;
+    }
+
+    .tempValHour {
+        font-size: 4rem;
+        margin-left: 1em;
+    }
+
     .coverText h1 {
         font-size: 6.7rem;
     }
@@ -1110,6 +1148,24 @@ footer i:hover {
     .tableVal {
         font-size: 1rem;
         margin-left: 35px;
+    }
+
+    .hourTitle {
+        font-size: 0.9rem;
+    }
+
+    .hourDesc {
+        font-size: 0.95rem;
+        margin-top: 1.5em;
+    }
+
+    .tempValHour {
+        font-size: 3.5rem;
+        margin-left: 1em;
+    }
+
+    #arrowDownHour i {
+        margin: 0 3.5em 0 0;
     }
 
     .coverText h1 {
@@ -1208,6 +1264,24 @@ footer i:hover {
 
     .tableUnit {
         font-size: 0.8rem;
+    }
+
+    .hourTitle {
+        font-size: 1.2rem;
+    }
+
+    .hourDesc {
+        font-size: 0.95rem;
+        margin-top: 1.5em;
+    }
+
+    .tempValHour {
+        font-size: 3rem;
+        margin: 2em 0 0 0.7em;
+    }
+
+    #arrowDownHour i {
+        margin: 0 3em 0 0;
     }
 
     .coverText h1 {
