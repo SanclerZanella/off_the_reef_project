@@ -295,50 +295,64 @@ span.tableTitle {
     font-weight: 600;
 }
 
-/* ------------------------------------------- Hourly Report */
+/* ------------------------------------------- Hourly Report & Daily Report & Surf Forecast */
 
-.hourlyWeather {
+.hourlyWeather,
+.dailyWeather,
+.surfForecast {
     cursor: pointer;
-    margin-bottom: 10px;
+    margin: 1em 0 1em 0;
 }
 
-.hourlyDate {
+.hourlyDate,
+.dailylyDate,
+.surfDate {
     margin: 1.5em 0 0 1em;
 }
 
-.hourlyDate span {
+.hourlyDate span,
+.dailylyDate span,
+.surfDate span {
     font-weight: 700;
 }
 
-.hourlyDate p {
+.hourlyDate p,
+.dailylyDate p,
+.surfDate p {
     color: rgb(70, 70, 70);
 }
 
-.hourIcon {
+.hourIcon,
+.dailyIcon {
     margin-top: 2em;
 }
 
-.hourDesc {
+.hourDesc,
+.dailyDesc {
     font-size: 1.2rem;
     font-weight: 600;
     margin: 1.2em 1em 0 0;
 }
 
-.tempValHour {
+.tempValHour,
+.tempValDaily {
     font-size: 4rem;
     font-weight: 600;
 }
 
-.hourTemp .tempUnit {
+.hourTemp .tempUnit,
+.dailyTemp .tempUnit {
     font-weight: 700;
 }
 
-.hourFeLike {
+.hourFeLike,
+.dailyFeLike {
     margin: 2.5em 0 0 1.5em;
     font-weight: 600;
 }
 
-.hourCloud {
+.hourCloud,
+.dailyCloud {
     font-size: 1.2rem;
     font-weight: 600;
     margin-top: 1.8em;
@@ -349,23 +363,58 @@ span.tableTitle {
     font-size: 3rem;
 }
 
-#arrowDownHour {
+#arrowDownHour,
+#arrowDownDaily {
     margin: 0.3em 0.3em 0 0;
 }
 
-.hourValues {
+.hourValues,
+.dailyValues,
+.surfValues {
     border-bottom: 1px solid #000;
     margin: 0 0 1em 1em;
     overflow: hidden;
 }
 
-.hourTitle {
+.hourTitle,
+.dailyTitle,
+.surfTableTitle {
     font-weight: 700;
 }
 
 .hourVal,
-.hourUnit {
+.hourUnit,
+.dailyVal,
+.dailyUnit,
+.surfVal,
+.surfUnit {
     font-weight: 600;
+}
+
+/* ------------------------------------------- Surf Forecast */
+
+.waveIcon {
+    width: 50px;
+}
+
+.surfTitle {
+    font-weight: 700;
+}
+
+.surfFirstVal {
+    font-weight: 600;
+}
+
+.surfFirstTab {
+    margin-top: 1.4em;
+}
+
+.windWave {
+    margin-top: 1em;
+}
+
+#arrowDownSurf {
+    margin-right: 0.2em;
 }
 
 /* --------------------------------------------------- SURFBOARDS PAGE -----------------------------------------------------------*/
@@ -816,7 +865,8 @@ footer i:hover {
         height: 20vh;
     }
 
-    .hourDesc {
+    .hourDesc,
+    .dailyDesc {
         margin: 1.2em 1.5em 0 0;
     }
 
@@ -864,27 +914,34 @@ footer i:hover {
         margin: 0 50px 0 50px;
     }
 
-    .hourTitle {
+    .hourTitle,
+    .dailyTitle,
+    .surfTableTitle {
         font-size: 0.88rem;
     }
 
-    .hourDesc {
+    .hourDesc,
+    .dailyDesc {
         margin: 1.2em 2em 0 0;
     }
 
-    .hourTemp {
+    .hourTemp,
+    .dailyTemp {
         margin-top: 1em;
     }
 
-    .tempValHour {
+    .tempValHour,
+    .tempValDaily {
         font-size: 3rem;
     }
 
-    .hourFeLike {
+    .hourFeLike,
+    .dailyFeLike {
         margin: 2em 0 0 1.5em;
     }
 
-    .hourCloud {
+    .hourCloud,
+    .dailyCloud {
         margin-top: 1.5em;
     }
 
@@ -956,22 +1013,31 @@ footer i:hover {
         margin-left: 35px;
     }
 
-    #arrowDownHour i {
+    #arrowDownHour i,
+    #arrowDownDaily i {
         margin: 0 4em 0 0;
     }
 
-    .hourTitle {
+    .hourTitle,
+    .dailyTitle,
+    .surfTableTitle {
         font-size: 1rem;
     }
 
-    .hourDesc {
+    .hourDesc,
+    .dailyDesc {
         font-size: 0.99rem;
         margin-top: 1.5em;
     }
 
-    .tempValHour {
+    .tempValHour,
+    .tempValDaily {
         font-size: 4rem;
         margin-left: 1em;
+    }
+
+    #arrowDownSurf i {
+        margin-right: 4em;
     }
 
     .coverText h1 {
@@ -1055,22 +1121,31 @@ footer i:hover {
         margin-left: 35px;
     }
 
-    #arrowDownHour i {
+    #arrowDownHour i,
+    #arrowDownDaily i {
         margin: 0 4em 0 0;
     }
 
-    .hourTitle {
+    .hourTitle,
+    .dailyTitle,
+    .surfTableTitle {
         font-size: 1rem;
     }
 
-    .hourDesc {
+    .hourDesc,
+    .dailyDesc {
         font-size: 0.99rem;
         margin-top: 1.5em;
     }
 
-    .tempValHour {
+    .tempValHour,
+    .tempValDaily {
         font-size: 4rem;
         margin-left: 1em;
+    }
+
+    #arrowDownSurf i {
+        margin-right: 4em;
     }
 
     .coverText h1 {
@@ -1150,22 +1225,31 @@ footer i:hover {
         margin-left: 35px;
     }
 
-    .hourTitle {
+    .hourTitle,
+    .dailyTitle,
+    .surfTableTitle {
         font-size: 0.9rem;
     }
 
-    .hourDesc {
+    .hourDesc,
+    .dailyDesc {
         font-size: 0.95rem;
         margin-top: 1.5em;
     }
 
-    .tempValHour {
+    .tempValHour,
+    .tempValDaily {
         font-size: 3.5rem;
         margin-left: 1em;
     }
 
-    #arrowDownHour i {
+    #arrowDownHour i,
+    #arrowDownDaily i {
         margin: 0 3.5em 0 0;
+    }
+
+    #arrowDownSurf i {
+        margin-right: 3.5em;
     }
 
     .coverText h1 {
@@ -1266,21 +1350,33 @@ footer i:hover {
         font-size: 0.8rem;
     }
 
-    .hourTitle {
+    .hourTitle,
+    .dailyTitle {
         font-size: 1.2rem;
     }
 
-    .hourDesc {
+    #arrowDownSurf i {
+        margin-right: 3em;
+    }
+
+    .surfTableTitle {
+        font-size: 1rem;
+    }
+
+    .hourDesc,
+    .dailyDesc {
         font-size: 0.95rem;
         margin-top: 1.5em;
     }
 
-    .tempValHour {
+    .tempValHour,
+    .tempValDaily {
         font-size: 3rem;
         margin: 2em 0 0 0.7em;
     }
 
-    #arrowDownHour i {
+    #arrowDownHour i,
+    #arrowDownDaily i {
         margin: 0 3em 0 0;
     }
 
