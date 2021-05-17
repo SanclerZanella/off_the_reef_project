@@ -95,60 +95,18 @@
                                 <div id="currentTime" class="col-12">
                                 </div>
 
-                                <!-- Local weather report -->
-                                <div class="col-12 localReport reportBackground">
-                                    <div class="row no-gutters">
-
-                                        <!-- Local weather heading -->
-                                        <div class="col-12 ">
-                                            <h3>Weather <i class="fas fa-cloud-sun"></i></h3>
-                                        </div>
-
-                                        <hr class="fineHr">
-
-                                        <div class="col-12">
-                                            <p>ICON</p>
-                                        </div>
-                                        <div class="col-12 reportDescription">
-                                            <p>MAIN</p>
-                                        </div>
-                                        <div class="col-12 reportDescription">
-                                            <p>DESCRIPTION</p>
-                                        </div>
-                                        <div class="col-12">
-                                            <hr class="fineHr">
-                                            <div class="row no-gutters generalReportAdjust">
-                                                <div class="col-lg-6 col-md-5 col-6">
-                                                    <h6 class="generalReportHeadings"><i class="fas fa-sun"></i>
-                                                        Sunrise(UTC)</h6>
-                                                    <div class="reportData">
-                                                        <p>12</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-lg-6 col-md-5 col-6">
-                                                    <h6 class="generalReportHeadings"><i class="far fa-sun"></i>
-                                                        Sunset(UTC)</h6>
-                                                    <div class="reportData">
-                                                        <p>12</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <!-- Forecast navigation bar -->
                                 <div class="col-12 content-alignment">
                                     <ul class="forecastNav">
-                                        <li class="forecastActive forecast-item">Now</li>
-                                        <li>Hourly</li>
-                                        <li>Daily</li>
-                                        <li>Surf Forecast</li>
+                                        <li id="now" class="forecastActive forecast-item">Now</li>
+                                        <li id="hourly" class="forecast-item">Hourly</li>
+                                        <li id="daily" class="forecast-item">Daily</li>
+                                        <li id="surf" class="forecast-item">Surf Forecast</li>
                                     </ul>
                                 </div>
 
                                 <!-- Current Weather -->
-                                <div class="col-12 reportBackground currentWeather">
+                                <div class="col-12 reportSection reportBackground currentWeather">
                                     <div class="row no-gutters content-alignment">
 
                                         <div class="col-4 col-md-3 col-lg-3 col-xl-3 nowIconDesc">
@@ -168,7 +126,7 @@
                                         </div>
 
                                         <div
-                                            class="d-none d-md-block col-5 col-md-5 col-lg-5 col-xl-5 forecastTable nowTable">
+                                            class="d-none d-md-block col-5 col-md-5 col-lg-5 col-xl-4 forecastTable nowTable">
 
                                             <div class="row no-gutters">
                                                 <div class="col-3 col-md-5 col-lg-4 ml-1 text-left currentData">
@@ -338,11 +296,30 @@
 
                                         </div>
 
+                                        <div class="col-12">
+                                            <hr class="fineHr">
+                                        </div>
+
+                                        <div class="col-5 col-md-5 col-lg-6 col-xl-6">
+                                            <div id="sunriseNow">
+                                                <span>Sunrise <i class="fas fa-sun"></i></span>
+                                                <p id="sunriseNowVal">12</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-5 col-md-5 col-lg-6 col-xl-6">
+                                            <div id="sunsetNow">
+                                                <span>Sunset <i class="far fa-sun"></i></span>
+                                                <p id="sunsetNowVal">12</p>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
 
                                 <!-- Hourly Weather -->
-                                <div class="col-12 col-md-9 col-lg-9 col-xl-9 reportBackground hourlyWeather">
+                                <div id="zeroAm"
+                                    class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground hourlyWeather hideReport">
                                     <div class="row no-gutters">
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left hourlyDate">
                                             <span>12 AM</span>
@@ -371,11 +348,277 @@
                                         </div>
                                         <div id="arrowDownHour"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
-                                            <div><i class="fas fa-caret-down"></i></div>
+                                            <i class="fas fa-caret-down"></i>
                                         </div>
                                     </div>
 
-                                    <div class="row no-gutters hourValueTable">
+                                    <div class="row no-gutters valueTable hourValueTable">
+                                        <div class="col-12">
+                                            <hr class="fineHr">
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 mr-auto text-left hourTitle">
+                                                            Humidity</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 humidityHourVal hourVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right hourUnit">
+                                                            %</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 mr-auto text-left hourTitle">
+                                                            UVI</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 uviHourVal hourVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-3 col-md-4 col-lg-4 col-xl-3 text-right hourUnit">
+                                                            Extreme</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-2 col-md-3 col-xl-3 mr-auto text-left hourTitle">
+                                                            Rain
+                                                        </div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-xl-1 text-right rainHourVal hourVal">
+                                                            12
+                                                        </div>
+                                                        <div class="col-2 col-md-2 col-xl-2 text-right hourUnit">
+                                                            mm
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-3 col-md-3 col-lg-3 col-xl-3 mr-auto text-left hourTitle">
+                                                            Visibility</div>
+                                                        <div
+                                                            class="col-4 col-md-3 col-lg-3 col-xl-2 text-right ml-auto visibilityHourVal hourVal">
+                                                            10000</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right hourUnit">
+                                                            m</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-7 col-md-8 col-lg-8 col-xl-6 mr-auto text-left hourTitle">
+                                                            Wind Direction</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right windDirHourVal hourVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-2 col-lg-2 col-xl-2 text-right hourUnit windDirUnit">
+                                                            ↑ N</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-6 col-md-5 col-lg-6 col-xl-6 mr-auto text-left hourTitle">
+                                                            Wind Speed</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right windSpeedHourVal hourVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-2 col-lg-2 col-xl-2 text-right hourUnit windSpeedUnit">
+                                                            m/s</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="oneAm"
+                                    class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground hourlyWeather hideReport">
+                                    <div class="row no-gutters">
+                                        <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left hourlyDate">
+                                            <span>1 AM</span>
+                                            <p class="currentDateVal">5/14</p>
+                                        </div>
+                                        <div class="col-3 col-md-2 col-lg-2 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 hourIcon">
+                                                    <p>ICON</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-1 col-md-1 col-lg-1 col-xl-1 hourDesc text-right">
+                                            <p>scattered clouds</p>
+                                        </div>
+                                        <div class="col-4 col-md-1 col-lg-1 col-xl-1 hourTemp">
+                                            <span class="gradeSi tempValHour">12</span><span class="tempUnit">C</span>
+                                        </div>
+                                        <div class="col-5 col-md-2 col-lg-3 col-xl-2 hourFeLike">
+                                            <span>Real feel®</span><span class="gradeSi feLikeValHour"> 12</span><span
+                                                class="tempUnit">c</span>
+                                        </div>
+                                        <div class="col-6 col-md-1 col-lg-1 col-xl-1 hourCloud">
+                                            <span><i class="fas fa-cloud"></i></span><span class="cloudValHour">
+                                                12</span><span>%</span>
+                                        </div>
+                                        <div id="arrowDownHour"
+                                            class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
+                                            <i class="fas fa-caret-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="row no-gutters valueTable hourValueTable">
+                                        <div class="col-12">
+                                            <hr class="fineHr">
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 mr-auto text-left hourTitle">
+                                                            Humidity</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 humidityHourVal hourVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right hourUnit">
+                                                            %</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 mr-auto text-left hourTitle">
+                                                            UVI</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 uviHourVal hourVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-3 col-md-4 col-lg-4 col-xl-3 text-right hourUnit">
+                                                            Extreme</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-2 col-md-3 col-xl-3 mr-auto text-left hourTitle">
+                                                            Rain
+                                                        </div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-xl-1 text-right rainHourVal hourVal">
+                                                            12
+                                                        </div>
+                                                        <div class="col-2 col-md-2 col-xl-2 text-right hourUnit">
+                                                            mm
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-3 col-md-3 col-lg-3 col-xl-3 mr-auto text-left hourTitle">
+                                                            Visibility</div>
+                                                        <div
+                                                            class="col-4 col-md-3 col-lg-3 col-xl-2 text-right ml-auto visibilityHourVal hourVal">
+                                                            10000</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right hourUnit">
+                                                            m</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-7 col-md-8 col-lg-8 col-xl-6 mr-auto text-left hourTitle">
+                                                            Wind Direction</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right windDirHourVal hourVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-2 col-lg-2 col-xl-2 text-right hourUnit windDirUnit">
+                                                            ↑ N</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-6 col-md-5 col-lg-6 col-xl-6 mr-auto text-left hourTitle">
+                                                            Wind Speed</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right windSpeedHourVal hourVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-2 col-lg-2 col-xl-2 text-right hourUnit windSpeedUnit">
+                                                            m/s</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="twoAm"
+                                    class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground hourlyWeather hideReport">
+                                    <div class="row no-gutters">
+                                        <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left hourlyDate">
+                                            <span>2 AM</span>
+                                            <p class="currentDateVal">5/14</p>
+                                        </div>
+                                        <div class="col-3 col-md-2 col-lg-2 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 hourIcon">
+                                                    <p>ICON</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-1 col-md-1 col-lg-1 col-xl-1 hourDesc text-right">
+                                            <p>scattered clouds</p>
+                                        </div>
+                                        <div class="col-4 col-md-1 col-lg-1 col-xl-1 hourTemp">
+                                            <span class="gradeSi tempValHour">12</span><span class="tempUnit">C</span>
+                                        </div>
+                                        <div class="col-5 col-md-2 col-lg-3 col-xl-2 hourFeLike">
+                                            <span>Real feel®</span><span class="gradeSi feLikeValHour"> 12</span><span
+                                                class="tempUnit">c</span>
+                                        </div>
+                                        <div class="col-6 col-md-1 col-lg-1 col-xl-1 hourCloud">
+                                            <span><i class="fas fa-cloud"></i></span><span class="cloudValHour">
+                                                12</span><span>%</span>
+                                        </div>
+                                        <div id="arrowDownHour"
+                                            class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
+                                            <i class="fas fa-caret-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="row no-gutters valueTable hourValueTable">
                                         <div class="col-12">
                                             <hr class="fineHr">
                                             <div class="row no-gutters content-alignment">
@@ -475,7 +718,8 @@
                                 </div>
 
                                 <!-- Daily Weather -->
-                                <div class="col-12 col-md-9 col-lg-9 col-xl-9 reportBackground dailyWeather">
+                                <div id="sunday"
+                                    class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground dailyWeather hideReport">
 
                                     <div class="row no-gutters">
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left dailylyDate">
@@ -505,11 +749,455 @@
                                         </div>
                                         <div id="arrowDownDaily"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
-                                            <div><i class="fas fa-caret-down"></i></div>
+                                            <i class="fas fa-caret-down"></i>
                                         </div>
                                     </div>
 
-                                    <div class="row no-gutters dailyValueTable">
+                                    <div class="row no-gutters valueTable dailyValueTable">
+                                        <div class="col-12">
+                                            <hr class="fineHr">
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-4 mr-auto text-left dailyTitle">
+                                                            Sunrise(UTC)</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 tempDayVal dailyVal">
+                                                            12</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-5 mr-auto text-left dailyTitle">
+                                                            Sunset(UTC)</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 uviDayVal dailyVal">
+                                                            12</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-7 col-lg-5 col-xl-4 mr-auto text-left dailyTitle">
+                                                            Temp Day</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 tempDayVal dailyVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit tempUnit">
+                                                            C</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-6 col-md-7 col-lg-6 col-xl-5 mr-auto text-left dailyTitle">
+                                                            Temp Night</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 uviDayVal dailyVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit tempUnit">
+                                                            C</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-6 col-md-7 col-lg-7 col-xl-5 mr-auto text-left dailyTitle">
+                                                            Real feel Day</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 tempDayVal dailyVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit tempUnit">
+                                                            C</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-7 col-md-7 col-lg-7 col-xl-6 mr-auto text-left dailyTitle">
+                                                            Real feel Night</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 uviDayVal dailyVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit tempUnit">
+                                                            C</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 mr-auto text-left dailyTitle">
+                                                            Humidity</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 humidityDailyVal dailyVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit">
+                                                            %</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 mr-auto text-left dailyTitle">
+                                                            UVI</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 uviDailyVal dailyVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-3 col-md-4 col-lg-4 col-xl-3 text-right dailyUnit">
+                                                            Extreme</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-2 col-md-3 col-xl-3 mr-auto text-left dailyTitle">
+                                                            Rain
+                                                        </div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-xl-1 text-right rainDailyVal dailyVal">
+                                                            12
+                                                        </div>
+                                                        <div class="col-2 col-md-2 col-xl-2 text-right dailyUnit">
+                                                            mm
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-3 col-md-3 col-lg-3 col-xl-3 mr-auto text-left dailyTitle">
+                                                            Visibility</div>
+                                                        <div
+                                                            class="col-4 col-md-3 col-lg-3 col-xl-2 text-right ml-auto visibilityDailyVal dailyVal">
+                                                            10000</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit">
+                                                            m</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-7 col-md-8 col-lg-8 col-xl-6 mr-auto text-left dailyTitle">
+                                                            Wind Direction</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right windDirDailyVal dailyVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-2 col-lg-2 col-xl-2 text-right dailyUnit windDirUnit">
+                                                            ↑ N</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-6 col-md-5 col-lg-6 col-xl-6 mr-auto text-left dailyTitle">
+                                                            Wind Speed</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right windSpeedDailyVal dailyVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-2 col-lg-2 col-xl-2 text-right dailyUnit windSpeedUnit">
+                                                            m/s</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="monday"
+                                    class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground dailyWeather hideReport">
+
+                                    <div class="row no-gutters">
+                                        <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left dailylyDate">
+                                            <span>MON</span>
+                                            <p class="dailyDateVal">5/14</p>
+                                        </div>
+                                        <div class="col-3 col-md-2 col-lg-2 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 dailyIcon">
+                                                    <p>ICON</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-1 col-md-1 col-lg-1 col-xl-1 dailyDesc text-right">
+                                            <p>scattered clouds</p>
+                                        </div>
+                                        <div class="col-4 col-md-1 col-lg-1 col-xl-1 dailyTemp">
+                                            <span class="gradeSi tempValDaily">12</span><span class="tempUnit">C</span>
+                                        </div>
+                                        <div class="col-5 col-md-2 col-lg-3 col-xl-2 dailyFeLike">
+                                            <span>Real feel®</span><span class="gradeSi feLikeValDaily"> 12</span><span
+                                                class="tempUnit">c</span>
+                                        </div>
+                                        <div class="col-6 col-md-1 col-lg-1 col-xl-1 dailyCloud">
+                                            <span><i class="fas fa-cloud"></i></span><span class="cloudValDaily">
+                                                12</span><span>%</span>
+                                        </div>
+                                        <div id="arrowDownDaily"
+                                            class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
+                                            <i class="fas fa-caret-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="row no-gutters valueTable dailyValueTable">
+                                        <div class="col-12">
+                                            <hr class="fineHr">
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-4 mr-auto text-left dailyTitle">
+                                                            Sunrise(UTC)</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 tempDayVal dailyVal">
+                                                            12</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-5 mr-auto text-left dailyTitle">
+                                                            Sunset(UTC)</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 uviDayVal dailyVal">
+                                                            12</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-7 col-lg-5 col-xl-4 mr-auto text-left dailyTitle">
+                                                            Temp Day</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 tempDayVal dailyVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit tempUnit">
+                                                            C</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-6 col-md-7 col-lg-6 col-xl-5 mr-auto text-left dailyTitle">
+                                                            Temp Night</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 uviDayVal dailyVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit tempUnit">
+                                                            C</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-6 col-md-7 col-lg-7 col-xl-5 mr-auto text-left dailyTitle">
+                                                            Real feel Day</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 tempDayVal dailyVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit tempUnit">
+                                                            C</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-7 col-md-7 col-lg-7 col-xl-6 mr-auto text-left dailyTitle">
+                                                            Real feel Night</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 uviDayVal dailyVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit tempUnit">
+                                                            C</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 mr-auto text-left dailyTitle">
+                                                            Humidity</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 humidityDailyVal dailyVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit">
+                                                            %</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 mr-auto text-left dailyTitle">
+                                                            UVI</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 uviDailyVal dailyVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-3 col-md-4 col-lg-4 col-xl-3 text-right dailyUnit">
+                                                            Extreme</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-2 col-md-3 col-xl-3 mr-auto text-left dailyTitle">
+                                                            Rain
+                                                        </div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-xl-1 text-right rainDailyVal dailyVal">
+                                                            12
+                                                        </div>
+                                                        <div class="col-2 col-md-2 col-xl-2 text-right dailyUnit">
+                                                            mm
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-3 col-md-3 col-lg-3 col-xl-3 mr-auto text-left dailyTitle">
+                                                            Visibility</div>
+                                                        <div
+                                                            class="col-4 col-md-3 col-lg-3 col-xl-2 text-right ml-auto visibilityDailyVal dailyVal">
+                                                            10000</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right dailyUnit">
+                                                            m</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-7 col-md-8 col-lg-8 col-xl-6 mr-auto text-left dailyTitle">
+                                                            Wind Direction</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right windDirDailyVal dailyVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-2 col-lg-2 col-xl-2 text-right dailyUnit windDirUnit">
+                                                            ↑ N</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-6 col-md-5 col-lg-6 col-xl-6 mr-auto text-left dailyTitle">
+                                                            Wind Speed</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right windSpeedDailyVal dailyVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-2 col-lg-2 col-xl-2 text-right dailyUnit windSpeedUnit">
+                                                            m/s</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="tuesday"
+                                    class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground dailyWeather hideReport">
+
+                                    <div class="row no-gutters">
+                                        <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left dailylyDate">
+                                            <span>TUE</span>
+                                            <p class="dailyDateVal">5/14</p>
+                                        </div>
+                                        <div class="col-3 col-md-2 col-lg-2 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 dailyIcon">
+                                                    <p>ICON</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-1 col-md-1 col-lg-1 col-xl-1 dailyDesc text-right">
+                                            <p>scattered clouds</p>
+                                        </div>
+                                        <div class="col-4 col-md-1 col-lg-1 col-xl-1 dailyTemp">
+                                            <span class="gradeSi tempValDaily">12</span><span class="tempUnit">C</span>
+                                        </div>
+                                        <div class="col-5 col-md-2 col-lg-3 col-xl-2 dailyFeLike">
+                                            <span>Real feel®</span><span class="gradeSi feLikeValDaily"> 12</span><span
+                                                class="tempUnit">c</span>
+                                        </div>
+                                        <div class="col-6 col-md-1 col-lg-1 col-xl-1 dailyCloud">
+                                            <span><i class="fas fa-cloud"></i></span><span class="cloudValDaily">
+                                                12</span><span>%</span>
+                                        </div>
+                                        <div id="arrowDownDaily"
+                                            class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
+                                            <i class="fas fa-caret-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="row no-gutters valueTable dailyValueTable">
                                         <div class="col-12">
                                             <hr class="fineHr">
 
@@ -697,7 +1385,8 @@
                                 </div>
 
                                 <!-- Surf Forecast -->
-                                <div class="col-12 col-md-9 col-lg-9 col-xl-9 reportBackground surfForecast">
+                                <div id="surfZeroAm"
+                                    class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground surfForecast hideReport">
                                     <div class="row no-gutters">
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left surfDate">
                                             <span>12 AM</span>
@@ -747,11 +1436,11 @@
                                         </div>
                                         <div id="arrowDownSurf"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
-                                            <div><i class="fas fa-caret-down"></i></div>
+                                            <i class="fas fa-caret-down"></i>
                                         </div>
                                     </div>
 
-                                    <div class="row no-gutters surfValueTable">
+                                    <div class="row no-gutters valueTable surfValueTable">
                                         <div class="col-12">
                                             <hr class="fineHr">
 
@@ -778,7 +1467,7 @@
                                                             class="col-1 col-md-1 col-lg-1 col-xl-1 wHeightVal surfVal">
                                                             12</div>
                                                         <div
-                                                            class="col-1 col-md-1 col-lg-1 col-xl-2 text-right surfUnit">
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right surfUnit">
                                                             m</div>
                                                     </div>
                                                 </div>
@@ -800,10 +1489,6 @@
                                                             s</div>
                                                     </div>
                                                 </div>
-
-                                            </div>
-
-                                            <div class="row no-gutters content-alignment windWave">
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -817,13 +1502,125 @@
                                                             ↑ N</div>
                                                     </div>
                                                 </div>
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
                                                             class="col-5 col-md-5 col-lg-8 col-xl-9 mr-auto text-left surfTableTitle">
                                                             Wind Wave Height</div>
                                                         <div
-                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 wdHeightVal surfVal">
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right wdHeightVal surfVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right surfUnit">
+                                                            m</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-9 mr-auto text-left surfTableTitle">
+                                                            Wind Wave Period</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right wdDirectionVal surfVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right surfUnit">
+                                                            s</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="surfOneAm"
+                                    class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground surfForecast hideReport">
+                                    <div class="row no-gutters">
+                                        <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left surfDate">
+                                            <span>1 AM</span>
+                                            <p class="currentDateVal">5/14</p>
+                                        </div>
+
+                                        <div class="col-4 col-md-2 col-lg-2 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 swellDirection surfFirstTab">
+                                                    <span class="surfTitle">Swell Direction</span>
+                                                    <div class="surfFirstVal">
+                                                        <span class="sDirectionVal gradeSi">12</span>
+                                                        <span class="sDirectionUnit"> ↑ N</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2 col-lg-2 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 col-md-10 swellHeight surfFirstTab">
+                                                    <span class="surfTitle">Swell Height</span>
+                                                    <div class="surfFirstVal">
+                                                        <span class="sHeightVal">12</span><span> m</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2 col-lg-2 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 col-md-10 swellPeriod surfFirstTab">
+                                                    <span class="surfTitle">Swell Period</span>
+                                                    <div class="surfFirstVal">
+                                                        <span class="sPeriodVal">12</span><span> s</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2 col-lg-3 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 wTemperature surfFirstTab">
+                                                    <span class="surfTitle">Water Temperature</span>
+                                                    <div class="surfFirstVal">
+                                                        <span class="wTempVal gradeSi">12</span><span> C</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="arrowDownSurf"
+                                            class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
+                                            <i class="fas fa-caret-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="row no-gutters valueTable surfValueTable">
+                                        <div class="col-12">
+                                            <hr class="fineHr">
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-6 mr-auto text-left surfTableTitle">
+                                                            Wave Direction</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-2 col-xl-1 wDirectionVal surfVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-1 col-lg-2 col-xl-2 text-right surfUnit">
+                                                            ↑ N</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-6 mr-auto text-left surfTableTitle">
+                                                            Wave Height</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 wHeightVal surfVal">
                                                             12</div>
                                                         <div
                                                             class="col-1 col-md-1 col-lg-1 col-xl-1 text-right surfUnit">
@@ -838,16 +1635,216 @@
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
-                                                            class="col-5 col-md-5 col-lg-8 col-xl-9 mr-auto text-left surfTableTitle">
-                                                            Wind Wave Period</div>
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-6 mr-auto text-left surfTableTitle">
+                                                            Wave Period</div>
                                                         <div
-                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 wdDirectionVal surfVal">
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 wDirectionVal surfVal">
                                                             12</div>
                                                         <div
                                                             class="col-1 col-md-1 col-lg-1 col-xl-1 text-right surfUnit">
                                                             s</div>
                                                     </div>
                                                 </div>
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-9 mr-auto text-left surfTableTitle">
+                                                            Wind Wave Direction</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-2 col-xl-1 wdDirectionVal surfVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-1 col-lg-2 col-xl-2 text-right surfUnit">
+                                                            ↑ N</div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-9 mr-auto text-left surfTableTitle">
+                                                            Wind Wave Height</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right wdHeightVal surfVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right surfUnit">
+                                                            m</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-9 mr-auto text-left surfTableTitle">
+                                                            Wind Wave Period</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right wdDirectionVal surfVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right surfUnit">
+                                                            s</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div id="surfTwoAm"
+                                    class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground surfForecast hideReport">
+                                    <div class="row no-gutters">
+                                        <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left surfDate">
+                                            <span>2 AM</span>
+                                            <p class="currentDateVal">5/14</p>
+                                        </div>
+
+                                        <div class="col-4 col-md-2 col-lg-2 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 swellDirection surfFirstTab">
+                                                    <span class="surfTitle">Swell Direction</span>
+                                                    <div class="surfFirstVal">
+                                                        <span class="sDirectionVal gradeSi">12</span>
+                                                        <span class="sDirectionUnit"> ↑ N</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 col-md-2 col-lg-2 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 col-md-10 swellHeight surfFirstTab">
+                                                    <span class="surfTitle">Swell Height</span>
+                                                    <div class="surfFirstVal">
+                                                        <span class="sHeightVal">12</span><span> m</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2 col-lg-2 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 col-md-10 swellPeriod surfFirstTab">
+                                                    <span class="surfTitle">Swell Period</span>
+                                                    <div class="surfFirstVal">
+                                                        <span class="sPeriodVal">12</span><span> s</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-2 col-lg-3 col-xl-2">
+                                            <div class="row no-gutters">
+                                                <div class="col-12 wTemperature surfFirstTab">
+                                                    <span class="surfTitle">Water Temperature</span>
+                                                    <div class="surfFirstVal">
+                                                        <span class="wTempVal gradeSi">12</span><span> C</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="arrowDownSurf"
+                                            class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
+                                            <i class="fas fa-caret-down"></i>
+                                        </div>
+                                    </div>
+
+                                    <div class="row no-gutters valueTable surfValueTable">
+                                        <div class="col-12">
+                                            <hr class="fineHr">
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-6 mr-auto text-left surfTableTitle">
+                                                            Wave Direction</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-2 col-xl-1 wDirectionVal surfVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-1 col-lg-2 col-xl-2 text-right surfUnit">
+                                                            ↑ N</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-6 mr-auto text-left surfTableTitle">
+                                                            Wave Height</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 wHeightVal surfVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right surfUnit">
+                                                            m</div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-6 mr-auto text-left surfTableTitle">
+                                                            Wave Period</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 wDirectionVal surfVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right surfUnit">
+                                                            s</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-9 mr-auto text-left surfTableTitle">
+                                                            Wind Wave Direction</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-2 col-xl-1 wdDirectionVal surfVal gradeSi">
+                                                            12</div>
+                                                        <div
+                                                            class="col-2 col-md-1 col-lg-2 col-xl-2 text-right surfUnit">
+                                                            ↑ N</div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="row no-gutters content-alignment">
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-9 mr-auto text-left surfTableTitle">
+                                                            Wind Wave Height</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right wdHeightVal surfVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right surfUnit">
+                                                            m</div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
+                                                    <div class="row no-gutters">
+                                                        <div
+                                                            class="col-5 col-md-5 col-lg-8 col-xl-9 mr-auto text-left surfTableTitle">
+                                                            Wind Wave Period</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right wdDirectionVal surfVal">
+                                                            12</div>
+                                                        <div
+                                                            class="col-1 col-md-1 col-lg-1 col-xl-1 text-right surfUnit">
+                                                            s</div>
+                                                    </div>
+                                                </div>
+
 
                                             </div>
 

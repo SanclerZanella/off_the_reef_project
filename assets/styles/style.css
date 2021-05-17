@@ -136,9 +136,9 @@ div#map {
 
 /* ----------------------------------Local Report */
 
-/* #beachReport {
+#beachReport {
     display: none;
-} */
+}
 
 .generalReportHeadings {
     font-size: 1.2rem;
@@ -295,7 +295,23 @@ span.tableTitle {
     font-weight: 600;
 }
 
+#sunriseNow span,
+#sunsetNow span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#sunriseNow p,
+#sunsetNow p {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
 /* ------------------------------------------- Hourly Report & Daily Report & Surf Forecast */
+
+.hideReport {
+    display: none;
+}
 
 .hourlyWeather,
 .dailyWeather,
@@ -358,6 +374,12 @@ span.tableTitle {
     margin-top: 1.8em;
 }
 
+.hourValueTable,
+.dailyValueTable,
+.surfValueTable {
+    display: none;
+}
+
 .arrowReport {
     color: #569532;
     font-size: 3rem;
@@ -407,10 +429,6 @@ span.tableTitle {
 
 .surfFirstTab {
     margin-top: 1.4em;
-}
-
-.windWave {
-    margin-top: 1em;
 }
 
 #arrowDownSurf {
@@ -1215,6 +1233,12 @@ footer i:hover {
         margin-top: 5px;
     }
 
+    #sunriseNow span,
+    #sunsetNow span {
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
     span.tableTitle {
         font-size: 1rem;
         margin: 0 0 20px 0;
@@ -1334,6 +1358,12 @@ footer i:hover {
 
     #nowTemp {
         margin-top: 5px;
+    }
+
+    #sunriseNow span,
+    #sunsetNow span {
+        font-size: 1.4rem;
+        font-weight: 700;
     }
 
     span.tableTitle {
