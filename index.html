@@ -106,22 +106,22 @@
                                 </div>
 
                                 <!-- Current Weather -->
-                                <div class="col-12 reportSection reportBackground currentWeather">
+                                <div id="nowReport" class="col-12 reportSection reportBackground currentWeather">
                                     <div class="row no-gutters content-alignment">
 
                                         <div class="col-4 col-md-3 col-lg-3 col-xl-3 nowIconDesc">
                                             <div class="row no-gutters">
                                                 <div id="nowIcon" class="col-12">
-                                                    <p class="text-right">ICON</p>
+                                                    -
                                                 </div>
                                                 <div id="nowDesc" class="col-12 text-right">
-                                                    <p>scattered clouds</p>
+                                                    <p>-</p>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div id="nowTemp" class="col-5 col-md-3 col-lg-3 col-xl-2">
-                                            <span class="gradeSi" id="tempValNow">12</span><span
+                                            <span class="gradeSi" id="tempValNow">-</span><span
                                                 class="tempUnit">C</span>
                                         </div>
 
@@ -129,81 +129,78 @@
                                             class="d-none d-md-block col-5 col-md-5 col-lg-5 col-xl-4 forecastTable nowTable">
 
                                             <div class="row no-gutters">
-                                                <div class="col-3 col-md-5 col-lg-4 ml-1 text-left currentData">
+                                                <div
+                                                    class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
                                                     <span class="tableTitle">Real feel®</span>
                                                 </div>
-                                                <div class="col-3 col-md-5 col-lg-4 text-right currentData">
-                                                    <span class="tableVal gradeSi" id="feLikeValNow">12</span><span
+                                                <div class="col-3 col-md-5 col-lg-4 col-xl-5 text-right currentData">
+                                                    <span class="tableVal gradeSi" id="feLikeValNow">-</span><span
                                                         class="tableUnit">C</span>
                                                 </div>
                                             </div>
 
                                             <div class="row no-gutters">
-                                                <div class="col-3 col-md-5 col-lg-4 ml-1 text-left currentData">
+                                                <div
+                                                    class="col-3 col-md-5 col-lg-4 ml-1 col-xl-4 text-left currentData">
                                                     <span class="tableTitle">Clouds</span>
                                                 </div>
-                                                <div class="col-3 col-md-5 col-lg-4 text-right currentData">
-                                                    <span class="tableVal" id="cloudValNow">12</span><span
+                                                <div class="col-3 col-md-5 col-lg-4 col-xl-5 text-right currentData">
+                                                    <span class="tableVal" id="cloudValNow">-</span><span
                                                         class="tableUnit">%</span>
                                                 </div>
                                             </div>
 
                                             <div class="row no-gutters">
-                                                <div class="col-3 col-md-5 col-lg-4 ml-1 text-left currentData">
+                                                <div
+                                                    class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
                                                     <span class="tableTitle">Humidity</span>
                                                 </div>
-                                                <div class="col-3 col-md-5 col-lg-4 text-right currentData">
-                                                    <span class="tableVal" id="humidityValNow">12</span><span
+                                                <div class="col-3 col-md-5 col-lg-4 col-xl-5 text-right currentData">
+                                                    <span class="tableVal" id="humidityValNow">-</span><span
                                                         class="tableUnit">%</span>
                                                 </div>
                                             </div>
 
                                             <div class="row no-gutters">
-                                                <div class="col-3 col-md-5 col-lg-4 ml-1 text-left currentData">
+                                                <div
+                                                    class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
                                                     <span class="tableTitle">UVI</span>
                                                 </div>
-                                                <div class="col-3 col-md-5 col-lg-4 text-right currentData">
-                                                    <span class="tableVal" id="uviValNow">12</span><span
-                                                        class="tableUnit"> extreme</span>
+                                                <div class="col-3 col-md-5 col-lg-4 col-xl-5 text-right currentData">
+                                                    <span class="tableVal uviVal" id="uviValNow">-</span><span
+                                                        class="tableUnit">-</span>
                                                 </div>
                                             </div>
 
                                             <div class="row no-gutters">
-                                                <div class="col-3 col-md-5 col-lg-4 ml-1 text-left currentData">
-                                                    <span class="tableTitle">Rain</span>
-                                                </div>
-                                                <div class="col-3 col-md-5 col-lg-4 text-right currentData">
-                                                    <span class="tableVal" id="rainValNow">12</span><span
-                                                        class="tableUnit"> mm</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="row no-gutters">
-                                                <div class="col-3 col-md-5 col-lg-4 ml-1 text-left currentData">
+                                                <div
+                                                    class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
                                                     <span class="tableTitle">Visibility</span>
                                                 </div>
-                                                <div class="col-3 col-md-5 col-lg-4 text-right currentData">
-                                                    <span class="tableVal" id="rainValNow">10000</span><span
+                                                <div class="col-3 col-md-5 col-lg-4 col-xl-5 text-right currentData">
+                                                    <span class="tableVal" id="visibilityValNow">-</span><span
                                                         class="tableUnit"> m</span>
                                                 </div>
                                             </div>
 
                                             <div class="row no-gutters">
-                                                <div class="col-3 col-md-5 col-lg-4 ml-1 text-left currentData">
+                                                <div
+                                                    class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
                                                     <span class="tableTitle">Wind Direction</span>
                                                 </div>
-                                                <div class="col-3 col-md-5 col-lg-4 text-right currentData">
-                                                    <span class="tableVal gradeSi" id="windDegValNow">12</span><span
-                                                        class="tableUnit"> ↑ N</span>
+                                                <div class="col-3 col-md-5 col-lg-4 col-xl-5 text-right currentData">
+                                                    <span class="tableVal gradeSi windDirectionVal"
+                                                        id="windDegValNow">-</span><span class="tableUnit">-</span>
                                                 </div>
                                             </div>
 
                                             <div class="row no-gutters">
-                                                <div class="col-3 col-md-5 col-lg-4 ml-1 text-left currentData">
+                                                <div
+                                                    class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
                                                     <span class="tableTitle">Wind Speed</span>
                                                 </div>
-                                                <div class="col-3 col-md-5 col-lg-4 text-right currentData">
-                                                    <span class="tableVal" id="windSpValNow">12</span><span
+                                                <div class="col-3 col-md-5 col-lg-4 col-xl-5 text-right currentData">
+                                                    <span class="tableVal" id="windSpValNow">-</span><span
                                                         class="tableUnit"> m/s</span>
                                                 </div>
                                             </div>
@@ -219,7 +216,7 @@
                                                     <span class="tableTitle">Feels Like:</span>
                                                 </div>
                                                 <div class="col-4 text-right currentData">
-                                                    <span class="tableVal gradeSi" id="feLikeValNowSm">12</span><span
+                                                    <span class="tableVal gradeSi" id="feLikeValNowSm">-</span><span
                                                         class="tableUnit">C</span>
                                                 </div>
                                             </div>
@@ -229,7 +226,7 @@
                                                     <span class="tableTitle">Clouds:</span>
                                                 </div>
                                                 <div class="col-4 text-right currentData">
-                                                    <span class="tableVal" id="cloudValNowSm">12</span><span
+                                                    <span class="tableVal" id="cloudValNowSm">-</span><span
                                                         class="tableUnit">%</span>
                                                 </div>
                                             </div>
@@ -239,7 +236,7 @@
                                                     <span class="tableTitle">Humidity:</span>
                                                 </div>
                                                 <div class="col-4 text-right currentData">
-                                                    <span class="tableVal" id="humidityValNowSm">12</span><span
+                                                    <span class="tableVal" id="humidityValNowSm">-</span><span
                                                         class="tableUnit">%</span>
                                                 </div>
                                             </div>
@@ -249,18 +246,8 @@
                                                     <span class="tableTitle">UVI:</span>
                                                 </div>
                                                 <div class="col-4 text-right currentData">
-                                                    <span class="tableVal" id="uviValNowSm">12</span><span
-                                                        class="tableUnit"> extreme</span>
-                                                </div>
-                                            </div>
-
-                                            <div class="row no-gutters content-alignment">
-                                                <div class="col-4 text-left currentData">
-                                                    <span class="tableTitle">Rain</span>
-                                                </div>
-                                                <div class="col-4 text-right currentData">
-                                                    <span class="tableVal" id="rainValNow">12</span><span
-                                                        class="tableUnit"> mm</span>
+                                                    <span class="tableVal uviVal" id="uviValNowSm">-</span><span
+                                                        class="tableUnit">-</span>
                                                 </div>
                                             </div>
 
@@ -269,7 +256,7 @@
                                                     <span class="tableTitle">Visibility</span>
                                                 </div>
                                                 <div class="col-4 text-right currentData">
-                                                    <span class="tableVal" id="rainValNow">10000</span><span
+                                                    <span class="tableVal" id="visibilityValNowSm">-</span><span
                                                         class="tableUnit"> m</span>
                                                 </div>
                                             </div>
@@ -279,8 +266,8 @@
                                                     <span class="tableTitle">Wind Direction:</span>
                                                 </div>
                                                 <div class="col-4 text-right currentData">
-                                                    <span class="tableVal gradeSi" id="windDegValNowSm">12</span><span
-                                                        class="tableUnit"> ↑ N</span>
+                                                    <span class="tableVal gradeSi windDirectionVal"
+                                                        id="windDegValNowSm">-</span><span class="tableUnit">-</span>
                                                 </div>
                                             </div>
 
@@ -289,7 +276,7 @@
                                                     <span class="tableTitle">Wind Speed:</span>
                                                 </div>
                                                 <div class="col-4 text-right currentData">
-                                                    <span class="tableVal" id="windSpValNowSm">12</span><span
+                                                    <span class="tableVal" id="windSpValNowSm">-</span><span
                                                         class="tableUnit"> m/s</span>
                                                 </div>
                                             </div>
@@ -303,14 +290,14 @@
                                         <div class="col-5 col-md-5 col-lg-6 col-xl-6">
                                             <div id="sunriseNow">
                                                 <span>Sunrise <i class="fas fa-sun"></i></span>
-                                                <p id="sunriseNowVal">12</p>
+                                                <p id="sunriseNowVal">-</p>
                                             </div>
                                         </div>
 
                                         <div class="col-5 col-md-5 col-lg-6 col-xl-6">
                                             <div id="sunsetNow">
                                                 <span>Sunset <i class="far fa-sun"></i></span>
-                                                <p id="sunsetNowVal">12</p>
+                                                <p id="sunsetNowVal">-</p>
                                             </div>
                                         </div>
 
@@ -1883,8 +1870,10 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script id="mapCall" async></script>
+    <script src="assets/scripts/dataTables.js"></script>
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/maps.js"></script>
+    <script src="assets/scripts/weatherAPI.js"></script>
     <script src="assets/scripts/config.js"></script>
 </body>
 

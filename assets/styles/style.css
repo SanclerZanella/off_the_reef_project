@@ -151,7 +151,7 @@ div#map {
 }
 
 .reportBackground {
-    background-color: #ededed;
+    background-color: rgb(185, 185, 185);
 }
 
 .reportBackground:hover {
@@ -272,12 +272,16 @@ span.tableTitle {
     margin-bottom: 0.3em;
 }
 
+#nowIcon img {
+    margin-left: 15em;
+}
+
 .nowIconDesc {
     margin-top: 105px;
 }
 
 #nowDesc {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -900,6 +904,10 @@ footer i:hover {
         margin-top: 5px;
         margin-left: 130px;
     }
+
+    #nowIcon img {
+        margin-left: 12em;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -984,6 +992,10 @@ footer i:hover {
         position: absolute;
         top: 93%;
         left: 0.1%;
+    }
+
+    #nowIcon img {
+        margin-left: 6em;
     }
 }
 
@@ -1093,6 +1105,10 @@ footer i:hover {
         left: 0.1%;
         font-size: 0.8rem;
     }
+
+    #nowIcon img {
+        margin-left: 3em;
+    }
 }
 
 @media screen and (min-width: 414px) and (max-width: 424px) {
@@ -1200,6 +1216,10 @@ footer i:hover {
         top: 90%;
         left: 0.1%;
         font-size: 0.8rem;
+    }
+
+    #nowIcon img {
+        margin-left: 3em;
     }
 }
 
@@ -1323,6 +1343,10 @@ footer i:hover {
         top: 90%;
         left: 0.1%;
         font-size: 0.8rem;
+    }
+
+    #nowIcon img {
+        margin-left: 2em;
     }
 }
 
@@ -1461,5 +1485,9 @@ footer i:hover {
         top: 90%;
         left: 0.1%;
         font-size: 0.8rem;
+    }
+
+    #nowIcon img {
+        margin-left: 1em;
     }
 }

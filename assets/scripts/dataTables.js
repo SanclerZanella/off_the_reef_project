@@ -344,23 +344,23 @@ function boardSizesCalc() {
     function BoardSizesCalcValues(weightData, fitnessData, styleData) {
         if (styleData === "shortboardSize") {
             switch (true) {
-                case ((weightData === "w35_39_under" || weightData === "w40_44"
-                    || weightData === "w45_49" || weightData === "w50_54" || weightData === "w55_59" || weightData === "w60_64")
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
+                case ((weightData === "w35_39_under" || weightData === "w40_44" ||
+                        weightData === "w45_49" || weightData === "w50_54" || weightData === "w55_59" || weightData === "w60_64") &&
+                    (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
                     this.boardLength = "6′0″-6′4″";
                     this.boardWidth = "18½″-19″";
                     this.boardThickness = "2¼″-23⁄8″";
                     break;
-                case ((weightData === "w35_39_under" || weightData === "w40_44"
-                    || weightData === "w45_49" || weightData === "w50_54" || weightData === "w55_59" || weightData === "w60_64")
-                    && fitnessData === "poor"):
+                case ((weightData === "w35_39_under" || weightData === "w40_44" ||
+                        weightData === "w45_49" || weightData === "w50_54" || weightData === "w55_59" || weightData === "w60_64") &&
+                    fitnessData === "poor"):
                     this.boardLength = "6′2″-6′4″";
                     this.boardWidth = "18¾″-19¼″";
                     this.boardThickness = "2¼″-23⁄8″";
                     break;
 
-                case ((weightData === "w65_69" || weightData === "w70_74"))
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
+                case ((weightData === "w65_69" || weightData === "w70_74")) &&
+                (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
                     this.boardLength = "6′2″-6′6″";
                     this.boardWidth = "18¾″-19¼″";
                     this.boardThickness = "23⁄8″-2½″";
@@ -371,8 +371,8 @@ function boardSizesCalc() {
                     this.boardThickness = "23⁄8″-2½″";
                     break;
 
-                case ((weightData === "w75_79" || weightData === "w80_84"))
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
+                case ((weightData === "w75_79" || weightData === "w80_84")) &&
+                (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
                     this.boardLength = "6′4″-6′8″";
                     this.boardWidth = "19″-19¾″";
                     this.boardThickness = "2½″-25⁄8″";
@@ -383,8 +383,8 @@ function boardSizesCalc() {
                     this.boardThickness = "2½″-25⁄8″";
                     break;
 
-                case ((weightData === "w85_89" || weightData === "w90_94"))
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
+                case ((weightData === "w85_89" || weightData === "w90_94")) &&
+                (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
                     this.boardLength = "6′8″-7′2″";
                     this.boardWidth = "19½″-20½″";
                     this.boardThickness = "25⁄8″-27⁄8″";
@@ -395,14 +395,14 @@ function boardSizesCalc() {
                     this.boardThickness = "2¾″-3″";
                     break;
 
-                case ((weightData === "w95_99" || weightData === "w100_104" || weightData === "w105_109" || weightData === "w110_more")
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
+                case ((weightData === "w95_99" || weightData === "w100_104" || weightData === "w105_109" || weightData === "w110_more") &&
+                    (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
                     this.boardLength = "7′2″ +";
                     this.boardWidth = "20″-21½″";
                     this.boardThickness = "3″-3¼″";
                     break;
-                case ((weightData === "w95_99" || weightData === "w100_104" || weightData === "w105_109" || weightData === "w110_more")
-                    && fitnessData === "poor"):
+                case ((weightData === "w95_99" || weightData === "w100_104" || weightData === "w105_109" || weightData === "w110_more") &&
+                    fitnessData === "poor"):
                     this.boardLength = "7′4″ +";
                     this.boardWidth = "21½″-22½″";
                     this.boardThickness = "3″-3¼″";
@@ -410,23 +410,23 @@ function boardSizesCalc() {
             };
         } else if (styleData === "funboardSize") {
             switch (true) {
-                case ((weightData === "w35_39_under" || weightData === "w40_44"
-                    || weightData === "w45_49" || weightData === "w50_54" || weightData === "w55_59" || weightData === "w60_64")
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
+                case ((weightData === "w35_39_under" || weightData === "w40_44" ||
+                        weightData === "w45_49" || weightData === "w50_54" || weightData === "w55_59" || weightData === "w60_64") &&
+                    (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
                     this.boardLength = "6′8″-7′2″";
                     this.boardWidth = "20½″-21¼″";
                     this.boardThickness = "2¼″-2½″";
                     break;
-                case ((weightData === "w35_39_under" || weightData === "w40_44"
-                    || weightData === "w45_49" || weightData === "w50_54" || weightData === "w55_59" || weightData === "w60_64")
-                    && fitnessData === "poor"):
+                case ((weightData === "w35_39_under" || weightData === "w40_44" ||
+                        weightData === "w45_49" || weightData === "w50_54" || weightData === "w55_59" || weightData === "w60_64") &&
+                    fitnessData === "poor"):
                     this.boardLength = "7′0″-7′4″";
                     this.boardWidth = "20¼″-21″";
                     this.boardThickness = "2½″-2¾″";
                     break;
 
-                case ((weightData === "w65_69" || weightData === "w70_74"))
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
+                case ((weightData === "w65_69" || weightData === "w70_74")) &&
+                (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
                     this.boardLength = "6′10-7′4″";
                     this.boardWidth = "20¾″-21½″";
                     this.boardThickness = "2½″-2¾″";
@@ -437,8 +437,8 @@ function boardSizesCalc() {
                     this.boardThickness = "2¾″-3″";
                     break;
 
-                case ((weightData === "w75_79" || weightData === "w80_84"))
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
+                case ((weightData === "w75_79" || weightData === "w80_84")) &&
+                (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
                     this.boardLength = "7′2″-7′8″";
                     this.boardWidth = "21″-21¾″";
                     this.boardThickness = "2½″-3″";
@@ -449,8 +449,8 @@ function boardSizesCalc() {
                     this.boardThickness = "2¾″-3″";
                     break;
 
-                case ((weightData === "w85_89" || weightData === "w90_94"))
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
+                case ((weightData === "w85_89" || weightData === "w90_94")) &&
+                (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
                     this.boardLength = "7′6″-8′0″";
                     this.boardWidth = "21½″ -22¼″";
                     this.boardThickness = "2¾″-3¼″";
@@ -461,14 +461,14 @@ function boardSizesCalc() {
                     this.boardThickness = "3″-3¼″";
                     break;
 
-                case ((weightData === "w95_99" || weightData === "w100_104" || weightData === "w105_109" || weightData === "w110_more")
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
+                case ((weightData === "w95_99" || weightData === "w100_104" || weightData === "w105_109" || weightData === "w110_more") &&
+                    (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
                     this.boardLength = "7′10″-8′4″";
                     this.boardWidth = "22″-22¾″";
                     this.boardThickness = "3″-3¼″";
                     break;
-                case ((weightData === "w95_99" || weightData === "w100_104" || weightData === "w105_109" || weightData === "w110_more")
-                    && fitnessData === "poor"):
+                case ((weightData === "w95_99" || weightData === "w100_104" || weightData === "w105_109" || weightData === "w110_more") &&
+                    fitnessData === "poor"):
                     this.boardLength = "8′2″-8′8″";
                     this.boardWidth = "22″-22¾″";
                     this.boardThickness = "3¼″ +";
@@ -476,48 +476,48 @@ function boardSizesCalc() {
             }
         } else if (styleData === "longboardSize") {
             switch (true) {
-                case ((weightData === "w35_39_under" || weightData === "w40_44"
-                    || weightData === "w45_49" || weightData === "w50_54"
-                    || weightData === "w55_59" || weightData === "w60_64" || weightData === "w65_69")
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
+                case ((weightData === "w35_39_under" || weightData === "w40_44" ||
+                        weightData === "w45_49" || weightData === "w50_54" ||
+                        weightData === "w55_59" || weightData === "w60_64" || weightData === "w65_69") &&
+                    (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
                     this.boardLength = "9′4″";
                     this.boardWidth = "20½″-21¼″";
                     this.boardThickness = "2¾″+";
                     break;
-                case ((weightData === "w35_39_under" || weightData === "w40_44"
-                    || weightData === "w45_49" || weightData === "w50_54"
-                    || weightData === "w55_59" || weightData === "w60_64" || weightData === "w65_69")
-                    && fitnessData === "poor"):
+                case ((weightData === "w35_39_under" || weightData === "w40_44" ||
+                        weightData === "w45_49" || weightData === "w50_54" ||
+                        weightData === "w55_59" || weightData === "w60_64" || weightData === "w65_69") &&
+                    fitnessData === "poor"):
                     this.boardLength = "9′4″";
                     this.boardWidth = "22¾″-23½″";
                     this.boardThickness = "2½″-3½″";
                     break;
 
-                case ((weightData === "w70_74" || weightData === "w75_79" || weightData === "w80_84"
-                    || weightData === "w85_89"))
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
+                case ((weightData === "w70_74" || weightData === "w75_79" || weightData === "w80_84" ||
+                    weightData === "w85_89")) &&
+                (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average"):
                     this.boardLength = "9′4″-9′10″";
                     this.boardWidth = "20¾″-21½″";
                     this.boardThickness = "2¾″+";
                     break;
-                case ((weightData === "w70_74" || weightData === "w75_79" || weightData === "w80_84"
-                    || weightData === "w85_89") && fitnessData === "poor"):
+                case ((weightData === "w70_74" || weightData === "w75_79" || weightData === "w80_84" ||
+                    weightData === "w85_89") && fitnessData === "poor"):
                     this.boardLength = "9′4″-9′10″";
                     this.boardWidth = "22¾″-23½″";
                     this.boardThickness = "2½″-3½″";
                     break;
 
 
-                case ((weightData === "w90_94" || weightData === "w95_99" || weightData === "w100_104"
-                    || weightData === "w105_109" || weightData === "w110_more")
-                    && (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
+                case ((weightData === "w90_94" || weightData === "w95_99" || weightData === "w100_104" ||
+                        weightData === "w105_109" || weightData === "w110_more") &&
+                    (fitnessData === "excellent" || fitnessData === "good" || fitnessData === "average")):
                     this.boardLength = "9′10″+";
                     this.boardWidth = "21″-21¾″";
                     this.boardThickness = "2½″";
                     break;
-                case ((weightData === "w90_94" || weightData === "w95_99" || weightData === "w100_104"
-                    || weightData === "w105_109" || weightData === "w110_more")
-                    && fitnessData === "poor"):
+                case ((weightData === "w90_94" || weightData === "w95_99" || weightData === "w100_104" ||
+                        weightData === "w105_109" || weightData === "w110_more") &&
+                    fitnessData === "poor"):
                     this.boardLength = "9′10″+";
                     this.boardWidth = "23″+";
                     this.boardThickness = "3½″+";
@@ -529,19 +529,58 @@ function boardSizesCalc() {
     return boardSizes = new BoardSizesCalcValues(weightInput, fitnessInput, boardStyle);
 };
 
+// Table that provides the surf spots coordinates and name
+let surfSpots = [
+    [{
+        lat: 51.5993402106841,
+        lng: -8.857156973671264
+    }, "Inchydoney"],
+    [{
+        lat: 53.73590782678734,
+        lng: -9.891694287898071
+    }, "Carrowniskey"],
+    [{
+        lat: 54.29552145031864,
+        lng: -8.947573634151851
+    }, "Easky Right"],
+    [{
+        lat: 55.18384443374948,
+        lng: -7.969478152888466
+    }, "Dunfanaghy"],
+    [{
+        lat: 52.8607468741472,
+        lng: -9.431567462230458
+    }, "Spanish Point"],
+    [{
+        lat: 53.998696545288176,
+        lng: -10.135475781914675
+    }, "Achill Island Secret Beach"],
+    [{
+        lat: 54.212718182804394,
+        lng: -9.098796582602265
+    }, "Enniscrone Beach"],
+    [{
+        lat: 54.46548439586764,
+        lng: -8.448618920219916
+    }, "Mullaghmore"],
+    [{
+        lat: 54.48354467072368,
+        lng: -8.276469884255313
+    }, "Bundoran Beach"],
+    [{
+        lat: 52.51363867743349,
+        lng: -9.677578996624085
+    }, "Ballybunion"],
+];
 
+// Table that provides the UVI status
+let uvi = {
+    zero_to_two: ' Low',
+    three_to_five: ' Moderate',
+    six_to_seven: ' High',
+    eight_to_ten: ' Very High',
+    eleven_plus: ' Extreme'
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Table that provides the wind directions
+let directions = ['↑ N', '⬈ NE', '→ E', '⬊ SE', '↓ S', '⬋ SW', '← W', '⬉ NW'];
