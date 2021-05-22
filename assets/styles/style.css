@@ -342,11 +342,6 @@ span.tableTitle {
     color: rgb(70, 70, 70);
 }
 
-.hourIcon,
-.dailyIcon {
-    margin-top: 2em;
-}
-
 .hourDesc,
 .dailyDesc {
     font-size: 1.2rem;
@@ -1489,5 +1484,13 @@ footer i:hover {
 
     #nowIcon img {
         margin-left: 1em;
+    }
+
+    .hourIcon img {
+        width: 99%;
+    }
+
+    .dailyIcon img {
+        width: 99%;
     }
 }
