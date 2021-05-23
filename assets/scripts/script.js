@@ -136,8 +136,8 @@ function dataReport(data) {
     };
 
     // Define the wind direction, accordingly to the wind angle, getting the direction from dataTables.js
-    function windDirectionStatus(uviValElement) {
-        let windDirectionVal = $(uviValElement).find('.windDirectionVal');
+    function windDirectionStatus(windDirElement) {
+        let windDirectionVal = $(windDirElement).find('.windDirectionVal');
         let direction = directions[Math.round(windDirectionVal.text() / 45) % 8];
 
         windDirectionVal.next().text(direction);
@@ -405,11 +405,98 @@ function dataReport(data) {
         dayWindDir.text(windDirection);
         dayWindSp.text(windSpeed);
 
+        // Set the date in dd/mm format
+        let currentTime = new Date();
+        let dd = currentTime.getDate();
+        let mm = currentTime.getMonth() + 1;
+        let currentDate = `${dd}/${mm}`;
+        $('.currentDateVal').text(currentDate);
+
         // Define the UVI status and the wind direction
         uviStatus(dayUVI);
         windDirectionStatus(dayElement);
     };
 };
+
+// Receive and handle the data from surf API
+function surfReportData(data) {
+
+    // Define the wave direction, accordingly to the wave angle, getting the direction from dataTables.js
+    function windDirectionStatus(windDirElement) {
+        $(windDirElement).find('.windDirectionVal').each((key, value) => {
+            let windDirectionVal = $(value);
+            let direction = directions[Math.round(windDirectionVal.text() / 45) % 8];
+
+            windDirectionVal.next().text(direction);
+        });
+    };
+
+    // Iterate over each surf report and print each tide and wave data specific for each hour
+    $('.surfForecast').each((key, value) => {
+        $('#surf').click(() => {
+            if ($(value).attr('id') === 'surfZeroAm') {
+                let surfIndex = key;
+                let surfElement = $('#surfZeroAm');
+
+                // Execute the print data function for this specific surf report, passing the element index and the element itself 
+                printSurfData(surfIndex, surfElement);
+            } else if ($(value).attr('id') === 'surfOneAm') {
+                let surfIndex = key;
+                let surfElement = $('#surfOneAm');
+
+                printSurfData(surfIndex, surfElement);
+            } else if ($(value).attr('id') === 'surfTwoAm') {
+                let surfIndex = key;
+                let surfElement = $('#surfTwoAm');
+
+                printSurfData(surfIndex, surfElement);
+            }
+        });
+    });
+
+    // Print the hourly weather data
+    function printSurfData(surfIndex, surfElement) {
+
+        // Fetch the data from API JSON
+        let swellDirection = data.hours[surfIndex].swellDirection.meteo;
+        let swellHeight = data.hours[surfIndex].swellHeight.meteo;
+        let swellPeriod = data.hours[surfIndex].swellPeriod.meteo;
+        let waterTemp = data.hours[surfIndex].waterTemperature.meto;
+        let waveDirection = data.hours[surfIndex].waveDirection.meteo;
+        let waveHeight = data.hours[surfIndex].waveHeight.meteo;
+        let wavePeriod = data.hours[surfIndex].wavePeriod.meteo;
+        let windWaveDir = data.hours[surfIndex].windWaveDirection.meteo;
+        let windWaveHei = data.hours[surfIndex].windWaveHeight.meteo;
+        let windWavePer = data.hours[surfIndex].windWavePeriod.meteo;
+
+        // Target the elements which will receive the data
+        let surfSwellDir = surfElement.find('.sDirectionVal');
+        let surfSwellHei = surfElement.find('.sHeightVal');
+        let surfSwellPer = surfElement.find('.sPeriodVal');
+        let surfWaterTemp = surfElement.find('.wTempVal');
+        let surfWaveDirection = surfElement.find('.wDirectionVal');
+        let surfWaveHeight = surfElement.find('.wHeightVal');
+        let surfWavePeriod = surfElement.find('.wDirectionVal');
+        let surfWindWaveDir = surfElement.find('.wdDirectionVal');
+        let surfWindWaveHei = surfElement.find('.wdHeightVal');
+        let surfWindWavePer = surfElement.find('.wdDirectionVal');
+
+        // Apply the data to the elements
+        surfSwellDir.text(swellDirection);
+        surfSwellHei.text(swellHeight);
+        surfSwellPer.text(swellPeriod);
+        surfWaterTemp.text(waterTemp);
+        surfWaveDirection.text(waveDirection);
+        surfWaveHeight.text(waveHeight);
+        surfWavePeriod.text(wavePeriod);
+        surfWindWaveDir.text(windWaveDir);
+        surfWindWaveHei.text(windWaveHei);
+        surfWindWavePer.text(windWavePer);
+
+        // Define the wind direction
+        windDirectionStatus(surfElement);
+    };
+}
 
 // -------------------------------------------------------Surfboard page Script-------------------------------------------------- //
 
