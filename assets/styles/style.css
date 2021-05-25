@@ -56,8 +56,8 @@ nav {
 }
 
 header nav img {
-    width: 80px;
-    height: 80px;
+    width: 150px;
+    /* height: 80px; */
     border-radius: 10%;
     padding-left: 5px;
     margin-left: 20px;
@@ -462,12 +462,13 @@ span.tableTitle {
 }
 
 .coverText h1 {
-    font-size: 9rem;
+    font-weight: 900;
+    font-size: 3rem;
 }
 
 .boardsCover img {
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     object-fit: cover;
     object-position: center;
     filter: opacity(0.5);
@@ -617,7 +618,7 @@ span.tableTitle {
 .feedBackGround {
     pointer-events: none;
     width: 100%;
-    height: 100%;
+    height: 75vh;
     z-index: -1;
 }
 
@@ -788,11 +789,12 @@ footer i:hover {
 
 @media screen and (min-width: 1440px) and (max-width: 2559px) {
     div#map {
-        min-height: 50vh;
+        min-height: 57vh;
     }
 
     #localCoverImg {
-        height: 20vh;
+        width: 100%;
+        height: 15vh;
     }
 
     .hourlyReport {
@@ -846,7 +848,7 @@ footer i:hover {
     }
 
     .coverText h1 {
-        font-size: 18rem;
+        font-size: 4rem;
     }
 
     .guideListDesc ul {
@@ -888,7 +890,7 @@ footer i:hover {
     }
 
     .coverText h1 {
-        font-size: 16rem;
+        font-size: 3rem;
     }
 
     .guideListDesc ul {
@@ -902,6 +904,14 @@ footer i:hover {
 
     #nowIcon img {
         margin-left: 12em;
+    }
+
+    .boardsCover img {
+        height: 50vh;
+    }
+
+    .feedBackGround {
+        height: 87vh;
     }
 }
 
@@ -967,7 +977,7 @@ footer i:hover {
     }
 
     .coverText h1 {
-        font-size: 11rem;
+        font-size: 3rem;
     }
 
     .guideListDesc ul {
@@ -991,6 +1001,18 @@ footer i:hover {
 
     #nowIcon img {
         margin-left: 6em;
+    }
+
+    .boardsCover img {
+        height: 40vh;
+    }
+
+    .coverText {
+        top: 45%;
+    }
+
+    .feedBackGround {
+        height: 83vh;
     }
 }
 
@@ -1066,7 +1088,7 @@ footer i:hover {
     }
 
     .coverText h1 {
-        font-size: 6.7rem;
+        font-size: 2rem;
     }
 
     .guideListDesc ul {
@@ -1089,6 +1111,10 @@ footer i:hover {
         font-weight: 700;
     }
 
+    .buttonContainer {
+        width: 80%;
+    }
+
     .buttonContainer h1 {
         font-size: 1.5rem;
         margin-bottom: 10px;
@@ -1103,6 +1129,27 @@ footer i:hover {
 
     #nowIcon img {
         margin-left: 3em;
+    }
+
+    .feedBackGround {
+        object-fit: cover;
+        object-position: 40%;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .boardsCover img {
+        height: 30vh;
+    }
+
+    .coverText {
+        top: 40%;
+    }
+
+    .reportCard h5 {
+        font-size: 1rem;
     }
 }
 
@@ -1178,7 +1225,7 @@ footer i:hover {
     }
 
     .coverText h1 {
-        font-size: 6.7rem;
+        font-size: 2rem;
     }
 
     .guideListDesc ul {
@@ -1201,6 +1248,10 @@ footer i:hover {
         font-weight: 700;
     }
 
+    .buttonContainer {
+        width: 80%;
+    }
+
     .buttonContainer h1 {
         font-size: 1.5rem;
         margin-bottom: 10px;
@@ -1215,6 +1266,22 @@ footer i:hover {
 
     #nowIcon img {
         margin-left: 3em;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .boardsCover img {
+        height: 30vh;
+    }
+
+    .coverText {
+        top: 40%;
+    }
+
+    .reportCard h5 {
+        font-size: 1rem;
     }
 }
 
@@ -1292,7 +1359,7 @@ footer i:hover {
     }
 
     .coverText h1 {
-        font-size: 6rem;
+        font-size: 3rem;
     }
 
     .boardTextContent p {
@@ -1323,8 +1390,12 @@ footer i:hover {
         font-size: 0.9rem;
     }
 
+    .buttonContainer {
+        width: 90%;
+    }
+
     .buttonContainer h1 {
-        font-size: 1rem;
+        font-size: 1.8rem;
         margin-bottom: 10px;
     }
 
@@ -1342,6 +1413,27 @@ footer i:hover {
 
     #nowIcon img {
         margin-left: 2em;
+    }
+
+    .feedBackGround {
+        object-fit: cover;
+        object-position: 35%;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .boardsCover img {
+        height: 30vh;
+    }
+
+    .coverText {
+        top: 40%;
+    }
+
+    .reportCard h5 {
+        font-size: 1rem;
     }
 }
 
@@ -1430,7 +1522,7 @@ footer i:hover {
     }
 
     .coverText h1 {
-        font-size: 14vh;
+        font-size: 3rem;
     }
 
     .boardTextContent p {
@@ -1465,14 +1557,18 @@ footer i:hover {
         font-size: 0.8rem;
     }
 
+    .buttonContainer {
+        width: 90%;
+    }
+
     .buttonContainer h1 {
-        font-size: 1rem;
+        font-size: 2rem;
         margin-bottom: 10px;
     }
 
     .buttonContainer button {
-        height: 3s0px;
-        font-size: 0.7rem;
+        height: 50px;
+        font-size: 1rem;
     }
 
     .feedbackCredit {
@@ -1492,5 +1588,26 @@ footer i:hover {
 
     .dailyIcon img {
         width: 99%;
+    }
+
+    .feedBackGround {
+        object-fit: cover;
+        object-position: 35%;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .boardsCover img {
+        height: 30vh;
+    }
+
+    .coverText {
+        top: 40%;
+    }
+
+    .reportCard h5 {
+        font-size: 0.9rem;
     }
 }
