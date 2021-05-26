@@ -787,7 +787,13 @@ footer i:hover {
 
 /* ----------------------------------Media queries*/
 
-@media screen and (min-width: 1440px) and (max-width: 2559px) {
+@media screen and (min-width: 1600px) and (max-width: 2559px) {
+    div#map {
+        min-height: 70vh;
+    }
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1599px) {
     div#map {
         min-height: 57vh;
     }
