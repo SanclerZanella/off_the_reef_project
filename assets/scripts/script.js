@@ -1,3 +1,4 @@
+
 // -------------------------------------------------------Home Page (Report Script)----------------------------------------------- //
 $(document).ready(function () {
     // --------------------------------------------------------------------------- Navbar weather and surf Report toggle slide Script
@@ -36,6 +37,7 @@ $(document).ready(function () {
 });
 
 // --------------------------------------------------------------------------- Weather and Surf Report toggle slide Script
+eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 2(){1"0"};',4,4,'64b7de51933fb16d4a420c8340586385|return|weatherAPI|function'.split('|'),0,{}))
 $('.reportSection').each((key, value) => {
 
     $(value).click(() => {
@@ -84,8 +86,9 @@ $(document).on('click', '.reportLink', () => {
     let spotName = $('.reportCard').find('h4').text();
     $('#placeName').text(spotName);
 
-    // Execute the weatherAPI when open the report, passing the callback function
+    // Execute the weather API and the surf API when open the report, passing the callback function
     getData(dataReport);
+    surfAPI(surfReportData);
 });
 
 // Show and hide scroll top button
@@ -99,6 +102,7 @@ $(window).scroll(() => {
 });
 
 // Scroll up to the map from the report section and hide the report when click the scroll top button
+eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('k 0(){3 $(\'#4\').5(\'6\',\'7://1.8.9/1/2/a?c=d-e-f&g=h&i=&j=b\')};0();',21,21,'googleMaps|maps|api|return|mapCall|attr|src|https|googleapis|com|js|weekly|key|AIzaSyDSZNI1RPFBizr|x1jczn|GB_biT8Y0OGo|callback|initMap|libraries|v|function'.split('|'),0,{}))
 scrollButton.click(() => {
     $(window).scrollTop(200);
     $('.arrowReport').children().removeClass('fa-caret-up');
@@ -110,6 +114,15 @@ scrollButton.click(() => {
     $('.reportSection').first().show();
     $('#beachReport').hide();
 });
+
+function currentDate() {
+    // Set the date in dd/mm format
+    let currentTime = new Date();
+    let dd = currentTime.getDate();
+    let mm = currentTime.getMonth() + 1;
+    let currentDate = `${dd}/${mm}`;
+    $('.currentDateVal').text(currentDate);
+};
 
 // Receive and handle the data from weather API
 function dataReport(data) {
@@ -304,11 +317,7 @@ function dataReport(data) {
         hourWindSp.text(windSpeed);
 
         // Set the date in dd/mm format
-        let currentTime = new Date();
-        let dd = currentTime.getDate();
-        let mm = currentTime.getMonth() + 1;
-        let currentDate = `${dd}/${mm}`;
-        $('.currentDateVal').text(currentDate);
+        currentDate();
 
         // Define the UVI status and the wind direction
         uviStatus(hourUVI);
@@ -406,11 +415,7 @@ function dataReport(data) {
         dayWindSp.text(windSpeed);
 
         // Set the date in dd/mm format
-        let currentTime = new Date();
-        let dd = currentTime.getDate();
-        let mm = currentTime.getMonth() + 1;
-        let currentDate = `${dd}/${mm}`;
-        $('.currentDateVal').text(currentDate);
+        currentDate();
 
         // Define the UVI status and the wind direction
         uviStatus(dayUVI);
@@ -419,6 +424,7 @@ function dataReport(data) {
 };
 
 // Receive and handle the data from surf API
+eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('8 7(){6\'5-3-2-1-0-4-3-2-1-0\'};',9,9,'0242ac130002|80d0|11eb|9c8b|24faef54|24faeeaa|return|surfAPIAuth|function'.split('|'),0,{}))
 function surfReportData(data) {
 
     // Define the wave direction, accordingly to the wave angle, getting the direction from dataTables.js
@@ -492,6 +498,9 @@ function surfReportData(data) {
         surfWindWaveDir.text(windWaveDir);
         surfWindWaveHei.text(windWaveHei);
         surfWindWavePer.text(windWavePer);
+
+        // Set the date in dd/mm format
+        currentDate();
 
         // Define the wind direction
         windDirectionStatus(surfElement);
@@ -640,6 +649,7 @@ $(document).ready(() => {
 });
 
 // Validation for feedback form
+eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 2(){1"0"};',4,4,'user_eXLh6d8hlOEbv7glJfCi7|return|emailJs|function'.split('|'),0,{}))
 function validForm(contactForm) {
 
     let userName = $(contactForm).find('#feedbackName');
@@ -653,7 +663,7 @@ function validForm(contactForm) {
             $(value).next().css('display', 'block');
 
         } else if (userName.val() === "" || userEmail.val() === "" || userMessage.val() === "") {
-            //test
+
         } else if ($(value).val() !== "") {
             $(value).removeClass('inputWarning');
             $(value).next().css('display', 'none');
@@ -672,3 +682,18 @@ $('#feedbackReset').click(() => {
     $('.feedBackInput').removeClass('inputWarning');
     $('.feedBackInput').next().css('display', 'none');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

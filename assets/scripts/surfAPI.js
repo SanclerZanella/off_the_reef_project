@@ -1,4 +1,6 @@
-$(document).on('click', '.reportLink', () => {
+
+function surfAPI(cb) {
+
     const params = 'seaLevel,waterTemperature,swellDirection,swellHeight,swellPeriod,waveDirection,waveHeight,wavePeriod,windWaveDirection,windWaveHeight,windWavePeriod';
     let placeName = $('#placeName').text();
     let latitude;
@@ -15,12 +17,12 @@ $(document).on('click', '.reportLink', () => {
     // Fetch tide and wave data from API for a specific place chosen by the user
     fetch(`https://api.stormglass.io/v2/weather/point?lat=${latitude}&lng=${longitute}&params=${params}`, {
         headers: {
-            'Authorization': surfAPI()
+            'Authorization': surfAPIAuth()
         }
     }).then(checkError).then((jsonData) => {
-        surfReportData(jsonData);
-    }).catch((error) => {});
-});
+        cb(jsonData);
+    }).catch((error) => {
+    });
 
 // Handle error response
 function checkError(response) {
@@ -30,3 +32,8 @@ function checkError(response) {
         throw Error(response.statusText);
     }
 };
+}
+
+
+
+
