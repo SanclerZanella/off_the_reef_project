@@ -82,6 +82,10 @@ This project has, at least, three separated pages, the three pages can be found 
 
   * Add a shopping suggestion section to the surfboards page using an API like amazon, ebay or google shopping.
 
+  * Add more surf spots.
+
+  * Add more hours on hourly and surf forecast report.
+
 ---
 ## Technologies Used
 
@@ -162,6 +166,9 @@ This project has, at least, three separated pages, the three pages can be found 
 
   * [Pexels](https://www.pexels.com/)
     * Stunning photos and videos, sourced from a global network of talented creators, completely free to use. I used to provide the images for this webpage.
+
+  * [introJs](https://introjs.com/docs/)
+    * Intro.js is an open source vanilla Javascript / CSS library to add step-by-step introduction or hints.  
 
 ---
 ## Testing

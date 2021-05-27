@@ -11,6 +11,8 @@
     <link rel="icon" href="assets/images/wave1.png" type="image/icon_type">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intro.js@3.4.0/minified/introjs.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intro.js@3.4.0/minified/introjs-rtl.min.css">
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 
@@ -58,16 +60,19 @@
             <!-- Home Page main heading -->
             <div class="row no-gutters">
                 <div class="col-12 text-center mainHeading">
-                    <h1>Irish Surf Forecast Map</h1>
+                    <h1 id="mapTitle">Irish Surf Forecast Map</h1>
                 </div>
                 <hr class="fineHr">
             </div>
+
+            <!-- Interactive map | Google Map API -->
             <div class="row no-gutters">
                 <div class="col-12">
                     <div id="map"></div>
                 </div>
             </div>
             <hr class="fineHr">
+
         </section>
 
         <!-- Selected beach status report:  | uses grid system from Bootstrap 4----------------------------------------------------->
@@ -77,7 +82,6 @@
                 <div class="col-lg-12 col-md-12 col-12">
 
                     <!-- Report heading | Place name -->
-
                     <div class="row no-gutters reportHeading">
                         <div class="col-12">
                             <h2 class="textCenter" id="placeName">-</h2>
@@ -111,15 +115,20 @@
 
                                         <div class="col-4 col-md-3 col-lg-3 col-xl-3 nowIconDesc">
                                             <div class="row no-gutters">
+
+                                                <!-- Current Weather icon -->
                                                 <div id="nowIcon" class="col-12">
                                                     -
                                                 </div>
+
+                                                <!-- Current Weather description -->
                                                 <div id="nowDesc" class="col-12 text-right">
                                                     <p>-</p>
                                                 </div>
                                             </div>
                                         </div>
 
+                                        <!-- Current Temperature -->
                                         <div id="nowTemp" class="col-5 col-md-3 col-lg-3 col-xl-2">
                                             <span class="gradeSi" id="tempValNow">-</span><span
                                                 class="tempUnit">C</span>
@@ -128,6 +137,7 @@
                                         <div
                                             class="d-none d-md-block col-5 col-md-5 col-lg-5 col-xl-4 forecastTable nowTable">
 
+                                            <!-- Current real feel temeprature -->
                                             <div class="row no-gutters">
                                                 <div
                                                     class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
@@ -139,6 +149,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current cloudness percentage -->
                                             <div class="row no-gutters">
                                                 <div
                                                     class="col-3 col-md-5 col-lg-4 ml-1 col-xl-4 text-left currentData">
@@ -150,6 +161,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current humidity percentage -->
                                             <div class="row no-gutters">
                                                 <div
                                                     class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
@@ -161,6 +173,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current UV index -->
                                             <div class="row no-gutters">
                                                 <div
                                                     class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
@@ -172,6 +185,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current visibility range -->
                                             <div class="row no-gutters">
                                                 <div
                                                     class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
@@ -183,6 +197,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current wind direction -->
                                             <div class="row no-gutters">
                                                 <div
                                                     class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
@@ -194,6 +209,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current wind speed -->
                                             <div class="row no-gutters">
                                                 <div
                                                     class="col-3 col-md-5 col-lg-4 col-xl-4 ml-1 text-left currentData">
@@ -210,6 +226,7 @@
                                         <div class="d-md-none col-12 forecastTableSm nowTable">
                                             <hr class="fineHr">
 
+                                            <!-- Current real feel temperature small screens -->
                                             <div class="row no-gutters content-alignment">
 
                                                 <div class="col-4 text-left currentData">
@@ -221,6 +238,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current cloudness percentage small screens -->
                                             <div class="row no-gutters content-alignment">
                                                 <div class="col-4 text-left currentData">
                                                     <span class="tableTitle">Clouds:</span>
@@ -231,6 +249,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current humidity percentage small screens -->
                                             <div class="row no-gutters content-alignment">
                                                 <div class="col-4 text-left currentData">
                                                     <span class="tableTitle">Humidity:</span>
@@ -241,6 +260,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current UV index small screens -->
                                             <div class="row no-gutters content-alignment">
                                                 <div class="col-4 text-left currentData">
                                                     <span class="tableTitle">UVI:</span>
@@ -251,6 +271,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current visibility range small screens -->
                                             <div class="row no-gutters content-alignment">
                                                 <div class="col-4 text-left currentData">
                                                     <span class="tableTitle">Visibility</span>
@@ -261,6 +282,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current wind direction small screens -->
                                             <div class="row no-gutters content-alignment">
                                                 <div class="col-4 text-left currentData">
                                                     <span class="tableTitle">Wind Direction:</span>
@@ -271,6 +293,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Current wind speed small screens -->
                                             <div class="row no-gutters content-alignment">
                                                 <div class="col-4 text-left currentData">
                                                     <span class="tableTitle">Wind Speed:</span>
@@ -287,6 +310,7 @@
                                             <hr class="fineHr">
                                         </div>
 
+                                        <!-- Current sunrise time -->
                                         <div class="col-5 col-md-5 col-lg-6 col-xl-6">
                                             <div id="sunriseNow">
                                                 <span>Sunrise <i class="fas fa-sun"></i></span>
@@ -294,6 +318,7 @@
                                             </div>
                                         </div>
 
+                                        <!-- Current sunset time -->
                                         <div class="col-5 col-md-5 col-lg-6 col-xl-6">
                                             <div id="sunsetNow">
                                                 <span>Sunset <i class="far fa-sun"></i></span>
@@ -305,13 +330,19 @@
                                 </div>
 
                                 <!-- Hourly Weather -->
+
+                                <!-- Hourly Weather First Hour -->
                                 <div id="firstHour"
                                     class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground hourlyWeather hideReport">
                                     <div class="row no-gutters">
+
+                                        <!-- Hour forecast and current date First Hour -->
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left hourlyDate">
                                             <span class="hourlyTime">-</span>
                                             <p class="currentDateVal">-</p>
                                         </div>
+
+                                        <!-- Hourly Weather icon first hour -->
                                         <div class="col-3 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 hourIcon">
@@ -319,20 +350,30 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Hourly Weather description first hour -->
                                         <div class="col-1 col-md-1 col-lg-1 col-xl-1 hourDesc text-left">
                                             <p>-</p>
                                         </div>
+
+                                        <!-- Hourly temperature first hour -->
                                         <div class="col-4 col-md-1 col-lg-1 col-xl-1 hourTemp">
                                             <span class="gradeSi tempValHour">-</span><span class="tempUnit">C</span>
                                         </div>
+
+                                        <!-- Hourly real feel temperature first hour -->
                                         <div class="col-5 col-md-2 col-lg-3 col-xl-2 hourFeLike">
                                             <span>Real feel®</span><span class="gradeSi feLikeValHour">-</span><span
                                                 class="tempUnit">c</span>
                                         </div>
+
+                                        <!-- Hourly cloudness percentage first hour -->
                                         <div class="col-6 col-md-1 col-lg-1 col-xl-1 hourCloud">
                                             <span><i class="fas fa-cloud"></i> </span><span class="cloudValHour">
                                                 -</span><span>%</span>
                                         </div>
+
+                                        <!-- Hourly arrow icon first hour -->
                                         <div id="arrowDownHour"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
                                             <i class="fas fa-caret-down"></i>
@@ -343,6 +384,8 @@
                                         <div class="col-12">
                                             <hr class="fineHr">
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Hourly humidity percentage first hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -356,6 +399,8 @@
                                                             %</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Hourly UV index first hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -375,6 +420,8 @@
 
                                             <div class="row no-gutters content-alignment">
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
+
+                                                    <!-- Hourly visibility range first hour -->
                                                     <div class="row no-gutters">
                                                         <div
                                                             class="col-3 col-md-3 col-lg-3 col-xl-3 mr-auto text-left hourTitle">
@@ -388,6 +435,7 @@
                                                     </div>
                                                 </div>
 
+                                                <!-- Hourly wind direction first hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -404,6 +452,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Hourly wind speed first hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -424,13 +474,18 @@
 
                                 </div>
 
+                                <!-- Hourly Weather Second Hour -->
                                 <div id="secondHour"
                                     class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground hourlyWeather hideReport">
                                     <div class="row no-gutters">
+
+                                        <!-- Hourly hour forecast and current date Second Hour -->
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left hourlyDate">
                                             <span class="hourlyTime">-</span>
                                             <p class="currentDateVal">-</p>
                                         </div>
+
+                                        <!-- Hourly Weather icon Second Hour -->
                                         <div class="col-3 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 hourIcon">
@@ -438,20 +493,30 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Hourly Weather description Second Hour -->
                                         <div class="col-1 col-md-1 col-lg-1 col-xl-1 hourDesc text-left">
                                             <p>-</p>
                                         </div>
+
+                                        <!-- Hourly temperature Second Hour -->
                                         <div class="col-4 col-md-1 col-lg-1 col-xl-1 hourTemp">
                                             <span class="gradeSi tempValHour">-</span><span class="tempUnit">C</span>
                                         </div>
+
+                                        <!-- Hourly Real feel temperature Second Hour -->
                                         <div class="col-5 col-md-2 col-lg-3 col-xl-2 hourFeLike">
                                             <span>Real feel®</span><span class="gradeSi feLikeValHour">-</span><span
                                                 class="tempUnit">c</span>
                                         </div>
+
+                                        <!-- Hourly Cloudness percentage Second Hour -->
                                         <div class="col-6 col-md-1 col-lg-1 col-xl-1 hourCloud">
                                             <span><i class="fas fa-cloud"></i> </span><span class="cloudValHour">
                                                 -</span><span>%</span>
                                         </div>
+
+                                        <!-- Hourly arrow icon Second Hour -->
                                         <div id="arrowDownHour"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
                                             <i class="fas fa-caret-down"></i>
@@ -462,6 +527,8 @@
                                         <div class="col-12">
                                             <hr class="fineHr">
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Hourly humidity percentage Second Hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -475,6 +542,8 @@
                                                             %</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Hourly UV index Second Hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -493,6 +562,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Hourly visibility range Second Hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -507,6 +578,7 @@
                                                     </div>
                                                 </div>
 
+                                                <!-- Hourly wind direction Second Hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -522,6 +594,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Hourly wind speed Second Hour -->
                                             <div class="row no-gutters content-alignment">
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
@@ -543,13 +616,18 @@
 
                                 </div>
 
+                                <!-- Hourly Weather Third Hour -->
                                 <div id="thirdHour"
                                     class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground hourlyWeather hideReport">
                                     <div class="row no-gutters">
+
+                                        <!-- Hourly hour forecast and current date Third Hour -->
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left hourlyDate">
                                             <span class="hourlyTime">-</span>
                                             <p class="currentDateVal">-</p>
                                         </div>
+
+                                        <!-- Hourly Weather icon Third Hour -->
                                         <div class="col-3 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 hourIcon">
@@ -557,20 +635,30 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Hourly Weather description Third Hour -->
                                         <div class="col-1 col-md-1 col-lg-1 col-xl-1 hourDesc text-left">
                                             <p>-</p>
                                         </div>
+
+                                        <!-- Hourly temperature Third Hour -->
                                         <div class="col-4 col-md-1 col-lg-1 col-xl-1 hourTemp">
                                             <span class="gradeSi tempValHour">-</span><span class="tempUnit">C</span>
                                         </div>
+
+                                        <!-- Hourly real feel temperature Third Hour -->
                                         <div class="col-5 col-md-2 col-lg-3 col-xl-2 hourFeLike">
                                             <span>Real feel®</span><span class="gradeSi feLikeValHour">-</span><span
                                                 class="tempUnit">c</span>
                                         </div>
+
+                                        <!-- Hourly cloudness percentage Third Hour -->
                                         <div class="col-6 col-md-1 col-lg-1 col-xl-1 hourCloud">
                                             <span><i class="fas fa-cloud"></i> </span><span class="cloudValHour">
                                                 -</span><span>%</span>
                                         </div>
+
+                                        <!-- Hourly arrow icon Third Hour -->
                                         <div id="arrowDownHour"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
                                             <i class="fas fa-caret-down"></i>
@@ -581,6 +669,8 @@
                                         <div class="col-12">
                                             <hr class="fineHr">
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Hourly humidity percentage Third Hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -594,6 +684,8 @@
                                                             %</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Hourly UV index Third Hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -612,6 +704,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Hourly visibility range Third Hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -625,6 +719,8 @@
                                                             m</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Hourly Wind direction Third Hour -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -640,6 +736,7 @@
                                                 </div>
                                             </div>
 
+                                            <!-- Hourly Wind speed Third Hour -->
                                             <div class="row no-gutters content-alignment">
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 hourValues">
                                                     <div class="row no-gutters">
@@ -662,14 +759,20 @@
                                 </div>
 
                                 <!-- Daily Weather -->
+
+                                <!-- Daily Weather First Day -->
                                 <div id="firstDay"
                                     class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground dailyWeather hideReport">
 
                                     <div class="row no-gutters">
+
+                                        <!-- Daily report day and date First Day -->
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left dailylyDate">
                                             <span class="dailyReportDay">-</span>
                                             <p class="dailyDateVal">-</p>
                                         </div>
+
+                                        <!-- Daily Weather icon First Day -->
                                         <div class="col-3 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 dailyIcon">
@@ -677,20 +780,30 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Daily Weather description First Day -->
                                         <div class="col-1 col-md-1 col-lg-1 col-xl-1 dailyDesc text-left">
                                             <p>-</p>
                                         </div>
+
+                                        <!-- Daily Temperature First Day -->
                                         <div class="col-4 col-md-1 col-lg-1 col-xl-1 dailyTemp">
                                             <span class="gradeSi tempValDaily">-</span><span class="tempUnit">C</span>
                                         </div>
+
+                                        <!-- Daily Real Feel Temperature First Day -->
                                         <div class="col-5 col-md-2 col-lg-3 col-xl-2 dailyFeLike">
                                             <span>Real feel®</span><span class="gradeSi feLikeValDaily">-</span><span
                                                 class="tempUnit">c</span>
                                         </div>
+
+                                        <!-- Daily cloudness percentage First Day -->
                                         <div class="col-6 col-md-1 col-lg-1 col-xl-1 dailyCloud">
                                             <span><i class="fas fa-cloud"></i> </span><span class="cloudValDaily">
                                                 -</span><span>%</span>
                                         </div>
+
+                                        <!-- Daily arrow icon First Day -->
                                         <div id="arrowDownDaily"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
                                             <i class="fas fa-caret-down"></i>
@@ -702,6 +815,8 @@
                                             <hr class="fineHr">
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily Sunrise Time First Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -712,6 +827,8 @@
                                                             12</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily Sunset Time First Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -727,6 +844,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily temperature day First Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -740,6 +859,8 @@
                                                             C</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily temperature night First Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -758,6 +879,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily Real feel temperature day First Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -771,6 +894,8 @@
                                                             C</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily temperature night First Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -789,6 +914,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily humidity percentage First Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -802,6 +929,8 @@
                                                             %</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily UV index First Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -820,6 +949,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily wind direction First Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -833,6 +964,8 @@
                                                             -</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily wind speed First Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -853,14 +986,19 @@
 
                                 </div>
 
+                                <!-- Daily Weather Second Day -->
                                 <div id="secondDay"
                                     class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground dailyWeather hideReport">
 
                                     <div class="row no-gutters">
+
+                                        <!-- Daily Report day and date Second Day -->
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left dailylyDate">
                                             <span class="dailyReportDay">-</span>
                                             <p class="dailyDateVal">-</p>
                                         </div>
+
+                                        <!-- Daily Weather icon Second Day -->
                                         <div class="col-3 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 dailyIcon">
@@ -868,20 +1006,30 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Daily Weather description Second Day -->
                                         <div class="col-1 col-md-1 col-lg-1 col-xl-1 dailyDesc text-left">
                                             <p>-</p>
                                         </div>
+
+                                        <!-- Daily temperature Second Day -->
                                         <div class="col-4 col-md-1 col-lg-1 col-xl-1 dailyTemp">
                                             <span class="gradeSi tempValDaily">-</span><span class="tempUnit">C</span>
                                         </div>
+
+                                        <!-- Daily real feel temperature Second Day -->
                                         <div class="col-5 col-md-2 col-lg-3 col-xl-2 dailyFeLike">
                                             <span>Real feel®</span><span class="gradeSi feLikeValDaily">-</span><span
                                                 class="tempUnit">c</span>
                                         </div>
+
+                                        <!-- Daily cloudness percentage Second Day -->
                                         <div class="col-6 col-md-1 col-lg-1 col-xl-1 dailyCloud">
                                             <span><i class="fas fa-cloud"></i> </span><span class="cloudValDaily">
                                                 -</span><span>%</span>
                                         </div>
+
+                                        <!-- Daily arrow icon Second Day -->
                                         <div id="arrowDownDaily"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
                                             <i class="fas fa-caret-down"></i>
@@ -893,6 +1041,8 @@
                                             <hr class="fineHr">
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily sunrise time Second Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -903,6 +1053,8 @@
                                                             -</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily sunset time Second Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -918,6 +1070,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily temperature day Second Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -931,6 +1085,8 @@
                                                             C</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily temperature night Second Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -949,6 +1105,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily real feel temperature day Second Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -962,6 +1120,8 @@
                                                             C</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily real feel temperature night Second Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -980,6 +1140,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily humidity percentage Second Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -993,6 +1155,8 @@
                                                             %</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily UV index Second Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1011,6 +1175,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily wind direction Second Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1024,6 +1190,8 @@
                                                             -</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily wind speed Second Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1044,14 +1212,19 @@
 
                                 </div>
 
+                                <!-- Daily Weather Third Day -->
                                 <div id="thirdDay"
                                     class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground dailyWeather hideReport">
 
                                     <div class="row no-gutters">
+
+                                        <!-- Daily report day and date Third Day -->
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left dailylyDate">
                                             <span class="dailyReportDay">-</span>
                                             <p class="dailyDateVal">-</p>
                                         </div>
+
+                                        <!-- Daily Weather icon Third Day -->
                                         <div class="col-3 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 dailyIcon">
@@ -1059,20 +1232,30 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Daily Weather description Third Day -->
                                         <div class="col-1 col-md-1 col-lg-1 col-xl-1 dailyDesc text-left">
                                             <p>-</p>
                                         </div>
+
+                                        <!-- Daily temperature Third Day -->
                                         <div class="col-4 col-md-1 col-lg-1 col-xl-1 dailyTemp">
                                             <span class="gradeSi tempValDaily">-</span><span class="tempUnit">C</span>
                                         </div>
+
+                                        <!-- Daily real feel temperature Third Day -->
                                         <div class="col-5 col-md-2 col-lg-3 col-xl-2 dailyFeLike">
                                             <span>Real feel®</span><span class="gradeSi feLikeValDaily">-</span><span
                                                 class="tempUnit">c</span>
                                         </div>
+
+                                        <!-- Daily cloudness percentage Third Day -->
                                         <div class="col-6 col-md-1 col-lg-1 col-xl-1 dailyCloud">
                                             <span><i class="fas fa-cloud"></i> </span><span class="cloudValDaily">
                                                 -</span><span>%</span>
                                         </div>
+
+                                        <!-- Daily arrow icon Third Day -->
                                         <div id="arrowDownDaily"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
                                             <i class="fas fa-caret-down"></i>
@@ -1084,6 +1267,8 @@
                                             <hr class="fineHr">
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily sunrise time Third Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1094,6 +1279,8 @@
                                                             -</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily sunset time Third Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1109,6 +1296,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily temperature day Third Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1122,6 +1311,8 @@
                                                             C</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily temperature night Third Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1140,6 +1331,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily real feel temperature day Third Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1153,6 +1346,8 @@
                                                             C</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily real feel temperature night Third Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1171,6 +1366,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily humidity percentage Third Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1184,6 +1381,8 @@
                                                             %</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily UV index Third Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1202,6 +1401,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Daily wind direction Third Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1215,6 +1416,8 @@
                                                             -</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Daily wind speed Third Day -->
                                                 <div class="col-9 col-md-4 col-lg-3 col-xl-3 dailyValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1236,14 +1439,19 @@
                                 </div>
 
                                 <!-- Surf Forecast -->
+
+                                <!-- Surf forecast First Time -->
                                 <div id="surfZeroAm"
                                     class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground surfForecast hideReport">
                                     <div class="row no-gutters">
+
+                                        <!-- Surf current date First Time -->
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left surfDate">
                                             <span>12 AM</span>
                                             <p class="currentDateVal">-</p>
                                         </div>
 
+                                        <!-- Surf swell direction First Time -->
                                         <div class="col-4 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 swellDirection surfFirstTab">
@@ -1255,6 +1463,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf swell height First Time -->
                                         <div class="col-4 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-md-10 swellHeight surfFirstTab">
@@ -1265,6 +1475,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf swell period First Time -->
                                         <div class="col-6 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-md-10 swellPeriod surfFirstTab">
@@ -1275,6 +1487,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf water temperature First Time -->
                                         <div class="col-6 col-md-2 col-lg-3 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 wTemperature surfFirstTab">
@@ -1285,6 +1499,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf arrow icon First Time -->
                                         <div id="arrowDownSurf"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
                                             <i class="fas fa-caret-down"></i>
@@ -1296,6 +1512,8 @@
                                             <hr class="fineHr">
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Surf wave direction First Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1309,6 +1527,8 @@
                                                             -</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Surf wave height First Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1327,6 +1547,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Surf wave period First Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1340,6 +1562,8 @@
                                                             s</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Surf wind wave direction First Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1357,6 +1581,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Surf wind wave height First Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1370,6 +1596,8 @@
                                                             m</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Surf wind wave period First Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1392,14 +1620,18 @@
 
                                 </div>
 
+                                <!-- Surf forecast Second Time -->
                                 <div id="surfOneAm"
                                     class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground surfForecast hideReport">
                                     <div class="row no-gutters">
+
+                                        <!-- Surf current date Second Time -->
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left surfDate">
                                             <span>1 AM</span>
                                             <p class="currentDateVal">-</p>
                                         </div>
 
+                                        <!-- Surf swell direction Second Time -->
                                         <div class="col-4 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 swellDirection surfFirstTab">
@@ -1411,6 +1643,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf Swell Height Second Time -->
                                         <div class="col-4 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-md-10 swellHeight surfFirstTab">
@@ -1421,6 +1655,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf Swell period Second Time -->
                                         <div class="col-6 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-md-10 swellPeriod surfFirstTab">
@@ -1431,6 +1667,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf water temperature Second Time -->
                                         <div class="col-6 col-md-2 col-lg-3 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 wTemperature surfFirstTab">
@@ -1441,6 +1679,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf arrow icon Second Time -->
                                         <div id="arrowDownSurf"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
                                             <i class="fas fa-caret-down"></i>
@@ -1452,6 +1692,8 @@
                                             <hr class="fineHr">
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Surf wave direction Second Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1465,6 +1707,8 @@
                                                             -</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Surf wave height Second Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1483,6 +1727,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Surf wave period Second Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1496,6 +1742,8 @@
                                                             s</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Surf wind wave direction Second Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1513,6 +1761,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Surf wind wave height Second Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1526,6 +1776,8 @@
                                                             m</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Surf wind wave period Second Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1548,14 +1800,18 @@
 
                                 </div>
 
+                                <!-- Surf forecast Third Time -->
                                 <div id="surfTwoAm"
                                     class="col-12 col-md-9 col-lg-9 col-xl-9 reportSection reportBackground surfForecast hideReport">
                                     <div class="row no-gutters">
+
+                                        <!-- Surf current date Third Time -->
                                         <div class="col-2 col-md-2 col-lg-1 col-xl-1 text-left surfDate">
                                             <span>2 AM</span>
                                             <p class="currentDateVal">-</p>
                                         </div>
 
+                                        <!-- Surf swell direction Third Time -->
                                         <div class="col-4 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 swellDirection surfFirstTab">
@@ -1567,6 +1823,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf swell height Third Time -->
                                         <div class="col-4 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-md-10 swellHeight surfFirstTab">
@@ -1577,6 +1835,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf swell period Third Time -->
                                         <div class="col-6 col-md-2 col-lg-2 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 col-md-10 swellPeriod surfFirstTab">
@@ -1587,6 +1847,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf water temperature Third Time -->
                                         <div class="col-6 col-md-2 col-lg-3 col-xl-2">
                                             <div class="row no-gutters">
                                                 <div class="col-12 wTemperature surfFirstTab">
@@ -1597,6 +1859,8 @@
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <!-- Surf arrow icon Third Time -->
                                         <div id="arrowDownSurf"
                                             class="col-12 col-md-1 col-lg-1 col-xl-1 ml-auto text-right arrowReport">
                                             <i class="fas fa-caret-down"></i>
@@ -1608,6 +1872,8 @@
                                             <hr class="fineHr">
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Surf wave direction Third Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1621,6 +1887,8 @@
                                                             -</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Surf wave height Third Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1639,6 +1907,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Surf wave period Third Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1652,6 +1922,8 @@
                                                             s</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Surf wind wave direction Third Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1669,6 +1941,8 @@
                                             </div>
 
                                             <div class="row no-gutters content-alignment">
+
+                                                <!-- Surf wind wave height Third Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1682,6 +1956,8 @@
                                                             m</div>
                                                     </div>
                                                 </div>
+
+                                                <!-- Surf wind wave period Third Time -->
                                                 <div class="col-9 col-md-7 col-lg-3 col-xl-3 surfValues">
                                                     <div class="row no-gutters">
                                                         <div
@@ -1709,6 +1985,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Scroll up button -->
             <button id="myBtn" title="Go to top">MAP</button>
         </section>
     </main>
@@ -1734,6 +2012,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script id="mapCall" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/intro.js@3.4.0/minified/intro.min.js"></script>
     <script src="assets/scripts/dataTables.js"></script>
     <script src="assets/scripts/script.js"></script>
     <script src="assets/scripts/maps.js"></script>

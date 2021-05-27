@@ -87,6 +87,7 @@
                                     <form onsubmit="return validForm(this);" method="POST" class="feedbackForm">
                                         <div class="form-group form-row no-gutters">
 
+                                            <!-- name input -->
                                             <div class="col-lg-6 col-12">
                                                 <label for="feedbackName">Your Name:</label>
                                                 <input type="text" id="feedbackName" name="feedbackName"
@@ -95,6 +96,7 @@
                                                     Please inform your Name.</small>
                                             </div>
 
+                                            <!-- email input -->
                                             <div class="col-lg-6 col-12">
                                                 <label for="feedbackEmail">Your Email:</label>
                                                 <input type="email" id="feedbackEmail" name="feedbackEmail"
@@ -105,6 +107,7 @@
                                                     email with anyone else.</small>
                                             </div>
 
+                                            <!-- Feedback input -->
                                             <div class="col-12">
                                                 <hr class="fineHr">
                                                 <label for="feedbackText">Your Feedback:</label>
@@ -114,9 +117,13 @@
                                                 <small class="feedbackWarning"><i class="fas fa-exclamation-circle"></i>
                                                     Your feedback is important for us.</small>
                                             </div>
+
+                                            <!-- submit button -->
                                             <div class="col-12 content-alignment">
                                                 <button type="submit" class="btn-lg feedbackButton">Submit</button>
                                             </div>
+
+                                            <!-- clear form button -->
                                             <div class="col-12 content-alignment">
                                                 <button type="reset" id="feedbackReset">Clear form</button>
                                             </div>

@@ -30,6 +30,7 @@ $(document).ready(function () {
                     $(value).addClass('forecastActive');
                     $('.reportSection').hide(500);
                     $('.surfForecast').toggle(500);
+                      
                     break;
             };
         });
@@ -85,6 +86,31 @@ $(document).on('click', '.reportLink', () => {
 
     let spotName = $('.reportCard').find('h4').text();
     $('#placeName').text(spotName);
+
+    // introJs API
+    introJs().setOptions({
+        steps: [{
+            element: document.querySelector('.forecastNav'),
+            intro: 'Here you will find the surf forecast and different ways to see the local weather forecast ("Now", "Hourly and "Daily")'
+         },
+         {
+            element: document.querySelector('#now'),
+            intro: 'Now represents the current weather'
+         },
+         {
+            element: document.querySelector('#hourly'),
+            intro: 'Hourly represents the next two hours of weather forecast starting from the current hour'
+         },
+         {
+            element: document.querySelector('#daily'),
+            intro: 'Daily represents the next two days of weather forecast starting from the current day'
+         },
+         {
+            element: document.querySelector('#surf'),
+            intro: 'Surf Forecast represents the prediction of swell and waves for this surf spot'
+         },
+        ]
+      }).start();
 
     // Execute the weather API and the surf API when open the report, passing the callback function
     getData(dataReport);
@@ -683,11 +709,15 @@ $('#feedbackReset').click(() => {
     $('.feedBackInput').next().css('display', 'none');
 });
 
-
-
-
-
-
+// introJs API
+introJs().setOptions({
+    steps: [{
+      element: document.querySelector('#map'),
+      intro: 'Over this interactive map you will find some of the best surf spots in Ireland, clicking on the marker you will find the link for the full report',
+      position: 'top',
+      }
+    ]
+  }).start();
 
 
 
