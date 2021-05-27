@@ -10,7 +10,7 @@ All designed to assist surfers in understanding what surf conditions can be expe
 
 [Click here to see the project live](https://sanclerzanella.github.io/off_the_reef_project/)
 
-![responsiveness TEST](assets/images/readme/responsiveness_FTR.PNG)
+![responsiveness TEST](assets/images/readme/responsiveness_FTR.png)
 
 ## UX
 ---
