@@ -25,7 +25,7 @@
 
             <!-- Logo -->
 
-            <a id="navLogo" class="navbar-brand" href="index.html">
+            <a id="navLogo" class="navbar-brand" href="index.html" aria-label="Off the reef logo, go to home page">
                 <img src="assets/images/index/off_the_reef_nav_logo.png" alt="off the reef logo">
             </a>
 
@@ -39,13 +39,14 @@
             <div class="collapse navbar-collapse" id="responsiveNavbar">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html" aria-label="go to home page">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="surfboards.html">Surfboards</a>
+                        <a class="nav-link" href="surfboards.html" aria-label="go to surfboards page">Surfboards</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Feedback <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#" aria-label="go to feedback page">Feedback <span
+                                class="sr-only">(current)</span></a>
                     </li>
                 </ul>
             </div>
@@ -68,77 +69,71 @@
                     </div>
                     <div class="feedbackCredit">
                         <small>Image Credit: <a href="https://www.pexels.com/pt-br/@pixabay" target="_blank"
-                                aria-label="Go to image credit website" rel="noopener>
+                                aria-label="Go to image credit website" rel="noreferrer">
                                 Pixabay</a></small>
                     </div>
 
                     <!-- modal popup | Modal from W3Schools -->
-                    <div id=" feedbackModal" class="modal">
+                    <div id="feedbackModal" class="modal">
 
-                                <!-- Modal content -->
-                                <div class="modal-content">
-                                    <span class="close">&times;</span>
-                                    <div class="row no-gutters text-center">
-                                        <div class="col-12 feedbackTitle">
-                                            <h3>Hey, let us know your feedback!</h3>
-                                            <hr>
-                                        </div>
-                                        <div class="col-12">
-
-                                            <!-- Feedback form | Uses bootstrap form -->
-                                            <form onsubmit="return validForm(this);" method="POST" class="feedbackForm">
-                                                <div class="form-group form-row no-gutters">
-
-                                                    <!-- name input -->
-                                                    <div class="col-lg-6 col-12">
-                                                        <label for="feedbackName">Your Name:</label>
-                                                        <input type="text" id="feedbackName" name="feedbackName"
-                                                            class="form-control feedBackInput">
-                                                        <small class="feedbackWarning"><i
-                                                                class="fas fa-exclamation-circle"></i>
-                                                            Please inform your Name.</small>
-                                                    </div>
-
-                                                    <!-- email input -->
-                                                    <div class="col-lg-6 col-12">
-                                                        <label for="feedbackEmail">Your Email:</label>
-                                                        <input type="email" id="feedbackEmail" name="feedbackEmail"
-                                                            class="form-control feedBackInput">
-                                                        <small class="feedbackWarning"><i
-                                                                class="fas fa-exclamation-circle"></i>
-                                                            Please inform your Name.</small>
-                                                        <small><i class="fas fa-exclamation-circle"></i> We'll never
-                                                            share your
-                                                            email with anyone else.</small>
-                                                    </div>
-
-                                                    <!-- Feedback input -->
-                                                    <div class="col-12">
-                                                        <hr class="fineHr">
-                                                        <label for="feedbackText">Your Feedback:</label>
-                                                        <textarea id="feedbackText" name="feedbackText"
-                                                            class="form-control feedBackInput" cols="60"
-                                                            rows="10"></textarea>
-                                                        <small class="feedbackWarning"><i
-                                                                class="fas fa-exclamation-circle"></i>
-                                                            Your feedback is important for us.</small>
-                                                    </div>
-
-                                                    <!-- submit button -->
-                                                    <div class="col-12 content-alignment">
-                                                        <button type="submit"
-                                                            class="btn-lg feedbackButton">Submit</button>
-                                                    </div>
-
-                                                    <!-- clear form button -->
-                                                    <div class="col-12 content-alignment">
-                                                        <button type="reset" id="feedbackReset">Clear form</button>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div class="row no-gutters text-center">
+                                <div class="col-12 feedbackTitle">
+                                    <h3>Hey, let us know your feedback!</h3>
+                                    <hr>
                                 </div>
+                                <div class="col-12">
+
+                                    <!-- Feedback form | Uses bootstrap form -->
+                                    <form onsubmit="return validForm(this);" method="POST" class="feedbackForm">
+                                        <div class="form-group form-row no-gutters">
+
+                                            <!-- name input -->
+                                            <div class="col-lg-6 col-12">
+                                                <label for="feedbackName">Your Name:</label>
+                                                <input type="text" id="feedbackName" name="feedbackName"
+                                                    class="form-control feedBackInput">
+                                                <small class="feedbackWarning"><i class="fas fa-exclamation-circle"></i>
+                                                    Please inform your Name.</small>
+                                            </div>
+
+                                            <!-- email input -->
+                                            <div class="col-lg-6 col-12">
+                                                <label for="feedbackEmail">Your Email:</label>
+                                                <input type="email" id="feedbackEmail" name="feedbackEmail"
+                                                    class="form-control feedBackInput">
+                                                <small class="feedbackWarning"><i class="fas fa-exclamation-circle"></i>
+                                                    Please inform your Name.</small>
+                                                <small><i class="fas fa-exclamation-circle"></i> We'll never share your
+                                                    email with anyone else.</small>
+                                            </div>
+
+                                            <!-- Feedback input -->
+                                            <div class="col-12">
+                                                <hr class="fineHr">
+                                                <label for="feedbackText">Your Feedback:</label>
+                                                <textarea id="feedbackText" name="feedbackText"
+                                                    class="form-control feedBackInput" cols="60" rows="10"></textarea>
+                                                <small class="feedbackWarning"><i class="fas fa-exclamation-circle"></i>
+                                                    Your feedback is important for us.</small>
+                                            </div>
+
+                                            <!-- submit button -->
+                                            <div class="col-12 content-alignment">
+                                                <button type="submit" class="btn-lg feedbackButton">Submit</button>
+                                            </div>
+
+                                            <!-- clear form button -->
+                                            <div class="col-12 content-alignment">
+                                                <button type="reset" id="feedbackReset">Clear form</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

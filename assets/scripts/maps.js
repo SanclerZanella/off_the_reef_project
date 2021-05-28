@@ -23,7 +23,7 @@ function initMap() {
 
         let preReportCard = `<div class="row no-gutters text-center reportCard">
                                 <div class="col-12 d-none d-md-block">
-                                    <img id="localCoverImg" src="assets/images/index/map/${title.replace(/\s+/g, '')}.jpg" alt="">
+                                    <img id="localCoverImg" src="assets/images/index/map/${title.replace(/\s+/g, '')}.jpg" alt="Place picture">
                                 </div>
                                 <div class="col-12">
                                     <h4>${title}</h4>
@@ -52,7 +52,7 @@ function initMap() {
                             </div>
                             <div class="row no-gutters text-center">
                                 <div class="col">
-                                    <a id=${title.replace(/\s+/g, '')} class="reportLink" href="index.html#beachReport">Click here to open full report</a>
+                                    <a id=${title.replace(/\s+/g, '')} class="reportLink" href="index.html#beachReport" aria-label="open full report">Click here to open full report</a>
                                 </div>
                             </div>`;
 
