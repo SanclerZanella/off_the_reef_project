@@ -216,7 +216,7 @@ div#map {
 }
 
 .forecastTableSm {
-    margin-top: 15px 0 10px 0;
+    margin: 15px 0 10px 0;
 }
 
 span.tableTitle {
@@ -384,8 +384,8 @@ span.tableTitle {
     font-size: 3rem;
 }
 
-#arrowDownHour,
-#arrowDownDaily {
+.arrowDownHour,
+.arrowDownDaily {
     margin: 0.3em 0.3em 0 0;
 }
 
@@ -430,7 +430,7 @@ span.tableTitle {
     margin-top: 1.4em;
 }
 
-#arrowDownSurf {
+.arrowDownSurf {
     margin-right: 0.2em;
 }
 
@@ -1053,7 +1053,7 @@ footer i:hover {
     }
 
     div.forecastTableSm {
-        margin-top: 15px 0 10px 0;
+        margin: 15px 0 10px 0;
     }
 
     span.tableTitle {
@@ -1066,8 +1066,8 @@ footer i:hover {
         margin-left: 35px;
     }
 
-    #arrowDownHour i,
-    #arrowDownDaily i {
+    .arrowDownHour i,
+    .arrowDownDaily i {
         margin: 0 4em 0 0;
     }
 
@@ -1089,7 +1089,7 @@ footer i:hover {
         margin-left: 1em;
     }
 
-    #arrowDownSurf i {
+    .arrowDownSurf i {
         margin-right: 4em;
     }
 
@@ -1190,7 +1190,7 @@ footer i:hover {
     }
 
     div.forecastTableSm {
-        margin-top: 15px 0 10px 0;
+        margin: 15px 0 10px 0;
     }
 
     span.tableTitle {
@@ -1203,8 +1203,8 @@ footer i:hover {
         margin-left: 35px;
     }
 
-    #arrowDownHour i,
-    #arrowDownDaily i {
+    .arrowDownHour i,
+    .arrowDownDaily i {
         margin: 0 4em 0 0;
     }
 
@@ -1226,7 +1226,7 @@ footer i:hover {
         margin-left: 1em;
     }
 
-    #arrowDownSurf i {
+    .arrowDownSurf i {
         margin-right: 4em;
     }
 
@@ -1355,12 +1355,12 @@ footer i:hover {
         margin-left: 1em;
     }
 
-    #arrowDownHour i,
-    #arrowDownDaily i {
+    .arrowDownHour i,
+    .arrowDownDaily i {
         margin: 0 3.5em 0 0;
     }
 
-    #arrowDownSurf i {
+    .arrowDownSurf i {
         margin-right: 3.5em;
     }
 
@@ -1502,7 +1502,7 @@ footer i:hover {
         font-size: 1.2rem;
     }
 
-    #arrowDownSurf i {
+    .arrowDownSurf i {
         margin-right: 3em;
     }
 
@@ -1522,8 +1522,8 @@ footer i:hover {
         margin: 2em 0 0 0.7em;
     }
 
-    #arrowDownHour i,
-    #arrowDownDaily i {
+    .arrowDownHour i,
+    .arrowDownDaily i {
         margin: 0 3em 0 0;
     }
 

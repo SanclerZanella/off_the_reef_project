@@ -710,14 +710,14 @@ $('#feedbackReset').click(() => {
 });
 
 // introJs API
-introJs().setOptions({
-    steps: [{
-      element: document.querySelector('#map'),
-      intro: 'Over this interactive map you will find some of the best surf spots in Ireland, clicking on the marker you will find the link for the full report',
-      position: 'top',
-      }
-    ]
-  }).start();
+// introJs().setOptions({
+//     steps: [{
+//       element: document.querySelector('#map'),
+//       intro: 'Over this interactive map you will find some of the best surf spots in Ireland, clicking on the marker you will find the link for the full report',
+//       position: 'top',
+//       }
+//     ]
+//   }).start();
 
 
 

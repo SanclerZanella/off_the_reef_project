@@ -16,7 +16,7 @@
 
 <body>
 
-    <!-- Header section: Includes the Navbar with logo within. Navbar template from Bootstrap 4------------------------------------->
+    <!-- Header section: Includes the Navbar with logo within. Navbar template from Bootstrap 4 -->
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light no-gutters">
@@ -30,7 +30,7 @@
             <!-- Toggle Button -->
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsiveNavbar"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                aria-controls="responsiveNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -360,7 +360,7 @@
                                 <div class="form-group col-lg-4 col-md-4 col-6">
                                     <label for="weightInput">Weight(Kg)</label><br>
                                     <select id="weightInput" class="custom-select" name="weightInput" required>
-                                        <option selected disabled hidden>Choose one option</option>
+                                        <option selected disabled hidden value="">Choose one option</option>
                                         <option value="w35_39_under">35 - 39 or Under</option>
                                         <option value="w40_44">40 - 44</option>
                                         <option value="w45_49">45 - 49</option>
@@ -388,7 +388,7 @@
                                 <div class="form-group col-lg-4 col-md-4 col-6">
                                     <label for="ageInput">How old are you?</label><br>
                                     <select id="ageInput" class="custom-select" name="ageInput" required>
-                                        <option selected disabled hidden>Choose one option</option>
+                                        <option selected disabled hidden value="">Choose one option</option>
                                         <option value="a0_To_30">0 - 30</option>
                                         <option value="a31_To_50">31 - 50</option>
                                         <option value="a51_To_60">51 - 60</option>
@@ -404,7 +404,7 @@
                                 <div class="form-group col-lg-4 col-md-4 col-6">
                                     <label for="abilityInput">What's your surf ability level?</label><br>
                                     <select id="abilityInput" class="custom-select" name="abilityLevel" required>
-                                        <option selected disabled hidden>Choose one option</option>
+                                        <option selected disabled hidden value="">Choose one option</option>
                                         <option value="advancedPlus">Advanced+</option>
                                         <option value="advanced">Advanced</option>
                                         <option value="inter_adv">Intermediate / Advanced</option>
@@ -421,7 +421,7 @@
                                 <div class="form-group col-lg-4 col-md-4 col-6">
                                     <label for="fitnessInput">What's your Fitness Condition?</label><br>
                                     <select id="fitnessInput" class="custom-select" name="fitnessLevel" required>
-                                        <option selected disabled hidden>Choose one option</option>
+                                        <option selected disabled hidden value="">Choose one option</option>
                                         <option value="excellent">Excellent</option>
                                         <option value="good">Good</option>
                                         <option value="average">Average</option>
@@ -437,7 +437,7 @@
                                 <div class="form-group col-lg-4 col-md-4 col-12">
                                     <label for="styleInput">What's your prefered surfboard style?</label><br>
                                     <select id="styleInput" class="custom-select" name="fitnessLevel" required>
-                                        <option selected disabled hidden>Choose one option</option>
+                                        <option selected disabled hidden value="">Choose one option</option>
                                         <option value="shortboardSize">Shortboard Size</option>
                                         <option value="funboardSize">Funboard Size</option>
                                         <option value="longboardSize">Longboard Size</option>
@@ -466,40 +466,37 @@
                             <div class="form-row no-gutters">
                                 <div class="form-group col-12 content-alignment">
 
-                                    <!-- Output calculator values (answer) | uses table and grid system from bootstrap-->
-                                    <output name="boardSizes" id="boardSizes" class="boardSizesDisplayHide"
-                                        for="weightInput ageInput abilityInput fitnessInput">
-                                        <div class="row no-gutters">
-                                            <div class="col-12">
+                                    <!-- Calculator Output values (answer) | uses table and grid system from bootstrap-->
+                                    <div class="row no-gutters boardSizesDisplayHide" id="boardSizes">
+                                        <div class="col-12">
 
-                                                <!-- Answer title -->
-                                                <h5 class="text-center">Surfboard Sizes</h5>
-                                                <h6 class="text-center" id="boardType"></h6>
-                                                <table class="table table-borderless text-center">
+                                            <!-- Answer title -->
+                                            <h5 class="text-center">Surfboard Sizes</h5>
+                                            <h6 class="text-center" id="boardType">-</h6>
+                                            <table class="table table-borderless text-center">
 
-                                                    <!-- Sizes titles -->
-                                                    <thead>
-                                                        <tr>
-                                                            <th scope="col">Length</th>
-                                                            <th scope="col">width</th>
-                                                            <th scope="col">Thickness</th>
-                                                            <th scope="col">Volume</th>
-                                                        </tr>
-                                                    </thead>
+                                                <!-- Sizes titles -->
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">Length</th>
+                                                        <th scope="col">width</th>
+                                                        <th scope="col">Thickness</th>
+                                                        <th scope="col">Volume</th>
+                                                    </tr>
+                                                </thead>
 
-                                                    <!-- Sizes values -->
-                                                    <tbody>
-                                                        <tr>
-                                                            <td id="boardLength"></td>
-                                                            <td id="boardWidth"></td>
-                                                            <td id="boardThickness"></td>
-                                                            <td id="boardVolume"></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
+                                                <!-- Sizes values -->
+                                                <tbody>
+                                                    <tr>
+                                                        <td id="boardLength"></td>
+                                                        <td id="boardWidth"></td>
+                                                        <td id="boardThickness"></td>
+                                                        <td id="boardVolume"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
-                                    </output>
+                                    </div>
                                 </div>
                             </div>
 
@@ -508,8 +505,6 @@
 
                 </div>
             </div>
-        </div>
-        </div>
         </div>
     </main>
 
