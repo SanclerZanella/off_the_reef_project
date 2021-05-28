@@ -58,7 +58,7 @@ function initMap() {
 
         const marker = new google.maps.Marker({
             position,
-            icon: 'assets/images/map/marker.png',
+            icon: 'assets/images/index/map/marker.png',
             map,
             animation: google.maps.Animation.DROP,
             title: title,
