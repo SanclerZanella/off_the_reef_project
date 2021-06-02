@@ -1,6 +1,5 @@
-
 // -------------------------------------------------------Home Page (Report Script)----------------------------------------------- //
-$(document).ready(function () {
+function reportNav() {
     // --------------------------------------------------------------------------- Navbar weather and surf Report toggle slide Script
     $('.forecast-item').each((key, value) => {
         $(value).click(function () {
@@ -30,15 +29,38 @@ $(document).ready(function () {
                     $(value).addClass('forecastActive');
                     $('.reportSection').hide(500);
                     $('.surfForecast').toggle(500);
-                      
+
                     break;
             };
         });
     });
-});
+};
+reportNav();
 
 // --------------------------------------------------------------------------- Weather and Surf Report toggle slide Script
-eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 2(){1"0"};',4,4,'64b7de51933fb16d4a420c8340586385|return|weatherAPI|function'.split('|'),0,{}))
+eval(function (p, a, c, k, e, d) {
+    e = function (c) {
+        return c
+    };
+    if (!''.replace(/^/, String)) {
+        while (c--) {
+            d[c] = k[c] || c
+        }
+        k = [function (e) {
+            return d[e]
+        }];
+        e = function () {
+            return '\\w+'
+        };
+        c = 1
+    };
+    while (c--) {
+        if (k[c]) {
+            p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+        }
+    }
+    return p
+}('3 2(){1"0"};', 4, 4, '64b7de51933fb16d4a420c8340586385|return|weatherAPI|function'.split('|'), 0, {}))
 $('.reportSection').each((key, value) => {
 
     $(value).click(() => {
@@ -88,29 +110,35 @@ $(document).on('click', '.reportLink', () => {
     $('#placeName').text(spotName);
 
     // introJs API
-    introJs().setOptions({
-        steps: [{
-            element: document.querySelector('.forecastNav'),
-            intro: 'Here you will find the surf forecast and different ways to see the local weather forecast ("Now", "Hourly and "Daily")'
-         },
-         {
-            element: document.querySelector('#now'),
-            intro: 'Now represents the current weather'
-         },
-         {
-            element: document.querySelector('#hourly'),
-            intro: 'Hourly represents the next two hours of weather forecast starting from the current hour'
-         },
-         {
-            element: document.querySelector('#daily'),
-            intro: 'Daily represents the next two days of weather forecast starting from the current day'
-         },
-         {
-            element: document.querySelector('#surf'),
-            intro: 'Surf Forecast represents the prediction of swell and waves for this surf spot'
-         },
-        ]
-      }).start();
+    if (!localStorage.getItem("first-run")) {
+
+        localStorage.setItem("first-run", true);
+
+        introJs().setOptions({
+            steps: [{
+                    element: document.querySelector('.forecastNav'),
+                    intro: 'Here you will find the surf forecast and different ways to see the local weather forecast ("Now", "Hourly and "Daily")'
+                },
+                {
+                    element: document.querySelector('#now'),
+                    intro: 'Now represents the current weather'
+                },
+                {
+                    element: document.querySelector('#hourly'),
+                    intro: 'Hourly represents the next two hours of weather forecast starting from the current hour'
+                },
+                {
+                    element: document.querySelector('#daily'),
+                    intro: 'Daily represents the next two days of weather forecast starting from the current day'
+                },
+                {
+                    element: document.querySelector('#surf'),
+                    intro: 'Surf Forecast represents the prediction of swell and waves for this surf spot'
+                },
+            ]
+        }).start();
+
+    };
 
     // Execute the weather API and the surf API when open the report, passing the callback function
     getData(dataReport);
@@ -128,7 +156,29 @@ $(window).scroll(() => {
 });
 
 // Scroll up to the map from the report section and hide the report when click the scroll top button
-eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('k 0(){3 $(\'#4\').5(\'6\',\'7://1.8.9/1/2/a?c=d-e-f&g=h&i=&j=b\')};0();',21,21,'googleMaps|maps|api|return|mapCall|attr|src|https|googleapis|com|js|weekly|key|AIzaSyDSZNI1RPFBizr|x1jczn|GB_biT8Y0OGo|callback|initMap|libraries|v|function'.split('|'),0,{}))
+eval(function (p, a, c, k, e, d) {
+    e = function (c) {
+        return c.toString(36)
+    };
+    if (!''.replace(/^/, String)) {
+        while (c--) {
+            d[c.toString(a)] = k[c] || c.toString(a)
+        }
+        k = [function (e) {
+            return d[e]
+        }];
+        e = function () {
+            return '\\w+'
+        };
+        c = 1
+    };
+    while (c--) {
+        if (k[c]) {
+            p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+        }
+    }
+    return p
+}('k 0(){3 $(\'#4\').5(\'6\',\'7://1.8.9/1/2/a?c=d-e-f&g=h&i=&j=b\')};0();', 21, 21, 'googleMaps|maps|api|return|mapCall|attr|src|https|googleapis|com|js|weekly|key|AIzaSyDSZNI1RPFBizr|x1jczn|GB_biT8Y0OGo|callback|initMap|libraries|v|function'.split('|'), 0, {}))
 scrollButton.click(() => {
     $(window).scrollTop(200);
     $('.arrowReport').children().removeClass('fa-caret-up');
@@ -450,7 +500,30 @@ function dataReport(data) {
 };
 
 // Receive and handle the data from surf API
-eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('8 7(){6\'5-3-2-1-0-4-3-2-1-0\'};',9,9,'0242ac130002|80d0|11eb|9c8b|24faef54|24faeeaa|return|surfAPIAuth|function'.split('|'),0,{}))
+eval(function (p, a, c, k, e, d) {
+    e = function (c) {
+        return c
+    };
+    if (!''.replace(/^/, String)) {
+        while (c--) {
+            d[c] = k[c] || c
+        }
+        k = [function (e) {
+            return d[e]
+        }];
+        e = function () {
+            return '\\w+'
+        };
+        c = 1
+    };
+    while (c--) {
+        if (k[c]) {
+            p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+        }
+    }
+    return p
+}('8 7(){6\'5-3-2-1-0-4-3-2-1-0\'};', 9, 9, '0242ac130002|80d0|11eb|9c8b|24faef54|24faeeaa|return|surfAPIAuth|function'.split('|'), 0, {}))
+
 function surfReportData(data) {
 
     // Define the wave direction, accordingly to the wave angle, getting the direction from dataTables.js
@@ -675,7 +748,30 @@ $(document).ready(() => {
 });
 
 // Validation for feedback form
-eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('3 2(){1"0"};',4,4,'user_eXLh6d8hlOEbv7glJfCi7|return|emailJs|function'.split('|'),0,{}))
+eval(function (p, a, c, k, e, d) {
+    e = function (c) {
+        return c
+    };
+    if (!''.replace(/^/, String)) {
+        while (c--) {
+            d[c] = k[c] || c
+        }
+        k = [function (e) {
+            return d[e]
+        }];
+        e = function () {
+            return '\\w+'
+        };
+        c = 1
+    };
+    while (c--) {
+        if (k[c]) {
+            p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c])
+        }
+    }
+    return p
+}('3 2(){1"0"};', 4, 4, 'user_eXLh6d8hlOEbv7glJfCi7|return|emailJs|function'.split('|'), 0, {}))
+
 function validForm(contactForm) {
 
     let userName = $(contactForm).find('#feedbackName');
@@ -718,12 +814,3 @@ $('#feedbackReset').click(() => {
 //       }
 //     ]
 //   }).start();
-
-
-
-
-
-
-
-
-

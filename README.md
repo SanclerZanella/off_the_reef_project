@@ -37,11 +37,6 @@ All designed to assist surfers in understanding what surf conditions can be expe
 
   * The layout changes in different screen sizes, I chose for take out some content in smaller screens to the content fits well in these smaller screens, but the main content still in the website, and I changed The rows and columns arrangement to fit the content well.
 
-
-### Wireframing my project on Balsamiq
-
-  * The wireframe can be seen here: [Wireframe]()
-
 ---
 ## Features
 ### Existing Features
@@ -78,7 +73,7 @@ This project has, at least, three separated pages, the three pages can be found 
 
   * There is a contact form.
 
-### Future Features
+### Future Improvement
 
   * Add a shopping suggestion section to the surfboards page using an API like amazon, ebay or google shopping.
 
